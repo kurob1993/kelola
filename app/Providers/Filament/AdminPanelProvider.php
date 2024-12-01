@@ -39,7 +39,7 @@ class AdminPanelProvider extends PanelProvider
             ->profile(isSimple: false)
             ->font('Plus Jakarta Sans', provider: GoogleFontProvider::class)
             ->colors([
-                'primary' => Color::Indigo,
+                'primary' => Color::Blue
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
