@@ -6,8 +6,11 @@ use App\Filament\Resources\IuranResource\Pages;
 use App\Filament\Resources\IuranResource\RelationManagers;
 use App\Models\Iuran;
 use Filament\Forms;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Support\RawJs;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -21,19 +24,42 @@ class IuranResource extends Resource
 
     protected static ?string $label = 'Iuran';
 
+    protected static ?int $navigationSort = 4;
+
     protected static ?string $navigationGroup = 'Data Master';
 
 
     public static function form(Form $form): Form
     {
         return $form->schema([
-            Forms\Components\TextInput::make('nama_iuran')->required()->label('Nama Iuran'),
-            Forms\Components\TextInput::make('nominal')->numeric()->required()->label('Nominal'),
-            Forms\Components\Textarea::make('deskripsi')->label('Deskripsi'),
-            Forms\Components\Select::make('periode')
-                ->options(['bulanan' => 'Bulanan', 'tahunan' => 'Tahunan'])
-                ->required()
-                ->label('Periode'),
+            Section::make()->schema([ // Membungkus seluruh input dalam Card
+                Grid::make([
+                    'sm' => 1,
+                    'md' => 3,
+                ])->schema([
+                    Forms\Components\TextInput::make('nama_iuran')
+                        ->required()
+                        ->label('Nama Iuran'),
+
+                    Forms\Components\TextInput::make('nominal')
+                        ->mask(RawJs::make('$money($input)'))
+                        ->required()
+                        ->label('Nominal'),
+
+                    Forms\Components\Select::make('periode')
+                        ->options(['bulanan' => 'Bulanan', 'tahunan' => 'Tahunan'])
+                        ->required()
+                        ->label('Periode'),
+
+                    Forms\Components\Textarea::make('deskripsi')
+                        ->label('Deskripsi')
+                        ->columnSpan([
+                            'md' => 3,
+                        ])
+                        ->rows(3),
+                ]),
+            ]),
+
         ]);
     }
 
