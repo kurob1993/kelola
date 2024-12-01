@@ -8,6 +8,8 @@ use App\Models\Blok;
 use App\Models\Perumahan;
 use App\Models\Warga;
 use Filament\Forms;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -23,25 +25,35 @@ class WargaResource extends Resource
 
     protected static ?string $label = 'Warga';
 
+    protected static ?int $navigationSort = 3;
+
     protected static ?string $navigationGroup = 'Data Master';
 
 
     public static function form(Form $form): Form
     {
         return $form->schema([
-            Forms\Components\TextInput::make('nama')->required()->label('Nama'),
-            Forms\Components\Select::make('blok_id')
-                ->label('Blok')
-                ->options(Blok::all()->pluck('nama_blok', 'id'))
-                ->required(),
-            Forms\Components\Select::make('perumahan_id')
-                ->label('Perumahan')
-                ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
-                ->required(),
-            Forms\Components\TextInput::make('nomor_rumah')->required()->label('Nomor Rumah'),
-            Forms\Components\TextInput::make('no_telepon')->label('No Telepon'),
-            Forms\Components\TextInput::make('email')->email()->label('Email'),
-            Forms\Components\DatePicker::make('tanggal_daftar')->required()->label('Tanggal Daftar'),
+            Section::make()->schema([
+                Grid::make([
+                    'sm' => 1,
+                    'md' => 2,
+                ])->schema([
+                    Forms\Components\TextInput::make('nama')->required()->label('Nama'),
+                    Forms\Components\Select::make('blok_id')
+                        ->label('Blok')
+                        ->options(Blok::all()->pluck('nama_blok', 'id'))
+                        ->required(),
+                    Forms\Components\Select::make('perumahan_id')
+                        ->label('Perumahan')
+                        ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
+                        ->required(),
+                    Forms\Components\TextInput::make('nomor_rumah')->required()->label('Nomor Rumah'),
+                    Forms\Components\TextInput::make('no_telepon')->label('No Telepon'),
+                    Forms\Components\TextInput::make('email')->email()->label('Email'),
+                    Forms\Components\DatePicker::make('tanggal_daftar')->required()->label('Tanggal Daftar'),
+                ])
+            ]),
+
         ]);
     }
 

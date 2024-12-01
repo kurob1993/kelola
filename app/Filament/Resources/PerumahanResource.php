@@ -6,6 +6,8 @@ use App\Filament\Resources\PerumahanResource\Pages;
 use App\Filament\Resources\PerumahanResource\RelationManagers;
 use App\Models\Perumahan;
 use Filament\Forms;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -21,24 +23,44 @@ class PerumahanResource extends Resource
 
     protected static ?string $label = 'Perumahan';
 
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $navigationGroup = 'Data Master';
 
     public static function form(Form $form): Form
     {
-        return $form->schema([
-            Forms\Components\TextInput::make('nama_perumahan')->required()->label('Nama Perumahan'),
-            Forms\Components\Textarea::make('alamat')->required()->label('Alamat'),
-            Forms\Components\TextInput::make('kota')->required()->label('Kota'),
-        ]);
+        return $form
+            ->schema([
+                Section::make()->schema([ // Membungkus seluruh input dalam Card
+                    Grid::make([
+                        'sm' => 1,
+                        'md' => 2,
+                    ])->schema([
+                        Forms\Components\TextInput::make('nama_perumahan')->required()->label('Nama Perumahan'),
+                        Forms\Components\TextInput::make('kota')->required()->label('Kota'),
+                        Forms\Components\Textarea::make('alamat')
+                            ->columnSpan([
+                                'md' => 2,
+                            ])
+                            ->required()
+                            ->label('Alamat'),
+                    ]),
+                ]),
+            ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama_perumahan')->label('Nama Perumahan')->searchable(),
-                Tables\Columns\TextColumn::make('alamat')->label('Alamat')->limit(50),
-                Tables\Columns\TextColumn::make('kota')->label('Kota'),
+                Tables\Columns\TextColumn::make('nama_perumahan')
+                    ->label('Nama Perumahan')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('alamat')
+                    ->label('Alamat')
+                    ->limit(50),
+                Tables\Columns\TextColumn::make('kota')
+                    ->label('Kota'),
             ])
             ->filters([
                 //

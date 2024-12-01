@@ -7,6 +7,8 @@ use App\Filament\Resources\BlokResource\RelationManagers;
 use App\Models\Blok;
 use App\Models\Perumahan;
 use Filament\Forms;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -22,16 +24,25 @@ class BlokResource extends Resource
 
     protected static ?string $label = 'Blok';
 
+    protected static ?int $navigationSort = 2;
+
     protected static ?string $navigationGroup = 'Data Master';
 
     public static function form(Form $form): Form
     {
         return $form->schema([
-            Forms\Components\Select::make('perumahan_id')
-                ->label('Perumahan')
-                ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
-                ->required(),
-            Forms\Components\TextInput::make('nama_blok')->required()->label('Nama Blok'),
+            Section::make()->schema([
+                Grid::make([
+                    'sm' => 1,
+                    'md' => 2,
+                ])->schema([
+                    Forms\Components\Select::make('perumahan_id')
+                        ->label('Perumahan')
+                        ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
+                        ->required(),
+                    Forms\Components\TextInput::make('nama_blok')->required()->label('Nama Blok'),
+                ])
+            ]),
         ]);
     }
 
