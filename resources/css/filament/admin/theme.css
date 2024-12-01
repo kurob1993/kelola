@@ -1,0 +1,126 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+.fi-breadcrumbs {
+    @apply hidden;
+}
+
+.fi-header-heading {
+    @apply hidden;
+}
+
+.fi-header {
+    @apply gap-0;
+
+    .items-center {
+        @apply mt-0;
+    }
+}
+
+.fi-sidebar-nav {
+    @apply bg-blue-950;
+    @apply dark:bg-gray-900;
+
+    @apply border-t;
+    @apply dark:border-t;
+
+    @apply border-gray-950;
+    @apply dark:border-white/5;
+
+    @apply lg:shadow-sm;
+    @apply dark:lg:shadow-sm;
+    @apply px-0;
+}
+
+.fi-sidebar-header {
+    @apply bg-blue-950;
+    @apply dark:bg-gray-900;
+
+    @apply lg:shadow-sm;
+    @apply dark:lg:shadow-sm;
+}
+
+.fi-topbar {
+    nav {
+        @apply dark:bg-gray-950;
+    }
+}
+
+.fi-logo {
+    @apply text-white;
+}
+
+.fi-sidebar-item {
+    @apply text-amber-500;
+    @apply hover:bg-blue-900;
+    @apply dark:hover:bg-gray-800;
+
+    @apply hover:text-white;
+    @apply ring-1;
+    @apply ring-gray-950/5;
+
+    a {
+        @apply rounded-none;
+        @apply ps-5;
+        @apply pe-7;
+
+        @apply hover:bg-sky-900/30;
+        @apply dark:hover:bg-white/20;
+
+        span {
+            @apply text-white;
+            @apply dark:text-white;
+        }
+
+        svg {
+            @apply text-white;
+            @apply dark:text-white;
+        }
+
+        span {
+            span {
+                @apply bg-blue-200;
+                @apply text-black;
+                @apply dark:bg-primary-500;
+                @apply dark:text-white;
+            }
+        }
+    }
+
+
+}
+
+li.fi-sidebar-item.fi-active  {
+    a {
+        @apply bg-blue-500/30;
+        @apply dark:bg-gray-700;
+    }
+}
+
+.fi-sidebar-group-label {
+    @apply text-white;
+    @apply dark:text-white;
+    @apply px-3;
+}
+
+.fi-sidebar-nav-groups {
+    @apply -mx-0;
+    @apply gap-y-3;
+}
+
+
+/*popup modal*/
+/*.fi-modal-header {*/
+/*    @apply bg-blue-950;*/
+/*    @apply dark:bg-gray-800;*/
+/*    @apply rounded-t-xl;*/
+/*    @apply py-4;*/
+
+/*    div {*/
+/*        h2 {*/
+/*            @apply text-white;*/
+/*            @apply dark:text-white;*/
+/*        }*/
+/*    }*/
+/*}*/
