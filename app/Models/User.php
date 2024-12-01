@@ -3,13 +3,15 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -85,5 +87,10 @@ class User extends Authenticatable
     public function getAuthIdentifier()
     {
         return $this->getKey();
+    }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return Auth::check();
     }
 }
