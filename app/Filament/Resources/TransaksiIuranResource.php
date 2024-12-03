@@ -58,7 +58,6 @@ class TransaksiIuranResource extends Resource
                     Forms\Components\FileUpload::make('bukti_bayar')
                         ->label('Bukti Bayar')
                         ->image() // Membatasi hanya untuk gambar
-                        ->required() // Wajib diisi
                         ->directory('bukti_bayar') // Folder tempat file akan disimpan
                         ->maxSize(2048) // Ukuran maksimum file (dalam KB)
                         ->helperText('Unggah bukti pembayaran dalam format gambar (max 2 MB).'),
