@@ -75,6 +75,9 @@ class TransaksiIuranResource extends Resource
                 Tables\Columns\TextColumn::make('warga.nama')->label('Warga')->sortable(),
                 Tables\Columns\TextColumn::make('iuran.nama_iuran')->label('Iuran'),
                 Tables\Columns\TextColumn::make('tanggal_bayar')->label('Tanggal Bayar'),
+                Tables\Columns\TextColumn::make('iuran.nominal')
+                    ->numeric(thousandsSeparator: '.')
+                    ->label('Nominal'),
                 Tables\Columns\TextColumn::make('status_bayar')
                     ->formatStateUsing(fn(string $state): string => strtoupper($state))
                     ->badge()
