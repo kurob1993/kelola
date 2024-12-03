@@ -45,7 +45,7 @@ class IuranResource extends Resource
 
                     Forms\Components\TextInput::make('nominal')
                         ->mask(RawJs::make('$money($input)'))
-                        ->length(10)
+                        ->maxLength(10)
                         ->required()
                         ->label('Nominal'),
 
