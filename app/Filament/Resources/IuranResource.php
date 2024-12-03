@@ -9,6 +9,8 @@ use Filament\Forms;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Support\RawJs;
 use Filament\Tables;
@@ -43,6 +45,7 @@ class IuranResource extends Resource
 
                     Forms\Components\TextInput::make('nominal')
                         ->mask(RawJs::make('$money($input)'))
+                        ->length(10)
                         ->required()
                         ->label('Nominal'),
 
@@ -68,7 +71,9 @@ class IuranResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('nama_iuran')->label('Nama Iuran')->searchable(),
-                Tables\Columns\TextColumn::make('nominal')->label('Nominal'),
+                Tables\Columns\TextColumn::make('nominal')
+                    ->numeric(thousandsSeparator: '.')
+                    ->label('Nominal'),
                 Tables\Columns\TextColumn::make('periode')->label('Periode')->sortable(),
             ])
             ->filters([
