@@ -72,8 +72,8 @@ class TransaksiIuranResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('warga.nama')->label('Warga')->sortable(),
-                Tables\Columns\TextColumn::make('iuran.nama_iuran')->label('Iuran'),
+                Tables\Columns\TextColumn::make('warga.nama')->label('Warga')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('iuran.nama_iuran')->label('Iuran')->searchable(),
                 Tables\Columns\TextColumn::make('tanggal_bayar')->label('Tanggal Bayar'),
                 Tables\Columns\TextColumn::make('iuran.nominal')
                     ->numeric(thousandsSeparator: '.')
@@ -89,7 +89,14 @@ class TransaksiIuranResource extends Resource
                     ->label('Status Bayar'),
             ])
             ->filters([
-                //
+                // filter by status bayar
+                Tables\Filters\SelectFilter::make('status_bayar')
+                    ->options([
+                        'lunas' => 'Lunas',
+                        'belum lunas' => 'Belum Lunas',
+                        'tertunda' => 'Tertunda',
+                    ])
+                    ->label('Status Bayar'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
