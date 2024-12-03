@@ -97,6 +97,12 @@ class TransaksiIuranResource extends Resource
                         'tertunda' => 'Tertunda',
                     ])
                     ->label('Status Bayar'),
+
+                // filter by nama warga
+                Tables\Filters\SelectFilter::make('warga_id')
+                    ->options(Warga::all()->pluck('nama', 'id'))
+                    ->searchable()
+                    ->label('Warga'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
