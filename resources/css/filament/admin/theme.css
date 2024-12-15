@@ -18,23 +18,23 @@
     }
 }
 
+
 .fi-sidebar-nav {
-    @apply bg-primary-900;
+    @apply bg-primary-700;
     @apply dark:bg-gray-900;
 
     @apply border-t;
     @apply dark:border-t;
 
-    @apply border-primary-950/30;
+    @apply border-primary-800/30;
     @apply dark:border-white/5;
 
     @apply lg:shadow-sm;
     @apply dark:lg:shadow-sm;
     @apply px-0;
 }
-
 .fi-sidebar-header {
-    @apply bg-primary-900;
+    @apply bg-primary-700;
     @apply dark:bg-gray-900;
 
     @apply lg:shadow-sm;
@@ -57,13 +57,13 @@
 }
 
 .fi-sidebar-item {
-    @apply text-primary-900;
-    @apply hover:bg-primary-950;
+    @apply text-primary-600;
+    @apply hover:bg-primary-700;
     @apply dark:hover:bg-gray-800;
 
     @apply hover:text-white;
     @apply ring-1;
-    @apply ring-primary-900;
+    @apply ring-primary-700;
     @apply dark:ring-gray-950/5;
 
     a {
@@ -71,7 +71,7 @@
         @apply ps-5;
         @apply pe-7;
 
-        @apply hover:bg-primary-950/30;
+        @apply hover:bg-primary-600/30;
         @apply dark:hover:bg-white/20;
 
         span {
@@ -100,7 +100,7 @@
 
 li.fi-sidebar-item.fi-active  {
     a {
-        @apply bg-primary-950/70;
+        @apply bg-primary-500/70;
         @apply dark:bg-gray-700;
     }
 }
@@ -124,7 +124,7 @@ li.fi-sidebar-item.fi-active  {
 
 /*popup modal*/
 /*.fi-modal-header {*/
-/*    @apply bg-primary-900;*/
+/*    @apply bg-primary-600;*/
 /*    @apply dark:bg-gray-800;*/
 /*    @apply rounded-t-xl;*/
 /*    @apply py-4;*/
