@@ -33,6 +33,7 @@
     @apply dark:lg:shadow-sm;
     @apply px-0;
 }
+
 .fi-sidebar-header {
     @apply bg-primary-700;
     @apply dark:bg-gray-900;
@@ -98,7 +99,7 @@
 
 }
 
-li.fi-sidebar-item.fi-active  {
+li.fi-sidebar-item.fi-active {
     a {
         @apply bg-primary-500/70;
         @apply dark:bg-gray-700;
@@ -112,15 +113,22 @@ li.fi-sidebar-item.fi-active  {
 }
 
 .fi-sidebar-nav-groups {
-    @apply -mx-0;
+    @apply -mr-4;
     @apply gap-y-3;
 
-    button {
-        @apply text-white;
-        @apply dark:text-white;
+    div {
+        @apply pr-5;
+
+        button {
+            @apply text-white;
+            @apply hover:text-white;
+            @apply dark:text-white;
+        }
     }
+
 }
 
+/*body > div.fi-layout.flex.min-h-screen.w-full.flex-row-reverse.overflow-x-clip > aside > nav > ul > li:nth-child(3) > div > button*/
 
 /*popup modal*/
 /*.fi-modal-header {*/
