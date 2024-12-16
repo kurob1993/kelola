@@ -62,6 +62,7 @@ class WargaResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('nama')->label('Nama')->searchable(),
+                Tables\Columns\TextColumn::make('perumahan.nama_perumahan')->label('Perumahan')->searchable(),
                 Tables\Columns\TextColumn::make('blok.nama_blok')->label('Blok')->sortable(),
                 Tables\Columns\TextColumn::make('nomor_rumah')->label('Nomor Rumah'),
             ])

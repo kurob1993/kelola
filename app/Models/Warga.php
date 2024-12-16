@@ -18,6 +18,11 @@ class Warga extends Model
         return $this->belongsTo(Blok::class);
     }
 
+    public function perumahan()
+    {
+        return $this->belongsTo(Perumahan::class);
+    }
+
     public function transaksiIuran()
     {
         return $this->hasMany(TransaksiIuran::class);
