@@ -23,10 +23,10 @@
     @apply bg-primary-700;
     @apply dark:bg-gray-900;
 
-    @apply border-t;
+    /*@apply border-t;*/
     @apply dark:border-t;
 
-    @apply border-primary-800/30;
+    /*@apply border-primary-800;*/
     @apply dark:border-white/5;
 
     @apply lg:shadow-sm;
@@ -35,7 +35,7 @@
 }
 
 .fi-sidebar-header {
-    @apply bg-primary-700;
+    @apply bg-primary-800;
     @apply dark:bg-gray-900;
 
     @apply lg:shadow-sm;
