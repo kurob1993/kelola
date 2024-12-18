@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\WargaResource\Pages;
 use App\Filament\Resources\WargaResource\RelationManagers;
 use App\Models\Blok;
+use App\Models\Gang;
 use App\Models\Perumahan;
 use App\Models\Warga;
 use Filament\Forms;
@@ -47,6 +48,10 @@ class WargaResource extends Resource
                         ->label('Perumahan')
                         ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
                         ->required(),
+                    Forms\Components\Select::make('gang_id')
+                        ->label('Gang')
+                        ->options(Gang::all()->pluck('nama', 'id'))
+                        ->required(),
                     Forms\Components\TextInput::make('nomor_rumah')->required()->label('Nomor Rumah'),
                     Forms\Components\TextInput::make('no_telepon')->label('No Telepon'),
                     Forms\Components\TextInput::make('email')->email()->label('Email'),
@@ -63,6 +68,7 @@ class WargaResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nama')->label('Nama')->searchable(),
                 Tables\Columns\TextColumn::make('perumahan.nama_perumahan')->label('Perumahan')->searchable(),
+                Tables\Columns\TextColumn::make('gang.nama')->label('Gang')->searchable(),
                 Tables\Columns\TextColumn::make('blok.nama_blok')->label('Blok')->sortable(),
                 Tables\Columns\TextColumn::make('nomor_rumah')->label('Nomor Rumah'),
             ])
