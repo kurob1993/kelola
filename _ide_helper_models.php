@@ -31,7 +31,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok whereNamaBlok($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok wherePerumahanId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok whereUpdatedAt($value)
- * @mixin \Eloquent
  */
 	class Blok extends \Eloquent {}
 }
@@ -42,7 +41,7 @@ namespace App\Models{
  *
  * @property int $id
  * @property string $nama_iuran
- * @property string $nominal
+ * @property numeric $nominal
  * @property string|null $deskripsi
  * @property string $periode
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -59,7 +58,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Iuran whereNominal($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Iuran wherePeriode($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Iuran whereUpdatedAt($value)
- * @mixin \Eloquent
  */
 	class Iuran extends \Eloquent {}
 }
@@ -85,7 +83,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Perumahan whereKota($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Perumahan whereNamaPerumahan($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Perumahan whereUpdatedAt($value)
- * @mixin \Eloquent
  */
 	class Perumahan extends \Eloquent {}
 }
@@ -117,7 +114,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereTanggalBayar($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereWargaId($value)
- * @mixin \Eloquent
  */
 	class TransaksiIuran extends \Eloquent {}
 }
@@ -170,6 +166,7 @@ namespace App\Models{
  * @property int $perumahan_id
  * @property int $blok_id
  * @property string $nomor_rumah
+ * @property string|null $gang
  * @property string $no_telepon
  * @property string|null $email
  * @property string $tanggal_daftar
@@ -184,6 +181,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereBlokId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereGang($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNama($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNoTelepon($value)
@@ -191,7 +189,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga wherePerumahanId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereTanggalDaftar($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereUpdatedAt($value)
- * @mixin \Eloquent
  */
 	class Warga extends \Eloquent {}
 }
