@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\IuranResource\Pages;
 use App\Filament\Resources\IuranResource\RelationManagers;
+use App\Models\Gang;
 use App\Models\Iuran;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
@@ -37,7 +38,7 @@ class IuranResource extends Resource
             Section::make()->schema([ // Membungkus seluruh input dalam Card
                 Grid::make([
                     'sm' => 1,
-                    'md' => 3,
+                    'md' => 2,
                 ])->schema([
                     Forms\Components\TextInput::make('nama_iuran')
                         ->required()
@@ -54,12 +55,16 @@ class IuranResource extends Resource
                         ->required()
                         ->label('Periode'),
 
+                    Forms\Components\Select::make('gang_id')
+                        ->label('Gang')
+                        ->options(Gang::all()->pluck('nama', 'id')),
+
                     Forms\Components\Textarea::make('deskripsi')
                         ->label('Deskripsi')
                         ->columnSpan([
-                            'md' => 3,
+                            'md' => 2,
                         ])
-                        ->rows(3),
+                        ->rows(2),
                 ]),
             ]),
 
@@ -72,9 +77,15 @@ class IuranResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nama_iuran')->label('Nama Iuran')->searchable(),
                 Tables\Columns\TextColumn::make('nominal')
-                    ->numeric(thousandsSeparator: '.')
+                    ->numeric()
                     ->label('Nominal'),
-                Tables\Columns\TextColumn::make('periode')->label('Periode')->sortable(),
+                Tables\Columns\TextColumn::make('periode')
+                    ->label('Periode')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('id')
+                    ->label('Gang')
+                    ->formatStateUsing(fn($record) => $record->gang ? $record->gang->nama : 'ALL')
+                    ->sortable(),
             ])
             ->filters([
                 //
