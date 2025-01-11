@@ -113,7 +113,7 @@ li.fi-sidebar-item.fi-active {
 }
 
 .fi-sidebar-nav-groups {
-    @apply -mr-4;
+    @apply -mr-1;
     @apply gap-y-3;
 
     div {
