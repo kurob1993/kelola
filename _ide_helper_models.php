@@ -40,6 +40,28 @@ namespace App\Models{
  * 
  *
  * @property int $id
+ * @property string $nama
+ * @property int $perumahan_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Perumahan $perumahan
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang whereNama($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang wherePerumahanId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang whereUpdatedAt($value)
+ */
+	class Gang extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
  * @property string $nama_iuran
  * @property numeric $nominal
  * @property string|null $deskripsi
@@ -165,14 +187,16 @@ namespace App\Models{
  * @property string $nama
  * @property int $perumahan_id
  * @property int $blok_id
+ * @property string|null $gang_id
  * @property string $nomor_rumah
- * @property string|null $gang
  * @property string $no_telepon
  * @property string|null $email
  * @property string $tanggal_daftar
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Blok $blok
+ * @property-read \App\Models\Gang|null $ganga
+ * @property-read \App\Models\Perumahan $perumahan
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TransaksiIuran> $transaksiIuran
  * @property-read int|null $transaksi_iuran_count
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga newModelQuery()
@@ -181,7 +205,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereBlokId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereGang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereGangId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNama($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNoTelepon($value)
