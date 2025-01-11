@@ -22,7 +22,11 @@ class GangResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $pluralLabel = 'Gang';
+
     protected static ?string $navigationGroup = 'Data Master';
+
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {

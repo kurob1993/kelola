@@ -21,7 +21,7 @@ class PerumahanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $label = 'Perumahan';
+    protected static ?string $pluralLabel = 'Perumahan';
 
     protected static ?int $navigationSort = 1;
 

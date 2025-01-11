@@ -24,7 +24,7 @@ class TransaksiIuranResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $label = 'Iuran Warga';
+    protected static ?string $pluralLabel = 'Iuran Warga';
 
     protected static ?int $navigationSort = 6;
 
