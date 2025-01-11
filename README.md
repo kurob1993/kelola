@@ -39,7 +39,22 @@ Tentu, cukup dengan koneksi internet dan browser.
 
 - Frontend: HTML5
 - Styling: Tailwind CSS
-- Animasi: CSS Keyframes
+- Backend: PHP, Laravel, Php Filament
+
+
+## 🛠️ Instalasi dan Konfigurasi
+
+### 1. Instal Laravel Filament
+
+```
+$ composer install && npm install
+$ cp .env-example .env
+$ php artisan key:generate
+$ php artisan migrate
+$ php artisan make:filament-user
+$ php artisan shield:generate --all
+$ php artisan shield:super-admin
+```
 
 ## 📞 Kontak
 
@@ -48,7 +63,7 @@ Tentu, cukup dengan koneksi internet dan browser.
 
 ## 📄 Lisensi
 
-[Tentukan lisensi proyek Anda, misalnya MIT License]
+Proyek ini dilisensikan di bawah [MIT License](./LICENSE).
 
 ## 🤝 Kontribusi
 

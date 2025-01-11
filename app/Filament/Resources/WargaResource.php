@@ -5,22 +5,18 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\WargaResource\Pages;
 use App\Filament\Resources\WargaResource\RelationManagers;
 use App\Models\Blok;
+use App\Models\Gang;
 use App\Models\Perumahan;
 use App\Models\Warga;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
-use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Contracts\HasTable;
-use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
 
 class WargaResource extends Resource
 {
@@ -44,7 +40,6 @@ class WargaResource extends Resource
                     'md' => 2,
                 ])->schema([
                     Forms\Components\TextInput::make('nama')->required()->label('Nama'),
-                    Forms\Components\TextInput::make('gang')->required()->label('Gang'),
                     Forms\Components\Select::make('blok_id')
                         ->label('Blok')
                         ->options(Blok::all()->pluck('nama_blok', 'id'))
@@ -52,6 +47,10 @@ class WargaResource extends Resource
                     Forms\Components\Select::make('perumahan_id')
                         ->label('Perumahan')
                         ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
+                        ->required(),
+                    Forms\Components\Select::make('gang_id')
+                        ->label('Gang')
+                        ->options(Gang::all()->pluck('nama', 'id'))
                         ->required(),
                     Forms\Components\TextInput::make('nomor_rumah')->required()->label('Nomor Rumah'),
                     Forms\Components\TextInput::make('no_telepon')->label('No Telepon'),
@@ -68,33 +67,13 @@ class WargaResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('nama')->label('Nama')->searchable(),
-                Tables\Columns\TextColumn::make('gang')->label('Gang')->searchable(),
-                Tables\Columns\TextColumn::make('blok_id')
-                    ->getStateUsing(function ($record) {
-                        return $record->blok->nama_blok . '-' . $record->nomor_rumah;
-                    })
-                    ->label('Blok')
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('perumahan.nama_perumahan')->label('Perumahan')->searchable(),
+                Tables\Columns\TextColumn::make('gang.nama')->label('Gang')->searchable(),
+                Tables\Columns\TextColumn::make('blok.nama_blok')->label('Blok')->sortable(),
+                Tables\Columns\TextColumn::make('nomor_rumah')->label('Nomor Rumah'),
             ])
             ->filters([
-                // filter by blok.nama_blok dan nomor_rumah
-                Tables\Filters\SelectFilter::make('blok_id')
-                    ->options(Blok::all()->pluck('nama_blok', 'id'))
-                    ->label('Blok'),
-
-                // filter by nomor_rumah
-//                Tables\Filters\SelectFilter::make('nomor_rumah')
-//                    ->options(function (Table $table) {
-//                        $blok_id = $table->getFilter('nomor_rumah');
-//
-//                        \Log::debug(json_encode($blok_id));
-//                        return Warga::where('blok_id', 1)
-//                            ->orderBy('nomor_rumah')
-//                            ->get()
-//                            ->pluck('gang');
-//                    })
-//                    ->label('Nomor Rumah'),
-
+                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
