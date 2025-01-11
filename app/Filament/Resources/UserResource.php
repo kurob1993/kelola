@@ -104,9 +104,7 @@ class UserResource extends Resource
 
     public static function getRelations(): array
     {
-        return [
-            RelationManagers\VendorContactRelationManager::class
-        ];
+        return [];
     }
 
     public static function getPages(): array

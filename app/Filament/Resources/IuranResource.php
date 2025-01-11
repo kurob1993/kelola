@@ -25,9 +25,9 @@ class IuranResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $label = 'Iuran';
+    protected static ?string $pluralLabel = 'Iuran';
 
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 5;
 
     protected static ?string $navigationGroup = 'Data Master';
 
