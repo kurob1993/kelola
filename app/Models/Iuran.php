@@ -30,4 +30,9 @@ class Iuran extends Model
     {
         return round($this->attributes['nominal']);
     }
+
+    public function gang()
+    {
+        return $this->belongsTo(Gang::class);
+    }
 }
