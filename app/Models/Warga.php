@@ -32,4 +32,9 @@ class Warga extends Model
     {
         return $this->hasMany(TransaksiIuran::class);
     }
+
+    public function pengurus()
+    {
+        return $this->hasOne(Pengurus::class);
+    }
 }

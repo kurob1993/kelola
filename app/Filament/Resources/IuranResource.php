@@ -67,7 +67,6 @@ class IuranResource extends Resource
                         ->rows(2),
                 ]),
             ]),
-
         ]);
     }
 
