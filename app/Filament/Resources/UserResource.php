@@ -5,16 +5,19 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
+use App\Models\Warga;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Log;
 use Rawilk\FilamentPasswordInput\Password;
 
@@ -146,6 +149,25 @@ class UserResource extends Resource
             TextInput::make('name')
                 ->required()
                 ->maxLength(255),
+
+            Select::make('warga_id')
+                ->label('Warga')
+                ->relationship(
+                    name: 'warga',
+                    titleAttribute: 'nama',
+                    modifyQueryUsing: function (Builder $query, $state) {
+                        $query->orWhere('nama', 'like', "%{$state}%")
+                            ->orWhere('nomor_rumah', 'like', "%{$state}%")
+                            ->orWhereHas('blok', function ($query) use ($state) {
+                                $query->where('nama_blok', 'like', "%{$state}%");
+                            });
+                    }
+                )
+                ->getOptionLabelFromRecordUsing(fn(Warga $record) => "{$record->nama} - {$record->blok->nama_blok}{$record->nomor_rumah}")
+                ->preload()
+                ->searchable()
+                ->live()
+                ->required(),
 
             TextInput::make('email')
                 ->email()

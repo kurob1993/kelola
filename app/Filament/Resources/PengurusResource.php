@@ -29,7 +29,7 @@ class PengurusResource extends Resource
 
     protected static ?string $pluralLabel = 'Pengurus';
 
-    protected static ?int $navigationSort = 6;
+    protected static ?int $navigationSort = 5;
 
     protected static ?string $navigationGroup = 'Data Master';
 

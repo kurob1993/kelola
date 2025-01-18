@@ -37,4 +37,9 @@ class Warga extends Model
     {
         return $this->hasOne(Pengurus::class);
     }
+
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
 }
