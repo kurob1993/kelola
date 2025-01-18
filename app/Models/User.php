@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -93,5 +93,10 @@ class User extends Authenticatable implements FilamentUser
     public function canAccessPanel(Panel $panel): bool
     {
         return Auth::check();
+    }
+
+    public function warga()
+    {
+        return $this->belongsTo(Warga::class);
     }
 }
