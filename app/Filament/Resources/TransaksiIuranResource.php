@@ -11,12 +11,9 @@ use Filament\Forms;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
-use Filament\Infolists\Components\ImageEntry;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class TransaksiIuranResource extends Resource
 {
@@ -41,6 +38,7 @@ class TransaksiIuranResource extends Resource
                     Forms\Components\Select::make('warga_id')
                         ->label('Warga')
                         ->options(Warga::all()->pluck('nama', 'id'))
+                        ->searchable()
                         ->required(),
                     Forms\Components\Select::make('iuran_id')
                         ->label('Iuran')
