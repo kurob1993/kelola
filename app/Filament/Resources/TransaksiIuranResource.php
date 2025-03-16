@@ -13,6 +13,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
 
 class TransaksiIuranResource extends Resource
@@ -85,6 +86,11 @@ class TransaksiIuranResource extends Resource
                         'tertunda' => 'warning',
                     })
                     ->label('Status Bayar'),
+            ])
+            ->groups([
+                Group::make('warga.nama')
+                    ->label('Nama Warga')
+                    ->collapsible(),
             ])
             ->filters([
                 // filter by status bayar

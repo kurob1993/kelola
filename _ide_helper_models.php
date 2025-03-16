@@ -156,6 +156,7 @@ namespace App\Models{
  * @property string|null $bukti_bayar
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read mixed $nama_tanggal
  * @property-read \App\Models\Iuran $iuran
  * @property-read \App\Models\Warga $warga
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran newModelQuery()

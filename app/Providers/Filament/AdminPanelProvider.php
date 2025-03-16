@@ -64,6 +64,7 @@ class AdminPanelProvider extends PanelProvider
             ->maxContentWidth(MaxWidth::Full)
             ->userMenuItems([
                 'profile' => MenuItem::make()->label('Edit profile'),
+//                'logout' => MenuItem::make()->label('Logout'),
 //                MenuItem::make()
 //                    ->label('Settings')
 //                    ->icon('heroicon-o-cog-6-tooth'),

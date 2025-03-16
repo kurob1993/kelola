@@ -29,6 +29,7 @@ class ListTransaksiIurans extends ListRecords
                 ->action(function (array $data) {
                     static::generateData($data['date']);
                 })
+                ->visible(auth()->user()->can('generate_transaksi::iuran'))
                 ->requiresConfirmation()
                 ->color('primary'),
         ];

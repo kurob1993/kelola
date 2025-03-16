@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class TransaksiIuran extends Model
 {
@@ -21,5 +22,10 @@ class TransaksiIuran extends Model
     public function iuran()
     {
         return $this->belongsTo(Iuran::class);
+    }
+
+    public function getNamaTanggalAttribute()
+    {
+        return $this->warga->nama . ' - ' . Carbon::parse($this->tanggal_bayar)->format('d M Y');
     }
 }
