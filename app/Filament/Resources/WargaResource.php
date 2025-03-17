@@ -52,9 +52,11 @@ class WargaResource extends Resource
                         ->options(Gang::all()->pluck('nama', 'id'))
                         ->required(),
                     Forms\Components\TextInput::make('nomor_rumah')->required()->label('Nomor Rumah'),
-                    Forms\Components\TextInput::make('no_telepon')->label('No Telepon'),
+                    Forms\Components\TextInput::make('no_telepon')
+                        ->default('+62 ')
+                        ->required()
+                        ->label('No Telepon'),
                     Forms\Components\TextInput::make('email')->email()->label('Email'),
-                    Forms\Components\DatePicker::make('tanggal_daftar')->required()->label('Tanggal Daftar'),
                 ])
             ]),
 
@@ -70,6 +72,9 @@ class WargaResource extends Resource
                 Tables\Columns\TextColumn::make('gang.nama')->label('Gang')->searchable(),
                 Tables\Columns\TextColumn::make('blok.nama_blok')->label('Blok')->sortable(),
                 Tables\Columns\TextColumn::make('nomor_rumah')->label('Nomor Rumah'),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label('Tanggal Daftar')
+                    ->date('d F Y'),
             ])
             ->filters([
                 //

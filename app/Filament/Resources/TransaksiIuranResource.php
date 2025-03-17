@@ -7,6 +7,7 @@ use App\Filament\Resources\TransaksiIuranResource\RelationManagers;
 use App\Models\Iuran;
 use App\Models\TransaksiIuran;
 use App\Models\Warga;
+use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
@@ -16,7 +17,7 @@ use Filament\Tables;
 use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
 
-class TransaksiIuranResource extends Resource
+class TransaksiIuranResource extends Resource implements HasShieldPermissions
 {
     protected static ?string $model = TransaksiIuran::class;
 
@@ -49,7 +50,7 @@ class TransaksiIuranResource extends Resource
                             return [$id => "$nama - Rp " . number_format($iuran->nominal, 0, ',', '.')];
                         }))
                         ->required(),
-                    Forms\Components\DatePicker::make('tanggal_bayar')->label('Tanggal Bayar'),
+                    Forms\Components\DatePicker::make('tanggal_bayar')->label('Jatuh Tempo')->required(),
                     Forms\Components\Select::make('status_bayar')
                         ->options(['lunas' => 'Lunas', 'belum lunas' => 'Belum Lunas', 'tertunda' => 'Tertunda'])
                         ->required()
@@ -73,7 +74,7 @@ class TransaksiIuranResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('warga.nama')->label('Warga')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('iuran.nama_iuran')->label('Iuran')->searchable(),
-                Tables\Columns\TextColumn::make('tanggal_bayar')->label('Tanggal Bayar'),
+                Tables\Columns\TextColumn::make('tanggal_bayar')->label('Jatuh Tempo')->date('d F Y'),
                 Tables\Columns\TextColumn::make('iuran.nominal')
                     ->numeric(thousandsSeparator: '.')
                     ->label('Nominal'),
@@ -139,6 +140,25 @@ class TransaksiIuranResource extends Resource
             'index' => Pages\ListTransaksiIurans::route('/'),
             'create' => Pages\CreateTransaksiIuran::route('/create'),
             'edit' => Pages\EditTransaksiIuran::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'restore',
+            'restore_any',
+            'replicate',
+            'reorder',
+            'delete',
+            'delete_any',
+            'force_delete',
+            'force_delete_any',
+            'generate',
         ];
     }
 }

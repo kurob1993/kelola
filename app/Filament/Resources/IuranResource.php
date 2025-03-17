@@ -57,6 +57,7 @@ class IuranResource extends Resource
 
                     Forms\Components\Select::make('gang_id')
                         ->label('Gang')
+                        ->placeholder(__('kelola.all'))
                         ->options(Gang::all()->pluck('nama', 'id')),
 
                     Forms\Components\Textarea::make('deskripsi')
