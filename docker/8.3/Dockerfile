@@ -1,8 +1,5 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04 as builder
 
-LABEL maintainer="Taylor Otwell"
-
-ARG WWWGROUP
 ARG NODE_VERSION=20
 ARG MYSQL_CLIENT="mysql-client"
 ARG POSTGRES_VERSION=17
@@ -10,61 +7,111 @@ ARG POSTGRES_VERSION=17
 WORKDIR /var/www/html
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV TZ=UTC
-ENV SUPERVISOR_PHP_COMMAND="/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan serve --host=0.0.0.0 --port=80"
-ENV SUPERVISOR_PHP_USER="sail"
 
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# Tambahkan konfigurasi apt yang diperlukan
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    && echo "Acquire::http::Pipeline-Depth 0;" > /etc/apt/apt.conf.d/99custom \
+    && echo "Acquire::http::No-Cache true;" >> /etc/apt/apt.conf.d/99custom \
+    && echo "Acquire::BrokenProxy true;" >> /etc/apt/apt.conf.d/99custom
 
-RUN echo "Acquire::http::Pipeline-Depth 0;" > /etc/apt/apt.conf.d/99custom && \
-    echo "Acquire::http::No-Cache true;" >> /etc/apt/apt.conf.d/99custom && \
-    echo "Acquire::BrokenProxy    true;" >> /etc/apt/apt.conf.d/99custom
-
-RUN apt-get update && apt-get upgrade -y \
+# Install paket yang dibutuhkan saja untuk build
+RUN apt-get update && apt-get upgrade -y gnupg curl ca-certificates \
     && mkdir -p /etc/apt/keyrings \
-    && apt-get install -y gnupg gosu curl ca-certificates zip unzip git supervisor sqlite3 libcap2-bin libpng-dev python2 dnsutils librsvg2-bin fswatch ffmpeg nano  \
+    && apt-get install -y curl ca-certificates zip unzip git \
     && curl -sS 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x14aa40ec0831756756d7f66c4f4ea0aae5267a6c' | gpg --dearmor | tee /etc/apt/keyrings/ppa_ondrej_php.gpg > /dev/null \
-    && echo "deb [signed-by=/etc/apt/keyrings/ppa_ondrej_php.gpg] https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
+    && echo "deb [signed-by=/etc/apt/keyrings/ppa_ondrej_php.gpg] https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
     && apt-get update \
     && apt-get install -y php8.3-cli php8.3-dev \
-       php8.3-pgsql php8.3-sqlite3 php8.3-gd \
-       php8.3-curl php8.3-mongodb \
-       php8.3-imap php8.3-mysql php8.3-mbstring \
-       php8.3-xml php8.3-zip php8.3-bcmath php8.3-soap \
-       php8.3-intl php8.3-readline \
-       php8.3-ldap \
-       php8.3-msgpack php8.3-igbinary php8.3-redis \
-       php8.3-memcached php8.3-pcov php8.3-imagick php8.3-xdebug php8.3-swoole \
+       php8.3-pgsql php8.3-gd php8.3-curl php8.3-imap php8.3-mysql php8.3-mbstring \
+       php8.3-xml php8.3-zip php8.3-bcmath php8.3-intl php8.3-readline php8.3-ldap \
+       php8.3-msgpack php8.3-igbinary php8.3-redis php8.3-memcached php8.3-pcov php8.3-imagick \
     && curl -sLS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer \
-    && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
-    && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_VERSION.x nodistro main" > /etc/apt/sources.list.d/nodesource.list \
-    && apt-get update \
-    && apt-get install -y nodejs \
-    && npm install -g npm \
-    && npm install -g pnpm \
-    && npm install -g bun \
-    && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /etc/apt/keyrings/yarn.gpg >/dev/null \
-    && echo "deb [signed-by=/etc/apt/keyrings/yarn.gpg] https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
-    && curl -sS https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | tee /etc/apt/keyrings/pgdg.gpg >/dev/null \
-    && echo "deb [signed-by=/etc/apt/keyrings/pgdg.gpg] http://apt.postgresql.org/pub/repos/apt jammy-pgdg main" > /etc/apt/sources.list.d/pgdg.list \
-    && apt-get update \
-    && apt-get install -y yarn \
-    && apt-get install -y $MYSQL_CLIENT \
-    && apt-get install -y postgresql-client-$POSTGRES_VERSION \
-    && apt-get -y autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+    # Install Node.js dan npm dari NodeSource
+RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install -g npm@latest
+
+# Salin aplikasi
+COPY . /var/www/html
+RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+RUN php artisan key:generate \
+    && php artisan config:cache \
+    && php artisan route:cache \
+    && php artisan view:cache
+
+RUN npm install && npm run build
+    
+# Aplikasi yang sebenarnya
+FROM ubuntu:24.04
+
+LABEL maintainer="Production Environment"
+
+ARG WWWGROUP
+ARG WWWUSER
+
+WORKDIR /var/www/html
+
+ENV TZ=Asia/Jakarta
+ENV DEBIAN_FRONTEND=noninteractive
+ENV SUPERVISOR_PHP_COMMAND="/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan serve --host=0.0.0.0 --port=80"
+ENV SUPERVISOR_PHP_USER='sail'
+
+# Konfigurasi timezone
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Install paket yang diperlukan untuk runtime saja
+RUN apt-get update && apt-get upgrade -y \
+    && mkdir -p /etc/apt/keyrings \
+    && apt-get install -y gnupg gosu curl ca-certificates supervisor libcap2-bin \
+    && curl -sS 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x14aa40ec0831756756d7f66c4f4ea0aae5267a6c' | gpg --dearmor | tee /etc/apt/keyrings/ppa_ondrej_php.gpg > /dev/null \
+    && echo "deb [signed-by=/etc/apt/keyrings/ppa_ondrej_php.gpg] https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
+    && apt-get update \
+    && apt-get install -y php8.3-cli \
+       php8.3-pgsql php8.3-mysql php8.3-gd php8.3-curl php8.3-mbstring \
+       php8.3-xml php8.3-zip php8.3-bcmath php8.3-intl \
+       php8.3-redis php8.3-msgpack php8.3-igbinary \
+       ncdu vim \
+    && curl -sLS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Konfigurasi PHP untuk production
+RUN mkdir -p /etc/php/8.3/cli/conf.d/
+COPY ./docker/8.3/php.ini /etc/php/8.3/cli/conf.d/99-sail.ini
+
+# Tambahkan konfigurasi OPcache untuk produksi
+RUN echo "opcache.enable=1" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
+    && echo "opcache.enable_cli=1" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
+    && echo "opcache.jit=1255" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
+    && echo "opcache.jit_buffer_size=100M" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
+    && echo "opcache.memory_consumption=256" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
+    && echo "opcache.interned_strings_buffer=16" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
+    && echo "opcache.max_accelerated_files=20000" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
+    && echo "opcache.validate_timestamps=0" >> /etc/php/8.3/cli/conf.d/10-opcache.ini
+
+# Berikan izin binding ke port rendah
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.3
 
-RUN groupadd --force -g $WWWGROUP sail
-RUN useradd -ms /bin/bash --no-user-group -g $WWWGROUP -u 1337 sail
+# Buat user non-root untuk menjalankan aplikasi
+RUN groupadd --force -g ${WWWGROUP} sail
+RUN useradd -ms /bin/bash --no-user-group -g ${WWWGROUP} -u ${WWWUSER} sail
 
-COPY start-container /usr/local/bin/start-container
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY php.ini /etc/php/8.3/cli/conf.d/99-sail.ini
+# Salin script dan konfigurasi supervisor
+COPY ./docker/8.3/start-container /usr/local/bin/start-container
+COPY ./docker/8.3/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN chmod +x /usr/local/bin/start-container
 
+# Salin aplikasi
+COPY --from=builder /var/www/html /var/www/html
+
+RUN chown -R sail:sail /var/www/html/storage /var/www/html/bootstrap/cache \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Ports
 EXPOSE 80/tcp
 
+# Jalankan container
 ENTRYPOINT ["start-container"]

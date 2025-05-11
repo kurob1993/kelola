@@ -1,11 +1,12 @@
 services:
     app:
         build:
-            context: ./docker/8.3
-            dockerfile: Dockerfile
+            context: .
+            dockerfile: ./docker/8.3/Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
-        image: sail-8.3/app
+                WWWUSER: '${WWWUSER}'
+        image: kurob/iuran:latest
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
@@ -17,8 +18,10 @@ services:
             XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
             XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
             IGNITION_LOCAL_SITES_PATH: '${PWD}'
+        env_file:
+            - .env
         volumes:
-            - '.:/var/www/html'
+            - './storage:/var/www/html/storage'
         networks:
             - sail
         depends_on:
@@ -27,7 +30,7 @@ services:
     redis:
         image: 'redis:alpine'
         ports:
-            - '${FORWARD_REDIS_PORT:-6379}:6379'
+            - '${REDIS_PORT:-6379}:6379'
         volumes:
             - 'sail-redis:/data'
         networks:
@@ -63,7 +66,7 @@ services:
     pgsql:
         image: 'postgres:17'
         ports:
-            - '${FORWARD_DB_PORT:-5432}:5432'
+            - '${DB_PORT:-5432}:5432'
         environment:
             PGPASSWORD: '${DB_PASSWORD:-secret}'
             POSTGRES_DB: '${DB_DATABASE}'
