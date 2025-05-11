@@ -47,7 +47,7 @@ RUN npm install && npm run build
 # Aplikasi yang sebenarnya
 FROM ubuntu:24.04
 
-LABEL maintainer="Production Environment"
+LABEL maintainer="https://okuru.id"
 
 ARG WWWGROUP
 ARG WWWUSER
