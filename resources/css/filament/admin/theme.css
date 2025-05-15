@@ -31,7 +31,14 @@
 
     @apply lg:shadow-sm;
     @apply dark:lg:shadow-sm;
-    @apply px-0;
+
+    /*@apply rtl:pr-40;*/
+    @apply pr-0 rtl:pr-6;
+
+    /*@apply rtl:pl-40;*/
+    @apply pl-4 rtl:pl-0;
+
+    @apply py-4;
 }
 
 .fi-sidebar-header {
@@ -68,7 +75,7 @@
     @apply dark:ring-gray-950/5;
 
     a {
-        @apply rounded-none;
+        /*@apply rounded-none;*/
         @apply ps-5;
         @apply pe-7;
 

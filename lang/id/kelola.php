@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'all' => 'Semua'
+    'all' => 'Semua',
+    'nav.transaction' => 'Transaksi'
 ];

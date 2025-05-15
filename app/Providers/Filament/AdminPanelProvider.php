@@ -27,7 +27,7 @@ class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
-        $isRtl = __('filament-panels::layout.direction') === 'rtl';
+        $isRtl = $this->getDirectionFromLocale();
 
         return $panel
             ->default()
@@ -39,7 +39,7 @@ class AdminPanelProvider extends PanelProvider
             ->profile(isSimple: false)
             ->font('Plus Jakarta Sans', provider: GoogleFontProvider::class)
             ->colors([
-                'primary' => Color::Blue
+                'primary' => Color::Indigo
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -62,13 +62,13 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->sidebarWidth('16rem')
             ->maxContentWidth(MaxWidth::Full)
-            ->userMenuItems([
-                'profile' => MenuItem::make()->label('Edit profile'),
+//            ->userMenuItems([
+//                'profile' => MenuItem::make()->label('Edit profile'),
 //                'logout' => MenuItem::make()->label('Logout'),
 //                MenuItem::make()
 //                    ->label('Settings')
 //                    ->icon('heroicon-o-cog-6-tooth'),
-            ])
+//            ])
             ->authMiddleware([
                 Authenticate::class,
             ])
@@ -108,5 +108,14 @@ class AdminPanelProvider extends PanelProvider
                     ]),
             ])
             ->viteTheme('resources/css/filament/admin/theme.css');
+    }
+
+    protected function getDirectionFromLocale()
+    {
+        $rtlLocales = [
+            'ar', 'fa', 'he', 'ur', 'dv', 'ku', 'ps', 'sd', 'ug', 'yi'
+        ];
+
+        return in_array(app()->getLocale(), $rtlLocales);
     }
 }

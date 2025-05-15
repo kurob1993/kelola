@@ -25,11 +25,16 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    protected static ?string $navigationGroup = 'System Configuration';
+//    protected static ?string $navigationGroup = trans('filament-shield::filament-shield.nav.group');
 
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
     protected static ?int $navigationSort = 100;
+
+    public static function getNavigationGroup(): ?string
+    {
+        return __('filament-shield::filament-shield.nav.group'); // Ambil dari file lang
+    }
 
     public static function getNavigationBadge(): ?string
     {

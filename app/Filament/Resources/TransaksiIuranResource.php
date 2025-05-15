@@ -27,7 +27,11 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
 
     protected static ?int $navigationSort = 6;
 
-    protected static ?string $navigationGroup = 'Transaksi';
+//    protected static ?string $navigationGroup = 'Transaksi';
+    public static function getNavigationGroup(): ?string
+    {
+        return __('kelola.nav.transaction'); // Ambil dari file lang
+    }
 
     public static function form(Form $form): Form
     {
