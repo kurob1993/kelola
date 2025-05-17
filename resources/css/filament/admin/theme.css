@@ -20,6 +20,8 @@
 
 
 .fi-sidebar-nav {
+    scrollbar-gutter: auto !important;
+
     @apply bg-primary-700;
     @apply dark:bg-gray-900;
 
