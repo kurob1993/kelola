@@ -33,10 +33,10 @@
     @apply dark:lg:shadow-sm;
 
     /*@apply rtl:pr-40;*/
-    @apply pr-0 rtl:pr-6;
+    @apply pr-3 rtl:pr-4;
 
     /*@apply rtl:pl-40;*/
-    @apply pl-4 rtl:pl-0;
+    @apply pl-4 rtl:pl-3;
 
     @apply py-4;
 }
