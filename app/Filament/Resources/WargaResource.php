@@ -38,18 +38,23 @@ class WargaResource extends Resource
                     'sm' => 1,
                     'md' => 2,
                 ])->schema([
-                    Forms\Components\TextInput::make('nama')->required()->label('Nama'),
-                    Forms\Components\Select::make('blok_id')
-                        ->label('Blok')
-                        ->options(Blok::all()->pluck('nama_blok', 'id'))
-                        ->required(),
                     Forms\Components\Select::make('perumahan_id')
+                        ->columnSpan(2)
                         ->label('Perumahan')
                         ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
                         ->required(),
+                    Forms\Components\TextInput::make('nama')->required()->label('Nama'),
+                    Forms\Components\Select::make('blok_id')
+                        ->label('Blok')
+                        ->relationship('blok', 'nama_blok')
+                        ->preload()
+                        ->searchable()
+                        ->required(),
                     Forms\Components\Select::make('gang_id')
                         ->label('Gang')
-                        ->options(Gang::all()->pluck('nama', 'id'))
+                        ->relationship('gang', 'nama')
+                        ->searchable()
+                        ->preload()
                         ->required(),
                     Forms\Components\TextInput::make('nomor_rumah')->required()->label('Nomor Rumah'),
                     Forms\Components\TextInput::make('no_telepon')

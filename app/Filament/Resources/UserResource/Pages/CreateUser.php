@@ -12,8 +12,6 @@ class CreateUser extends CreateRecord
 
     protected function getRedirectUrl(): string
     {
-        $resource = static::getResource();
-
-        return $resource::getUrl('index');
+        return static::getResource()::getUrl('index'); // ke table
     }
 }

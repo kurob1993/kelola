@@ -9,4 +9,9 @@ use Filament\Resources\Pages\CreateRecord;
 class CreatePengurus extends CreateRecord
 {
     protected static string $resource = PengurusResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('index'); // ke table
+    }
 }

@@ -9,4 +9,9 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateTransaksiIuran extends CreateRecord
 {
     protected static string $resource = TransaksiIuranResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('index'); // ke table
+    }
 }
