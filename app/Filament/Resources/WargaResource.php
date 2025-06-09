@@ -61,7 +61,7 @@ class WargaResource extends Resource
                         ->default('+62 ')
                         ->required()
                         ->label('No Telepon'),
-                    Forms\Components\TextInput::make('email')->email()->label('Email'),
+                    Forms\Components\TextInput::make('email')->email()->required()->label('Email'),
                 ])
             ]),
 
@@ -86,6 +86,7 @@ class WargaResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

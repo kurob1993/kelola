@@ -95,7 +95,7 @@ class User extends Authenticatable implements FilamentUser
         return Auth::check();
     }
 
-    public function warga()
+    public function warga(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Warga::class);
     }

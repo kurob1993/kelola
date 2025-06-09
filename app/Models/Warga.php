@@ -13,6 +13,13 @@ class Warga extends Model
         'blok_id', 'nama', 'nomor_rumah', 'no_telepon', 'email', 'tanggal_daftar', 'gang_id'
     ];
 
+    protected static function booted()
+    {
+        static::deleting(function ($warga) {
+            $warga->user()->delete();
+        });
+    }
+
     public function blok()
     {
         return $this->belongsTo(Blok::class);

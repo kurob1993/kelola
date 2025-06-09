@@ -12,24 +12,24 @@
     $items = \Illuminate\Support\Arr::except($items, ['account', 'logout', 'profile']);
 @endphp
 
-<div>
-    <x-icon name="heroicon-o-bell" class="w-6 h-6 cursor-pointer"/>
-</div>
+{{--<div>--}}
+{{--    <x-icon name="heroicon-o-bell" class="w-6 h-6 cursor-pointer"/>--}}
+{{--</div>--}}
 
-<x-filament::icon-button
-    icon="heroicon-o-envelope"
-    label="Mark notifications as read"
-    badge-color="danger"
-    color="transparent"
-    :attributes="
-        \Filament\Support\prepare_inherited_attributes($attributes)
-            ->class(['w-6', 'h-6'])
-    "
->
-    <x-slot name="badge">
-        3
-    </x-slot>
-</x-filament::icon-button>
+{{--<x-filament::icon-button--}}
+{{--    icon="heroicon-o-envelope"--}}
+{{--    label="Mark notifications as read"--}}
+{{--    badge-color="danger"--}}
+{{--    color="transparent"--}}
+{{--    :attributes="--}}
+{{--        \Filament\Support\prepare_inherited_attributes($attributes)--}}
+{{--            ->class(['w-6', 'h-6'])--}}
+{{--    "--}}
+{{-->--}}
+{{--    <x-slot name="badge">--}}
+{{--        3--}}
+{{--    </x-slot>--}}
+{{--</x-filament::icon-button>--}}
 
 {{ \Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::USER_MENU_BEFORE) }}
 

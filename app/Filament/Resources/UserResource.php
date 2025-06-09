@@ -81,17 +81,24 @@ class UserResource extends Resource
                     ->multiple(),
             ])
             ->actions([
-                Action::make('changeRole')
+                Action::make('changePassword')
                     ->form([
-                        Select::make('roles')
-                            ->relationship('roles', 'name')
-                            ->multiple()
-                            ->preload()
-                            ->searchable(),
-                    ])->closeModalByClickingAway(false)
-                    ->icon('heroicon-o-shield-check')
+                        Password::make('password')
+                            ->confirmed()
+                            ->label('Password'),
+                        Password::make('password_confirmation')
+                            ->dehydrated(false),
+                    ])
+                    ->action(function (array $data, User $record) {
+                        $record->password = bcrypt($data['password']);
+                        $record->save();
+                    })
+                    ->closeModalByClickingAway(false)
+                    ->icon('heroicon-o-key')
                     ->color('success')
-                    ->iconButton(),
+                    ->iconButton()
+                    ->tooltip('Ganti Password'),
+
                 Tables\Actions\ViewAction::make()->iconButton()->tooltip('View'),
                 Tables\Actions\EditAction::make()->iconButton()->modal()
                     ->tooltip('Edit'),
@@ -102,8 +109,8 @@ class UserResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\ForceDeleteBulkAction::make(),
-                    Tables\Actions\RestoreBulkAction::make(),
+//                    Tables\Actions\ForceDeleteBulkAction::make(),
+//                    Tables\Actions\RestoreBulkAction::make(),
                 ]),
             ])
             ->recordAction(Tables\Actions\ViewAction::class)
@@ -177,7 +184,17 @@ class UserResource extends Resource
             TextInput::make('email')
                 ->email()
                 ->required()
+                ->autocomplete(false)
                 ->unique(ignoreRecord: true),
+
+            Select::make('role')
+                ->label('Role')
+                ->relationship('roles', 'name')
+                ->preload()
+                ->required()
+                ->searchable()
+                ->multiple(false)
+                ->default(fn(?User $record) => $record?->roles()->first()?->id ?? null),
 
             Password::make('password')
                 ->confirmed()
@@ -187,13 +204,6 @@ class UserResource extends Resource
             Password::make('password_confirmation')
                 ->visible(fn(string $context): bool => $context === 'create')
                 ->dehydrated(false),
-
-            Select::make('roles')
-                ->relationship('roles', 'name')
-                ->multiple()
-                ->preload()
-                ->searchable(),
-
         ];
     }
 }

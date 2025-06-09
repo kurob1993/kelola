@@ -18,10 +18,10 @@ namespace App\Models{
  * @property int $id
  * @property int $perumahan_id
  * @property string $nama_blok
- * @property int|null $kordinator_id
- * @property int|null $rt_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int|null $rt_id
+ * @property int|null $kordinator_id
  * @property-read \App\Models\Perumahan $perumahan
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Warga> $warga
  * @property-read int|null $warga_count
@@ -70,9 +70,9 @@ namespace App\Models{
  * @property numeric $nominal
  * @property string|null $deskripsi
  * @property string $periode
- * @property int|null $gang_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int|null $gang_id
  * @property-read \App\Models\Gang|null $gang
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TransaksiIuran> $transaksiIuran
  * @property-read int|null $transaksi_iuran_count
@@ -152,7 +152,7 @@ namespace App\Models{
  * @property int $iuran_id
  * @property string $tanggal_bayar
  * @property string $status_bayar
- * @property string $metode_bayar
+ * @property string|null $metode_bayar
  * @property string|null $bukti_bayar
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -225,14 +225,13 @@ namespace App\Models{
  * @property string $nama
  * @property int $perumahan_id
  * @property int $blok_id
- * @property string|null $gang_id
  * @property string $nomor_rumah
- * @property \App\Models\Gang|null $gang
  * @property string $no_telepon
  * @property string|null $email
- * @property string $tanggal_daftar
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \App\Models\Gang|null $gang
+ * @property int|null $gang_id
  * @property-read \App\Models\Blok $blok
  * @property-read \App\Models\Pengurus|null $pengurus
  * @property-read \App\Models\Perumahan $perumahan
@@ -252,7 +251,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNoTelepon($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNomorRumah($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga wherePerumahanId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereTanggalDaftar($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereUpdatedAt($value)
  */
 	class Warga extends \Eloquent {}
