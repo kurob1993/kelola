@@ -4,7 +4,9 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\TransaksiIuranResource\Pages;
 use App\Filament\Resources\TransaksiIuranResource\RelationManagers;
+use App\Models\Gang;
 use App\Models\Iuran;
+use App\Models\Perumahan;
 use App\Models\TransaksiIuran;
 use App\Models\Warga;
 use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
@@ -16,13 +18,14 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 
 class TransaksiIuranResource extends Resource implements HasShieldPermissions
 {
     protected static ?string $model = TransaksiIuran::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-banknotes';
 
     protected static ?string $pluralLabel = 'Iuran Warga';
 
@@ -108,11 +111,26 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                     ])
                     ->label('Status Bayar'),
 
-                // filter by nama warga
-                Tables\Filters\SelectFilter::make('warga_id')
-                    ->options(Warga::all()->pluck('nama', 'id'))
+                Tables\Filters\SelectFilter::make('perumahan_id_filter')
+                    ->label('Perumahan')
+                    ->options(fn() => Perumahan::pluck('nama_perumahan', 'id'))
                     ->searchable()
-                    ->label('Warga'),
+                    ->modifyQueryUsing(function (Builder $query, $state) {
+                        if ($state['value']) {
+                            $query->whereHas('warga.gang', function ($q) use ($state) {
+                                $q->where('perumahan_id', $state['value']);
+                            });
+                        }
+                    }),
+
+                // filter by gang
+                Tables\Filters\SelectFilter::make('gang_id')
+                    ->label('Gang')
+                    ->options(Gang::all()->pluck('nama', 'id'))
+                    ->searchable()
+                    ->modifyQueryUsing(function (Builder $query, $state) {
+                        return $query->whereHas('warga', fn($q) => $state['value'] ? $q->where('gang_id', $state['value']) : null);
+                    }),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
