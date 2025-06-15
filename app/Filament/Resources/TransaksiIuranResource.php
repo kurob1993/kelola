@@ -16,6 +16,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
+use Illuminate\Support\Carbon;
 
 class TransaksiIuranResource extends Resource implements HasShieldPermissions
 {
@@ -46,20 +47,20 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                         ->options(Warga::all()->pluck('nama', 'id'))
                         ->searchable()
                         ->required(),
-                    Forms\Components\Select::make('iuran_id')
-                        ->label('Iuran')
-                        ->options(Iuran::all()->pluck('nama_iuran', 'id')->mapWithKeys(function ($nama, $id) {
-                            $iuran = Iuran::find($id);
-
-                            return [$id => "$nama - Rp " . number_format($iuran->nominal, 0, ',', '.')];
-                        }))
+                    Forms\Components\DatePicker::make('tanggal_bayar')
+                        ->default(Carbon::now()->endOfMonth()->toDateString())
+                        ->label('Jatuh Tempo')
                         ->required(),
-                    Forms\Components\DatePicker::make('tanggal_bayar')->label('Jatuh Tempo')->required(),
                     Forms\Components\Select::make('status_bayar')
+                        ->default('belum lunas')
                         ->options(['lunas' => 'Lunas', 'belum lunas' => 'Belum Lunas', 'tertunda' => 'Tertunda'])
                         ->required()
                         ->label('Status Bayar'),
+                    Forms\Components\Select::make('metode_bayar')
+                        ->options(['cash', 'transfer', 'online'])
+                        ->label('Status Bayar'),
                     Forms\Components\FileUpload::make('bukti_bayar')
+                        ->columnSpan(['md' => 2])
                         ->label('Bukti Bayar')
                         ->image() // Membatasi hanya untuk gambar
                         ->directory('bukti_bayar') // Folder tempat file akan disimpan
@@ -77,10 +78,10 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('warga.nama')->label('Warga')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('iuran.nama_iuran')->label('Iuran')->searchable(),
                 Tables\Columns\TextColumn::make('tanggal_bayar')->label('Jatuh Tempo')->date('d F Y'),
-                Tables\Columns\TextColumn::make('iuran.nominal')
-                    ->numeric(thousandsSeparator: '.')
+                Tables\Columns\TextColumn::make('metode_bayar')->label('Metode Bayar'),
+                Tables\Columns\TextColumn::make('total_iuran')
+                    ->money('Rp.')
                     ->label('Nominal'),
                 Tables\Columns\TextColumn::make('status_bayar')
                     ->formatStateUsing(fn(string $state): string => strtoupper($state))
@@ -115,6 +116,7 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\Action::make('bukti_bayar')
                     ->icon('heroicon-o-eye')
                     ->modalContent(fn($record) => view('components.transaksi.iuran.modal-bukti-bayar', [
@@ -134,7 +136,7 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\TransaksiIuranDetailsRelationManager::class,
         ];
     }
 

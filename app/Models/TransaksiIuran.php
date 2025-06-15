@@ -11,7 +11,7 @@ class TransaksiIuran extends Model
     use HasFactory;
 
     protected $fillable = [
-        'warga_id', 'iuran_id', 'tanggal_bayar', 'status_bayar', 'bukti_bayar'
+        'warga_id', 'tanggal_bayar', 'status_bayar', 'bukti_bayar'
     ];
 
     public function warga()
@@ -27,5 +27,15 @@ class TransaksiIuran extends Model
     public function getNamaTanggalAttribute()
     {
         return $this->warga->nama . ' - ' . Carbon::parse($this->tanggal_bayar)->format('d M Y');
+    }
+
+    public function transaksiIuranDetails()
+    {
+        return $this->hasMany(TransaksiIuranDetail::class);
+    }
+
+    public function getTotalIuranAttribute()
+    {
+        return $this->transaksiIuranDetails()->sum('jumlah');
     }
 }

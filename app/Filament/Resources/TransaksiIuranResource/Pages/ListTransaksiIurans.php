@@ -6,6 +6,7 @@ use App\Filament\Resources\TransaksiIuranResource;
 use App\Models\Iuran;
 use App\Models\Perumahan;
 use App\Models\TransaksiIuran;
+use App\Models\TransaksiIuranDetail;
 use App\Models\Warga;
 use Filament\Actions;
 use Filament\Actions\Action;
@@ -33,7 +34,7 @@ class ListTransaksiIurans extends ListRecords
                         ->required(),
                     DatePicker::make('date')
                         ->label('Pilih Tanggal')
-                        ->default(Carbon::now())
+                        ->default(Carbon::now()->endOfMonth()->toDateString())
                         ->required(),
                 ])
                 ->action(function (array $data) {
@@ -58,26 +59,30 @@ class ListTransaksiIurans extends ListRecords
         if (count($TransIuran) === 0) {
             $wargas = Warga::where('perumahan_id', $data['perumahan'])->get();
             foreach ($wargas as $warga) {
+                $transaskiIuran = new TransaksiIuran();
+                $transaskiIuran->warga_id = $warga->id;
+                $transaskiIuran->tanggal_bayar = $data['date'];
+                $transaskiIuran->status_bayar = 'belum lunas';
+                $transaskiIuran->save();
+
                 // Logika untuk menghasilkan data transaksi iuran
                 $iurans = Iuran::all();
 
                 foreach ($iurans as $iuran) {
                     if($iuran->gang_id === null) {
-                        TransaksiIuran::create([
-                            'warga_id' => $warga->id,
-                            'iuran_id' => $iuran->id,
-                            'tanggal_bayar' => $data['date'],
-                            'status_bayar' => 'belum lunas',
-                        ]);
+                        $transaskiIuranDetail = new TransaksiIuranDetail();
+                        $transaskiIuranDetail->transaksi_iuran_id = $transaskiIuran->id;
+                        $transaskiIuranDetail->iuran_id = $iuran->id;
+                        $transaskiIuranDetail->jumlah = $iuran->nominal;
+                        $transaskiIuranDetail->save();
                     }
 
                     if($warga->gang_id === $iuran->gang_id) {
-                        TransaksiIuran::create([
-                            'warga_id' => $warga->id,
-                            'iuran_id' => $iuran->id,
-                            'tanggal_bayar' => $data['date'],
-                            'status_bayar' => 'belum lunas',
-                        ]);
+                        $transaskiIuranDetail = new TransaksiIuranDetail();
+                        $transaskiIuranDetail->transaksi_iuran_id = $transaskiIuran->id;
+                        $transaskiIuranDetail->iuran_id = $iuran->id;
+                        $transaskiIuranDetail->jumlah = $iuran->nominal;
+                        $transaskiIuranDetail->save();
                     }
                 }
             }

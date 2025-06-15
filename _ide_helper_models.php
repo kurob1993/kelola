@@ -149,7 +149,6 @@ namespace App\Models{
  *
  * @property int $id
  * @property int $warga_id
- * @property int $iuran_id
  * @property string $tanggal_bayar
  * @property string $status_bayar
  * @property string|null $metode_bayar
@@ -157,7 +156,9 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read mixed $nama_tanggal
- * @property-read \App\Models\Iuran $iuran
+ * @property-read \App\Models\Iuran|null $iuran
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TransaksiIuranDetail> $transaksiIuranDetails
+ * @property-read int|null $transaksi_iuran_details_count
  * @property-read \App\Models\Warga $warga
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran newQuery()
@@ -165,7 +166,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereBuktiBayar($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereIuranId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereMetodeBayar($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereStatusBayar($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereTanggalBayar($value)
@@ -173,6 +173,30 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereWargaId($value)
  */
 	class TransaksiIuran extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property int $transaksi_iuran_id
+ * @property int $iuran_id
+ * @property string|null $jumlah
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Iuran $iuran
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail whereIuranId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail whereJumlah($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail whereTransaksiIuranId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail whereUpdatedAt($value)
+ */
+	class TransaksiIuranDetail extends \Eloquent {}
 }
 
 namespace App\Models{
