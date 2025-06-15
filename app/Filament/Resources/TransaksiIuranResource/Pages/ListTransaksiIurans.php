@@ -62,12 +62,23 @@ class ListTransaksiIurans extends ListRecords
                 $iurans = Iuran::all();
 
                 foreach ($iurans as $iuran) {
-                    TransaksiIuran::create([
-                        'warga_id' => $warga->id,
-                        'iuran_id' => $iuran->id,
-                        'tanggal_bayar' => $data['date'],
-                        'status_bayar' => 'belum lunas',
-                    ]);
+                    if($iuran->gang_id === null) {
+                        TransaksiIuran::create([
+                            'warga_id' => $warga->id,
+                            'iuran_id' => $iuran->id,
+                            'tanggal_bayar' => $data['date'],
+                            'status_bayar' => 'belum lunas',
+                        ]);
+                    }
+
+                    if($warga->gang_id === $iuran->gang_id) {
+                        TransaksiIuran::create([
+                            'warga_id' => $warga->id,
+                            'iuran_id' => $iuran->id,
+                            'tanggal_bayar' => $data['date'],
+                            'status_bayar' => 'belum lunas',
+                        ]);
+                    }
                 }
             }
 
