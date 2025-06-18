@@ -44,9 +44,9 @@ class WargaResource extends Resource
                         ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
                         ->required(),
                     Forms\Components\TextInput::make('nama')->required()->label('Nama'),
-                    Forms\Components\Select::make('blok_id')
+                    Forms\Components\Select::make('blok_detail_id')
                         ->label('Blok')
-                        ->relationship('blok', 'nama_blok')
+                        ->relationship('blokDetail', 'nama_blok')
                         ->preload()
                         ->searchable()
                         ->required(),
@@ -75,7 +75,7 @@ class WargaResource extends Resource
                 Tables\Columns\TextColumn::make('nama')->label('Nama')->searchable(),
                 Tables\Columns\TextColumn::make('perumahan.nama_perumahan')->label('Perumahan')->searchable(),
                 Tables\Columns\TextColumn::make('gang.nama')->label('Gang')->searchable(),
-                Tables\Columns\TextColumn::make('blok.nama_blok')->label('Blok')->sortable(),
+                Tables\Columns\TextColumn::make('blokDetail.nama_blok')->label('Blok')->sortable(),
                 Tables\Columns\TextColumn::make('nomor_rumah')->label('Nomor Rumah'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Tanggal Daftar')

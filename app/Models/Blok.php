@@ -20,4 +20,8 @@ class Blok extends Model
     {
         return $this->hasMany(Warga::class);
     }
+
+    public function blokDetail() {
+        return $this->hasMany(BlokDetail::class);
+    }
 }

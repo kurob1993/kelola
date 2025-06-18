@@ -49,6 +49,7 @@ class BlokResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultSort('nama_blok', 'asc')
             ->columns([
                 Tables\Columns\TextColumn::make('perumahan.nama_perumahan')->label('Perumahan')->sortable(),
                 Tables\Columns\TextColumn::make('nama_blok')->label('Nama Blok')->searchable(),
@@ -57,6 +58,7 @@ class BlokResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
@@ -69,7 +71,7 @@ class BlokResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\BlokDetailRelationManager::class,
         ];
     }
 

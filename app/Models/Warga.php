@@ -10,7 +10,7 @@ class Warga extends Model
     use HasFactory;
 
     protected $fillable = [
-        'blok_id', 'nama', 'nomor_rumah', 'no_telepon', 'email', 'tanggal_daftar', 'gang_id'
+        'blok_detail_id', 'nama', 'nomor_rumah', 'no_telepon', 'email', 'tanggal_daftar', 'gang_id'
     ];
 
     protected static function booted()
@@ -20,9 +20,9 @@ class Warga extends Model
         });
     }
 
-    public function blok()
+    public function blokDetail()
     {
-        return $this->belongsTo(Blok::class);
+        return $this->belongsTo(BlokDetail::class);
     }
 
     public function perumahan()
