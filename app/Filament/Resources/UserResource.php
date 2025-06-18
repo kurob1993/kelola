@@ -170,12 +170,12 @@ class UserResource extends Resource
                     modifyQueryUsing: function (Builder $query, $state) {
                         $query->orWhere('nama', 'like', "%{$state}%")
                             ->orWhere('nomor_rumah', 'like', "%{$state}%")
-                            ->orWhereHas('blok', function ($query) use ($state) {
+                            ->orWhereHas('blokDetail', function ($query) use ($state) {
                                 $query->where('nama_blok', 'like', "%{$state}%");
                             });
                     }
                 )
-                ->getOptionLabelFromRecordUsing(fn(Warga $record) => "{$record->nama} - {$record->blok->nama_blok}{$record->nomor_rumah}")
+                ->getOptionLabelFromRecordUsing(fn(Warga $record) => "{$record->nama} - {$record->blokDetail->nama_blok}{$record->nomor_rumah}")
                 ->preload()
                 ->searchable()
                 ->live()

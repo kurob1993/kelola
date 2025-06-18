@@ -747,6 +747,102 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2025-03-17 06:16:21',
                 'updated_at' => '2025-03-17 06:16:21',
             ),
+            91 => 
+            array (
+                'id' => 92,
+                'name' => 'view_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            92 => 
+            array (
+                'id' => 93,
+                'name' => 'view_any_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            93 => 
+            array (
+                'id' => 94,
+                'name' => 'create_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            94 => 
+            array (
+                'id' => 95,
+                'name' => 'update_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            95 => 
+            array (
+                'id' => 96,
+                'name' => 'restore_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            96 => 
+            array (
+                'id' => 97,
+                'name' => 'restore_any_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            97 => 
+            array (
+                'id' => 98,
+                'name' => 'replicate_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            98 => 
+            array (
+                'id' => 99,
+                'name' => 'reorder_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            99 => 
+            array (
+                'id' => 100,
+                'name' => 'delete_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            100 => 
+            array (
+                'id' => 101,
+                'name' => 'delete_any_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            101 => 
+            array (
+                'id' => 102,
+                'name' => 'force_delete_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
+            102 => 
+            array (
+                'id' => 103,
+                'name' => 'force_delete_any_pengurus',
+                'guard_name' => 'web',
+                'created_at' => '2025-06-18 15:35:47',
+                'updated_at' => '2025-06-18 15:35:47',
+            ),
         ));
         
         
