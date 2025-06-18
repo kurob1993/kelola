@@ -20,13 +20,15 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
         $this->call(RolesTableSeeder::class);
+        $this->call(PermissionsTableSeeder::class);
         $this->call(RoleHasPermissionsTableSeeder::class);
+        $this->call(PerumahansTableSeeder::class);
         $this->call(BloksTableSeeder::class);
+        $this->call(BlokDetailsTableSeeder::class);
         $this->call(GangsTableSeeder::class);
         $this->call(IuransTableSeeder::class);
-        $this->call(PerumahansTableSeeder::class);
         $this->call(WargasTableSeeder::class);
         $this->call(UsersTableSeeder::class);
-        $this->call(BlokDetailsTableSeeder::class);
+        $this->call(ModelHasRolesTableSeeder::class);
     }
 }

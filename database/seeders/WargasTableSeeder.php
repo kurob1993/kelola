@@ -14,17 +14,17 @@ class WargasTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('wargas')->delete();
-        
+
         \DB::table('wargas')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'nama' => 'BAPONG',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'bapong@gmail.com',
@@ -33,12 +33,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 3,
                 'nama' => 'NANANG',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'nanang@gmail.com',
@@ -47,12 +47,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 4,
                 'nama' => 'SAIFUL',
                 'perumahan_id' => 1,
-                'blok_id' => 17,
+                'blok_detail_id' => 17,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'saiful@gmail.com',
@@ -61,12 +61,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 6,
                 'nama' => 'EKO',
                 'perumahan_id' => 1,
-                'blok_id' => 17,
+                'blok_detail_id' => 17,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'eko@gmail.com',
@@ -75,12 +75,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 7,
                 'nama' => 'VIA',
                 'perumahan_id' => 1,
-                'blok_id' => 17,
+                'blok_detail_id' => 17,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'via@gmail.com',
@@ -89,12 +89,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 8,
                 'nama' => 'MUSTAKIM',
                 'perumahan_id' => 1,
-                'blok_id' => 18,
+                'blok_detail_id' => 18,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'mustakim@gmail.com',
@@ -103,12 +103,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 9,
                 'nama' => 'YASA ',
                 'perumahan_id' => 1,
-                'blok_id' => 18,
+                'blok_detail_id' => 18,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'yasa @gmail.com',
@@ -117,12 +117,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 10,
                 'nama' => 'ALI',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'ali@gmail.com',
@@ -131,12 +131,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 12,
                 'nama' => 'MEDI',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'medi@gmail.com',
@@ -145,12 +145,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 13,
                 'nama' => 'RAHMAT',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'rahmat@gmail.com',
@@ -159,12 +159,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 14,
                 'nama' => 'DEDI',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'dedi@gmail.com',
@@ -173,12 +173,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 15,
                 'nama' => 'NGONTRAK',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'ngontrak@gmail.com',
@@ -187,12 +187,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 16,
                 'nama' => 'BAYU',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'bayu@gmail.com',
@@ -201,12 +201,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 17,
                 'nama' => 'PONO',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'pono@gmail.com',
@@ -215,12 +215,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 18,
                 'nama' => 'FAHRUL',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'fahrul@gmail.com',
@@ -229,12 +229,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 19,
                 'nama' => 'LANANG',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'lanang@gmail.com',
@@ -243,12 +243,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            16 => 
+            16 =>
             array (
                 'id' => 21,
                 'nama' => 'YAHYA',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'yahya@gmail.com',
@@ -257,12 +257,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            17 => 
+            17 =>
             array (
                 'id' => 22,
                 'nama' => 'EKO',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'eko@gmail.com',
@@ -271,12 +271,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            18 => 
+            18 =>
             array (
                 'id' => 23,
                 'nama' => 'RESTU',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'restu@gmail.com',
@@ -285,12 +285,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            19 => 
+            19 =>
             array (
                 'id' => 24,
                 'nama' => 'YAYAT',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'yayat@gmail.com',
@@ -299,12 +299,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            20 => 
+            20 =>
             array (
                 'id' => 25,
                 'nama' => 'ROHAEMIN',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'rohaemin@gmail.com',
@@ -313,12 +313,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            21 => 
+            21 =>
             array (
                 'id' => 26,
                 'nama' => 'PUJI',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'puji@gmail.com',
@@ -327,12 +327,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            22 => 
+            22 =>
             array (
                 'id' => 28,
                 'nama' => 'RUSLAN',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'ruslan@gmail.com',
@@ -341,12 +341,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            23 => 
+            23 =>
             array (
                 'id' => 29,
                 'nama' => 'MAMAS',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'mamas@gmail.com',
@@ -355,12 +355,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            24 => 
+            24 =>
             array (
                 'id' => 30,
                 'nama' => 'ARIFIN',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'arifin@gmail.com',
@@ -369,12 +369,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            25 => 
+            25 =>
             array (
                 'id' => 31,
                 'nama' => 'MAKSUS',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'maksus@gmail.com',
@@ -383,12 +383,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            26 => 
+            26 =>
             array (
                 'id' => 32,
                 'nama' => 'IGUN',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'igun@gmail.com',
@@ -397,12 +397,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            27 => 
+            27 =>
             array (
                 'id' => 33,
                 'nama' => 'ARI',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'ari@gmail.com',
@@ -411,12 +411,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            28 => 
+            28 =>
             array (
                 'id' => 35,
                 'nama' => 'IMAM',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'imam@gmail.com',
@@ -425,12 +425,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            29 => 
+            29 =>
             array (
                 'id' => 36,
                 'nama' => 'TITO',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'tito@gmail.com',
@@ -439,12 +439,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            30 => 
+            30 =>
             array (
                 'id' => 37,
                 'nama' => 'RIYAN',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'riyan@gmail.com',
@@ -453,12 +453,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            31 => 
+            31 =>
             array (
                 'id' => 38,
                 'nama' => 'IKSAN',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'iksan@gmail.com',
@@ -467,12 +467,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            32 => 
+            32 =>
             array (
                 'id' => 39,
                 'nama' => 'EKA',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'eka@gmail.com',
@@ -481,12 +481,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            33 => 
+            33 =>
             array (
                 'id' => 40,
                 'nama' => 'YUSUF',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'yusuf@gmail.com',
@@ -495,12 +495,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            34 => 
+            34 =>
             array (
                 'id' => 42,
                 'nama' => 'MAHER',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'maher@gmail.com',
@@ -509,12 +509,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            35 => 
+            35 =>
             array (
                 'id' => 43,
                 'nama' => 'AYIK',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'ayik@gmail.com',
@@ -523,12 +523,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            36 => 
+            36 =>
             array (
                 'id' => 44,
                 'nama' => 'FAISAL',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'faisal@gmail.com',
@@ -537,12 +537,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            37 => 
+            37 =>
             array (
                 'id' => 45,
                 'nama' => 'RIDHO',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'ridho@gmail.com',
@@ -551,12 +551,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            38 => 
+            38 =>
             array (
                 'id' => 46,
                 'nama' => 'HARIS',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'haris@gmail.com',
@@ -565,12 +565,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            39 => 
+            39 =>
             array (
                 'id' => 48,
                 'nama' => 'ADIT',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'adit@gmail.com',
@@ -579,12 +579,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            40 => 
+            40 =>
             array (
                 'id' => 49,
                 'nama' => 'HAYAT',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'hayat@gmail.com',
@@ -593,12 +593,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            41 => 
+            41 =>
             array (
                 'id' => 50,
                 'nama' => 'MANTO',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'manto@gmail.com',
@@ -607,12 +607,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            42 => 
+            42 =>
             array (
                 'id' => 51,
                 'nama' => 'TIKO',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'tiko@gmail.com',
@@ -621,12 +621,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            43 => 
+            43 =>
             array (
                 'id' => 52,
                 'nama' => 'BIMBA',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'bimba@gmail.com',
@@ -635,12 +635,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            44 => 
+            44 =>
             array (
                 'id' => 54,
                 'nama' => 'NOVA',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'nova@gmail.com',
@@ -649,12 +649,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            45 => 
+            45 =>
             array (
                 'id' => 55,
                 'nama' => 'AKMAL',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'akmal@gmail.com',
@@ -663,12 +663,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            46 => 
+            46 =>
             array (
                 'id' => 56,
                 'nama' => 'PA. DE KARSI',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'pa. de karsi@gmail.com',
@@ -677,12 +677,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            47 => 
+            47 =>
             array (
                 'id' => 57,
                 'nama' => 'EKY',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'eky@gmail.com',
@@ -691,12 +691,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            48 => 
+            48 =>
             array (
                 'id' => 58,
                 'nama' => 'RINO',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'rino@gmail.com',
@@ -705,12 +705,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            49 => 
+            49 =>
             array (
                 'id' => 59,
                 'nama' => 'RUDI',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'rudi@gmail.com',
@@ -719,12 +719,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            50 => 
+            50 =>
             array (
                 'id' => 61,
                 'nama' => 'SANDI',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'sandi@gmail.com',
@@ -733,12 +733,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            51 => 
+            51 =>
             array (
                 'id' => 62,
                 'nama' => 'RIKY',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => ' 27/28',
                 'no_telepon' => '0',
                 'email' => 'riky@gmail.com',
@@ -747,12 +747,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            52 => 
+            52 =>
             array (
                 'id' => 63,
                 'nama' => 'DEDE',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'dede@gmail.com',
@@ -761,12 +761,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            53 => 
+            53 =>
             array (
                 'id' => 64,
                 'nama' => 'HARIS',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'haris@gmail.com',
@@ -775,12 +775,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            54 => 
+            54 =>
             array (
                 'id' => 65,
                 'nama' => 'SANTOSO',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => ' 07/08 ',
                 'no_telepon' => '0',
                 'email' => 'santoso@gmail.com',
@@ -789,12 +789,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            55 => 
+            55 =>
             array (
                 'id' => 66,
                 'nama' => 'RIZAL',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'rizal@gmail.com',
@@ -803,12 +803,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            56 => 
+            56 =>
             array (
                 'id' => 68,
                 'nama' => 'ARI',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'ari@gmail.com',
@@ -817,12 +817,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            57 => 
+            57 =>
             array (
                 'id' => 69,
                 'nama' => 'SONAY',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'sonay@gmail.com',
@@ -831,12 +831,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            58 => 
+            58 =>
             array (
                 'id' => 70,
                 'nama' => 'IRKA',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'irka@gmail.com',
@@ -845,12 +845,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            59 => 
+            59 =>
             array (
                 'id' => 71,
                 'nama' => 'SOPYAN/RARA',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'sopyan/rara@gmail.com',
@@ -859,12 +859,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            60 => 
+            60 =>
             array (
                 'id' => 73,
                 'nama' => 'DANIUS',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'danius@gmail.com',
@@ -873,12 +873,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            61 => 
+            61 =>
             array (
                 'id' => 75,
                 'nama' => 'OPAN',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'opan@gmail.com',
@@ -887,12 +887,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            62 => 
+            62 =>
             array (
                 'id' => 76,
                 'nama' => 'AGUS',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'agus@gmail.com',
@@ -901,12 +901,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            63 => 
+            63 =>
             array (
                 'id' => 77,
                 'nama' => 'ULUM',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'ulum@gmail.com',
@@ -915,12 +915,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            64 => 
+            64 =>
             array (
                 'id' => 79,
                 'nama' => 'ANDI',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'andi@gmail.com',
@@ -929,12 +929,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            65 => 
+            65 =>
             array (
                 'id' => 80,
                 'nama' => 'SOFYAN',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'sofyan@gmail.com',
@@ -943,12 +943,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            66 => 
+            66 =>
             array (
                 'id' => 81,
                 'nama' => 'SUBHI',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'subhi@gmail.com',
@@ -957,12 +957,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            67 => 
+            67 =>
             array (
                 'id' => 82,
                 'nama' => 'MAUREN',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'mauren@gmail.com',
@@ -971,12 +971,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            68 => 
+            68 =>
             array (
                 'id' => 83,
                 'nama' => 'FARIS',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'faris@gmail.com',
@@ -985,12 +985,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            69 => 
+            69 =>
             array (
                 'id' => 84,
                 'nama' => 'FAHMI',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'fahmi@gmail.com',
@@ -999,12 +999,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            70 => 
+            70 =>
             array (
                 'id' => 86,
                 'nama' => 'HAMIJI',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '27',
                 'no_telepon' => '0',
                 'email' => 'hamiji@gmail.com',
@@ -1013,12 +1013,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            71 => 
+            71 =>
             array (
                 'id' => 87,
                 'nama' => 'IRAWAN',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '28',
                 'no_telepon' => '0',
                 'email' => 'irawan@gmail.com',
@@ -1027,12 +1027,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            72 => 
+            72 =>
             array (
                 'id' => 88,
                 'nama' => 'JAJULI',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'jajuli@gmail.com',
@@ -1041,12 +1041,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            73 => 
+            73 =>
             array (
                 'id' => 89,
                 'nama' => 'ANGGA',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'angga@gmail.com',
@@ -1055,12 +1055,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            74 => 
+            74 =>
             array (
                 'id' => 90,
                 'nama' => 'ARI/KIKI',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'ari/kiki@gmail.com',
@@ -1069,12 +1069,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            75 => 
+            75 =>
             array (
                 'id' => 91,
                 'nama' => 'EKO',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'eko@gmail.com',
@@ -1083,12 +1083,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            76 => 
+            76 =>
             array (
                 'id' => 92,
                 'nama' => 'INTAN',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'intan@gmail.com',
@@ -1097,12 +1097,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            77 => 
+            77 =>
             array (
                 'id' => 94,
                 'nama' => 'ASLIN',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'aslin@gmail.com',
@@ -1111,12 +1111,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            78 => 
+            78 =>
             array (
                 'id' => 95,
                 'nama' => 'FITRI',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'fitri@gmail.com',
@@ -1125,12 +1125,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            79 => 
+            79 =>
             array (
                 'id' => 96,
                 'nama' => 'RUDI',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'rudi@gmail.com',
@@ -1139,12 +1139,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            80 => 
+            80 =>
             array (
                 'id' => 97,
                 'nama' => 'ANDRY',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'andry@gmail.com',
@@ -1153,12 +1153,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            81 => 
+            81 =>
             array (
                 'id' => 98,
                 'nama' => 'KINAN',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'kinan@gmail.com',
@@ -1167,12 +1167,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            82 => 
+            82 =>
             array (
                 'id' => 100,
                 'nama' => 'DANI',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'dani@gmail.com',
@@ -1181,12 +1181,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            83 => 
+            83 =>
             array (
                 'id' => 101,
                 'nama' => 'RIZKY',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'rizky@gmail.com',
@@ -1195,12 +1195,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            84 => 
+            84 =>
             array (
                 'id' => 102,
                 'nama' => 'IVAN',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'ivan@gmail.com',
@@ -1209,12 +1209,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            85 => 
+            85 =>
             array (
                 'id' => 103,
                 'nama' => 'BU TATIK',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'bu tatik@gmail.com',
@@ -1223,12 +1223,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            86 => 
+            86 =>
             array (
                 'id' => 104,
                 'nama' => 'PAK DIAN',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'pak dian@gmail.com',
@@ -1237,12 +1237,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            87 => 
+            87 =>
             array (
                 'id' => 105,
                 'nama' => 'ASEP',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'asep@gmail.com',
@@ -1251,12 +1251,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            88 => 
+            88 =>
             array (
                 'id' => 107,
                 'nama' => 'BU ISTI',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '27',
                 'no_telepon' => '0',
                 'email' => 'bu isti@gmail.com',
@@ -1265,12 +1265,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            89 => 
+            89 =>
             array (
                 'id' => 108,
                 'nama' => 'ZAINUL',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'zainul@gmail.com',
@@ -1279,12 +1279,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            90 => 
+            90 =>
             array (
                 'id' => 109,
                 'nama' => 'EKO',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'eko@gmail.com',
@@ -1293,12 +1293,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            91 => 
+            91 =>
             array (
                 'id' => 110,
                 'nama' => 'JULAHAN',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'julahan@gmail.com',
@@ -1307,12 +1307,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            92 => 
+            92 =>
             array (
                 'id' => 111,
                 'nama' => 'ROY',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'roy@gmail.com',
@@ -1321,12 +1321,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            93 => 
+            93 =>
             array (
                 'id' => 112,
                 'nama' => 'EZI',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'ezi@gmail.com',
@@ -1335,12 +1335,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            94 => 
+            94 =>
             array (
                 'id' => 113,
                 'nama' => 'DEDE',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'dede@gmail.com',
@@ -1349,12 +1349,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            95 => 
+            95 =>
             array (
                 'id' => 115,
                 'nama' => 'RIFKY',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'rifky@gmail.com',
@@ -1363,12 +1363,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            96 => 
+            96 =>
             array (
                 'id' => 116,
                 'nama' => 'JAKII',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'jakii@gmail.com',
@@ -1377,12 +1377,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            97 => 
+            97 =>
             array (
                 'id' => 117,
                 'nama' => 'AHMAD',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'ahmad@gmail.com',
@@ -1391,12 +1391,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            98 => 
+            98 =>
             array (
                 'id' => 118,
                 'nama' => 'HALIM',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '28',
                 'no_telepon' => '0',
                 'email' => 'halim@gmail.com',
@@ -1405,12 +1405,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            99 => 
+            99 =>
             array (
                 'id' => 119,
                 'nama' => 'PURBA',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'purba@gmail.com',
@@ -1419,12 +1419,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            100 => 
+            100 =>
             array (
                 'id' => 121,
                 'nama' => 'BOY',
                 'perumahan_id' => 1,
-                'blok_id' => 19,
+                'blok_detail_id' => 19,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'boy@gmail.com',
@@ -1433,12 +1433,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            101 => 
+            101 =>
             array (
                 'id' => 122,
                 'nama' => 'DEDE',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'dede@gmail.com',
@@ -1447,12 +1447,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            102 => 
+            102 =>
             array (
                 'id' => 123,
                 'nama' => 'LEO',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'leo@gmail.com',
@@ -1461,12 +1461,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            103 => 
+            103 =>
             array (
                 'id' => 124,
                 'nama' => 'HAMID',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'hamid@gmail.com',
@@ -1475,12 +1475,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            104 => 
+            104 =>
             array (
                 'id' => 125,
                 'nama' => 'MAWAN',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'mawan@gmail.com',
@@ -1489,12 +1489,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            105 => 
+            105 =>
             array (
                 'id' => 126,
                 'nama' => 'WISNU',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'wisnu@gmail.com',
@@ -1503,12 +1503,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            106 => 
+            106 =>
             array (
                 'id' => 128,
                 'nama' => 'RENI',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'reni@gmail.com',
@@ -1517,12 +1517,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            107 => 
+            107 =>
             array (
                 'id' => 129,
                 'nama' => 'BAGUS',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'bagus@gmail.com',
@@ -1531,12 +1531,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            108 => 
+            108 =>
             array (
                 'id' => 130,
                 'nama' => 'WAHYU',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'wahyu@gmail.com',
@@ -1545,12 +1545,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            109 => 
+            109 =>
             array (
                 'id' => 131,
                 'nama' => 'FATULLAH',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'fatullah@gmail.com',
@@ -1559,12 +1559,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            110 => 
+            110 =>
             array (
                 'id' => 132,
                 'nama' => 'IMAM',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'imam@gmail.com',
@@ -1573,12 +1573,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            111 => 
+            111 =>
             array (
                 'id' => 134,
                 'nama' => 'SAEFUL',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'saeful@gmail.com',
@@ -1587,12 +1587,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            112 => 
+            112 =>
             array (
                 'id' => 135,
                 'nama' => 'YOGI',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'yogi@gmail.com',
@@ -1601,12 +1601,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            113 => 
+            113 =>
             array (
                 'id' => 136,
                 'nama' => 'ANDI',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'andi@gmail.com',
@@ -1615,12 +1615,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            114 => 
+            114 =>
             array (
                 'id' => 137,
                 'nama' => 'HUDARI',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'hudari@gmail.com',
@@ -1629,12 +1629,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            115 => 
+            115 =>
             array (
                 'id' => 138,
                 'nama' => 'FAHMI',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'fahmi@gmail.com',
@@ -1643,12 +1643,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            116 => 
+            116 =>
             array (
                 'id' => 139,
                 'nama' => 'EKO',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '26/27',
                 'no_telepon' => '0',
                 'email' => 'eko@gmail.com',
@@ -1657,12 +1657,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            117 => 
+            117 =>
             array (
                 'id' => 140,
                 'nama' => 'HENDRA',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '28',
                 'no_telepon' => '0',
                 'email' => 'hendra@gmail.com',
@@ -1671,12 +1671,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            118 => 
+            118 =>
             array (
                 'id' => 142,
                 'nama' => 'KONTRAK',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'kontrak@gmail.com',
@@ -1685,12 +1685,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            119 => 
+            119 =>
             array (
                 'id' => 143,
                 'nama' => 'NIKI',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'niki@gmail.com',
@@ -1699,12 +1699,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            120 => 
+            120 =>
             array (
                 'id' => 144,
                 'nama' => 'DADAY',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'daday@gmail.com',
@@ -1713,12 +1713,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            121 => 
+            121 =>
             array (
                 'id' => 145,
                 'nama' => 'BUDI',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'budi@gmail.com',
@@ -1727,12 +1727,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            122 => 
+            122 =>
             array (
                 'id' => 146,
                 'nama' => 'ANDRI YANTO',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'andri yanto@gmail.com',
@@ -1741,12 +1741,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            123 => 
+            123 =>
             array (
                 'id' => 148,
                 'nama' => 'FERDI',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'ferdi@gmail.com',
@@ -1755,12 +1755,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            124 => 
+            124 =>
             array (
                 'id' => 150,
                 'nama' => 'ANGGA',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'angga@gmail.com',
@@ -1769,12 +1769,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            125 => 
+            125 =>
             array (
                 'id' => 151,
                 'nama' => 'DOHIKA',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'dohika@gmail.com',
@@ -1783,12 +1783,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            126 => 
+            126 =>
             array (
                 'id' => 152,
                 'nama' => 'RIZKY FAUJI',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'rizky fauji@gmail.com',
@@ -1797,12 +1797,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            127 => 
+            127 =>
             array (
                 'id' => 153,
                 'nama' => 'ADE',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'ade@gmail.com',
@@ -1811,12 +1811,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            128 => 
+            128 =>
             array (
                 'id' => 154,
                 'nama' => 'IMAM',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'imam@gmail.com',
@@ -1825,12 +1825,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            129 => 
+            129 =>
             array (
                 'id' => 155,
                 'nama' => 'AGUS',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'agus@gmail.com',
@@ -1839,12 +1839,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            130 => 
+            130 =>
             array (
                 'id' => 156,
                 'nama' => 'KOMAR',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'komar@gmail.com',
@@ -1853,12 +1853,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            131 => 
+            131 =>
             array (
                 'id' => 158,
                 'nama' => 'RULI',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'ruli@gmail.com',
@@ -1867,12 +1867,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            132 => 
+            132 =>
             array (
                 'id' => 159,
                 'nama' => 'DANANG',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'danang@gmail.com',
@@ -1881,12 +1881,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            133 => 
+            133 =>
             array (
                 'id' => 160,
                 'nama' => 'AEP',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'aep@gmail.com',
@@ -1895,12 +1895,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            134 => 
+            134 =>
             array (
                 'id' => 161,
                 'nama' => 'ADE IKYAS',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'ade ikyas@gmail.com',
@@ -1909,12 +1909,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            135 => 
+            135 =>
             array (
                 'id' => 162,
                 'nama' => 'NURAUFA',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'nuraufa@gmail.com',
@@ -1923,12 +1923,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            136 => 
+            136 =>
             array (
                 'id' => 163,
                 'nama' => 'NUHMAN',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '27',
                 'no_telepon' => '0',
                 'email' => 'nuhman@gmail.com',
@@ -1937,12 +1937,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            137 => 
+            137 =>
             array (
                 'id' => 164,
                 'nama' => 'ILHAM',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '28',
                 'no_telepon' => '0',
                 'email' => 'ilham@gmail.com',
@@ -1951,12 +1951,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            138 => 
+            138 =>
             array (
                 'id' => 166,
                 'nama' => 'GINA',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'gina@gmail.com',
@@ -1965,12 +1965,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            139 => 
+            139 =>
             array (
                 'id' => 167,
                 'nama' => 'ABYAN',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'abyan@gmail.com',
@@ -1979,12 +1979,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            140 => 
+            140 =>
             array (
                 'id' => 168,
                 'nama' => 'LALU',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '02/03',
                 'no_telepon' => '0',
                 'email' => 'lalu@gmail.com',
@@ -1993,12 +1993,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            141 => 
+            141 =>
             array (
                 'id' => 169,
                 'nama' => 'DELA',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'dela@gmail.com',
@@ -2007,12 +2007,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            142 => 
+            142 =>
             array (
                 'id' => 170,
                 'nama' => 'DWI',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'dwi@gmail.com',
@@ -2021,12 +2021,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            143 => 
+            143 =>
             array (
                 'id' => 171,
                 'nama' => 'MAULANA',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'maulana@gmail.com',
@@ -2035,12 +2035,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            144 => 
+            144 =>
             array (
                 'id' => 173,
                 'nama' => 'HENDRIK',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'hendrik@gmail.com',
@@ -2049,12 +2049,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            145 => 
+            145 =>
             array (
                 'id' => 174,
                 'nama' => 'YUDA/UUS',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'yuda/uus@gmail.com',
@@ -2063,12 +2063,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            146 => 
+            146 =>
             array (
                 'id' => 175,
                 'nama' => 'RIKO',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'riko@gmail.com',
@@ -2077,12 +2077,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            147 => 
+            147 =>
             array (
                 'id' => 176,
                 'nama' => 'DENY',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'deny@gmail.com',
@@ -2091,12 +2091,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            148 => 
+            148 =>
             array (
                 'id' => 177,
                 'nama' => 'PANGGIH',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'panggih@gmail.com',
@@ -2105,12 +2105,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            149 => 
+            149 =>
             array (
                 'id' => 178,
                 'nama' => 'APRI',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'apri@gmail.com',
@@ -2119,12 +2119,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            150 => 
+            150 =>
             array (
                 'id' => 179,
                 'nama' => 'CECEP',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'cecep@gmail.com',
@@ -2133,12 +2133,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            151 => 
+            151 =>
             array (
                 'id' => 181,
                 'nama' => 'ROHIM',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'rohim@gmail.com',
@@ -2147,12 +2147,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            152 => 
+            152 =>
             array (
                 'id' => 182,
                 'nama' => 'ADAM',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'adam@gmail.com',
@@ -2161,12 +2161,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            153 => 
+            153 =>
             array (
                 'id' => 183,
                 'nama' => 'FAUJI',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'fauji@gmail.com',
@@ -2175,12 +2175,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            154 => 
+            154 =>
             array (
                 'id' => 184,
                 'nama' => 'WAHYU-2',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'wahyu-2@gmail.com',
@@ -2189,12 +2189,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            155 => 
+            155 =>
             array (
                 'id' => 185,
                 'nama' => 'PVC',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'pvc@gmail.com',
@@ -2203,12 +2203,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            156 => 
+            156 =>
             array (
                 'id' => 187,
                 'nama' => 'AGUS',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'agus@gmail.com',
@@ -2217,12 +2217,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            157 => 
+            157 =>
             array (
                 'id' => 188,
                 'nama' => 'RIYAN',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'riyan@gmail.com',
@@ -2231,12 +2231,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            158 => 
+            158 =>
             array (
                 'id' => 189,
                 'nama' => 'ISTI',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'isti@gmail.com',
@@ -2245,12 +2245,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            159 => 
+            159 =>
             array (
                 'id' => 190,
                 'nama' => 'DIDI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'didi@gmail.com',
@@ -2259,12 +2259,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            160 => 
+            160 =>
             array (
                 'id' => 191,
                 'nama' => 'SUNARDI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'sunardi@gmail.com',
@@ -2273,12 +2273,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            161 => 
+            161 =>
             array (
                 'id' => 192,
                 'nama' => 'YUGATA',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'yugata@gmail.com',
@@ -2287,12 +2287,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            162 => 
+            162 =>
             array (
                 'id' => 193,
                 'nama' => 'YUGATA',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'yugata@gmail.com',
@@ -2301,12 +2301,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            163 => 
+            163 =>
             array (
                 'id' => 195,
                 'nama' => 'PANGKI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'pangki@gmail.com',
@@ -2315,12 +2315,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            164 => 
+            164 =>
             array (
                 'id' => 196,
                 'nama' => 'FAHRUL ROJI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'fahrul roji@gmail.com',
@@ -2329,12 +2329,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            165 => 
+            165 =>
             array (
                 'id' => 197,
                 'nama' => 'SINGGIH',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'singgih@gmail.com',
@@ -2343,12 +2343,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            166 => 
+            166 =>
             array (
                 'id' => 198,
                 'nama' => 'ISMET ',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'ismet @gmail.com',
@@ -2357,12 +2357,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            167 => 
+            167 =>
             array (
                 'id' => 199,
                 'nama' => 'JAKI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'jaki@gmail.com',
@@ -2371,12 +2371,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            168 => 
+            168 =>
             array (
                 'id' => 200,
                 'nama' => 'SUMEDI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'sumedi@gmail.com',
@@ -2385,12 +2385,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            169 => 
+            169 =>
             array (
                 'id' => 202,
                 'nama' => 'GUNADI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'gunadi@gmail.com',
@@ -2399,12 +2399,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            170 => 
+            170 =>
             array (
                 'id' => 203,
                 'nama' => 'HERU SINAGA',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'heru sinaga@gmail.com',
@@ -2413,12 +2413,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            171 => 
+            171 =>
             array (
                 'id' => 204,
                 'nama' => 'JOKO',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'joko@gmail.com',
@@ -2427,12 +2427,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            172 => 
+            172 =>
             array (
                 'id' => 205,
                 'nama' => 'JUFRONI',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'jufroni@gmail.com',
@@ -2441,12 +2441,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            173 => 
+            173 =>
             array (
                 'id' => 206,
                 'nama' => 'SADIMIN',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'sadimin@gmail.com',
@@ -2455,12 +2455,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            174 => 
+            174 =>
             array (
                 'id' => 207,
                 'nama' => 'DIMAS',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'dimas@gmail.com',
@@ -2469,12 +2469,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            175 => 
+            175 =>
             array (
                 'id' => 208,
                 'nama' => 'GALIH',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'galih@gmail.com',
@@ -2483,12 +2483,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            176 => 
+            176 =>
             array (
                 'id' => 209,
                 'nama' => 'KHOIRUL',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'khoirul@gmail.com',
@@ -2497,12 +2497,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            177 => 
+            177 =>
             array (
                 'id' => 210,
                 'nama' => 'SAEFUROHMAN',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'saefurohman@gmail.com',
@@ -2511,12 +2511,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            178 => 
+            178 =>
             array (
                 'id' => 212,
                 'nama' => 'YONI WINARTO',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'yoni winarto@gmail.com',
@@ -2525,12 +2525,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            179 => 
+            179 =>
             array (
                 'id' => 213,
                 'nama' => 'HERMAWAN',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'hermawan@gmail.com',
@@ -2539,12 +2539,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            180 => 
+            180 =>
             array (
                 'id' => 214,
                 'nama' => 'NURI ISKANDAR',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'nuri iskandar@gmail.com',
@@ -2553,12 +2553,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            181 => 
+            181 =>
             array (
                 'id' => 215,
                 'nama' => 'FERI FADLI',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '27',
                 'no_telepon' => '0',
                 'email' => 'feri fadli@gmail.com',
@@ -2567,12 +2567,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            182 => 
+            182 =>
             array (
                 'id' => 216,
                 'nama' => 'SABRAMALISI',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'sabramalisi@gmail.com',
@@ -2581,12 +2581,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            183 => 
+            183 =>
             array (
                 'id' => 217,
                 'nama' => 'DONNY ',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'donny @gmail.com',
@@ -2595,12 +2595,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            184 => 
+            184 =>
             array (
                 'id' => 220,
                 'nama' => 'RONI',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'roni@gmail.com',
@@ -2609,12 +2609,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            185 => 
+            185 =>
             array (
                 'id' => 221,
                 'nama' => 'REZA',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'reza@gmail.com',
@@ -2623,12 +2623,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            186 => 
+            186 =>
             array (
                 'id' => 222,
                 'nama' => 'PIJAR',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'pijar@gmail.com',
@@ -2637,12 +2637,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            187 => 
+            187 =>
             array (
                 'id' => 223,
                 'nama' => 'SUPRIYADI',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'supriyadi@gmail.com',
@@ -2651,12 +2651,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            188 => 
+            188 =>
             array (
                 'id' => 224,
                 'nama' => 'ROBERTO',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'roberto@gmail.com',
@@ -2665,12 +2665,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            189 => 
+            189 =>
             array (
                 'id' => 225,
                 'nama' => 'HADIRI',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'hadiri@gmail.com',
@@ -2679,12 +2679,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            190 => 
+            190 =>
             array (
                 'id' => 227,
                 'nama' => 'AGUS MULYADI ',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'agus mulyadi @gmail.com',
@@ -2693,12 +2693,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            191 => 
+            191 =>
             array (
                 'id' => 228,
                 'nama' => 'IPUL',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'ipul@gmail.com',
@@ -2707,12 +2707,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            192 => 
+            192 =>
             array (
                 'id' => 229,
                 'nama' => 'ROSIAH',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'rosiah@gmail.com',
@@ -2721,12 +2721,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            193 => 
+            193 =>
             array (
                 'id' => 230,
                 'nama' => 'INEKE',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'ineke@gmail.com',
@@ -2735,12 +2735,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            194 => 
+            194 =>
             array (
                 'id' => 231,
                 'nama' => 'HARIYANTO',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'hariyanto@gmail.com',
@@ -2749,12 +2749,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            195 => 
+            195 =>
             array (
                 'id' => 232,
                 'nama' => 'YOSEP',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'yosep@gmail.com',
@@ -2763,12 +2763,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            196 => 
+            196 =>
             array (
                 'id' => 233,
                 'nama' => 'NGONTRAK',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'ngontrak@gmail.com',
@@ -2777,12 +2777,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            197 => 
+            197 =>
             array (
                 'id' => 235,
                 'nama' => 'HERI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'heri@gmail.com',
@@ -2791,12 +2791,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            198 => 
+            198 =>
             array (
                 'id' => 236,
                 'nama' => 'ADE',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'ade@gmail.com',
@@ -2805,12 +2805,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            199 => 
+            199 =>
             array (
                 'id' => 237,
                 'nama' => 'AJI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'aji@gmail.com',
@@ -2819,12 +2819,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            200 => 
+            200 =>
             array (
                 'id' => 238,
                 'nama' => 'NAFIUDIN',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'nafiudin@gmail.com',
@@ -2833,12 +2833,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            201 => 
+            201 =>
             array (
                 'id' => 239,
                 'nama' => 'WAHYU',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'wahyu@gmail.com',
@@ -2847,12 +2847,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            202 => 
+            202 =>
             array (
                 'id' => 240,
                 'nama' => 'EGA',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'ega@gmail.com',
@@ -2861,12 +2861,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            203 => 
+            203 =>
             array (
                 'id' => 241,
                 'nama' => 'PIPIT',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'pipit@gmail.com',
@@ -2875,12 +2875,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            204 => 
+            204 =>
             array (
                 'id' => 242,
                 'nama' => 'INDRA',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'indra@gmail.com',
@@ -2889,12 +2889,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            205 => 
+            205 =>
             array (
                 'id' => 244,
                 'nama' => 'JAMAL',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'jamal@gmail.com',
@@ -2903,12 +2903,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            206 => 
+            206 =>
             array (
                 'id' => 245,
                 'nama' => 'DIMAS',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'dimas@gmail.com',
@@ -2917,12 +2917,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            207 => 
+            207 =>
             array (
                 'id' => 246,
                 'nama' => 'SYAHRIL',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'syahril@gmail.com',
@@ -2931,12 +2931,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            208 => 
+            208 =>
             array (
                 'id' => 247,
                 'nama' => 'RUDI',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'rudi@gmail.com',
@@ -2945,12 +2945,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            209 => 
+            209 =>
             array (
                 'id' => 248,
                 'nama' => 'FABIO',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'fabio@gmail.com',
@@ -2959,12 +2959,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            210 => 
+            210 =>
             array (
                 'id' => 249,
                 'nama' => 'RIZAL',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'rizal@gmail.com',
@@ -2973,12 +2973,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            211 => 
+            211 =>
             array (
                 'id' => 250,
                 'nama' => 'REZA',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'reza@gmail.com',
@@ -2987,12 +2987,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            212 => 
+            212 =>
             array (
                 'id' => 251,
                 'nama' => 'SYARIF',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'syarif@gmail.com',
@@ -3001,12 +3001,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            213 => 
+            213 =>
             array (
                 'id' => 253,
                 'nama' => 'KUKU/KOKO',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'kuku/koko@gmail.com',
@@ -3015,12 +3015,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            214 => 
+            214 =>
             array (
                 'id' => 254,
                 'nama' => 'BAMBANG',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'bambang@gmail.com',
@@ -3029,12 +3029,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            215 => 
+            215 =>
             array (
                 'id' => 255,
                 'nama' => 'RIJAL',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'rijal@gmail.com',
@@ -3043,12 +3043,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            216 => 
+            216 =>
             array (
                 'id' => 256,
                 'nama' => 'RAHMAT',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'rahmat@gmail.com',
@@ -3057,12 +3057,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            217 => 
+            217 =>
             array (
                 'id' => 257,
                 'nama' => 'FAHRUL',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '27',
                 'no_telepon' => '0',
                 'email' => 'fahrul@gmail.com',
@@ -3071,12 +3071,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            218 => 
+            218 =>
             array (
                 'id' => 258,
                 'nama' => 'IYAN',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '29',
                 'no_telepon' => '0',
                 'email' => 'iyan@gmail.com',
@@ -3085,12 +3085,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            219 => 
+            219 =>
             array (
                 'id' => 259,
                 'nama' => 'IYUS',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'iyus@gmail.com',
@@ -3099,12 +3099,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            220 => 
+            220 =>
             array (
                 'id' => 261,
                 'nama' => 'ARI',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'ari@gmail.com',
@@ -3113,12 +3113,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            221 => 
+            221 =>
             array (
                 'id' => 262,
                 'nama' => 'ALFA',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'alfa@gmail.com',
@@ -3127,12 +3127,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            222 => 
+            222 =>
             array (
                 'id' => 263,
                 'nama' => 'SUHARTONO',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'suhartono@gmail.com',
@@ -3141,12 +3141,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            223 => 
+            223 =>
             array (
                 'id' => 264,
                 'nama' => 'HERYANTO',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '34',
                 'no_telepon' => '0',
                 'email' => 'heryanto@gmail.com',
@@ -3155,12 +3155,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            224 => 
+            224 =>
             array (
                 'id' => 265,
                 'nama' => 'GUNAWAN',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'gunawan@gmail.com',
@@ -3169,12 +3169,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            225 => 
+            225 =>
             array (
                 'id' => 266,
                 'nama' => 'SAM\'UN',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'sam\'un@gmail.com',
@@ -3183,12 +3183,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            226 => 
+            226 =>
             array (
                 'id' => 267,
                 'nama' => 'MASKAN',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '28',
                 'no_telepon' => '0',
                 'email' => 'maskan@gmail.com',
@@ -3197,12 +3197,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            227 => 
+            227 =>
             array (
                 'id' => 269,
                 'nama' => 'MARDI',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'mardi@gmail.com',
@@ -3211,12 +3211,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            228 => 
+            228 =>
             array (
                 'id' => 270,
                 'nama' => 'VANI',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'vani@gmail.com',
@@ -3225,12 +3225,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            229 => 
+            229 =>
             array (
                 'id' => 271,
                 'nama' => 'MUKSI',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'muksi@gmail.com',
@@ -3239,12 +3239,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            230 => 
+            230 =>
             array (
                 'id' => 272,
                 'nama' => 'ULES',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '36',
                 'no_telepon' => '0',
                 'email' => 'ules@gmail.com',
@@ -3253,12 +3253,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            231 => 
+            231 =>
             array (
                 'id' => 273,
                 'nama' => 'TITUS',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'titus@gmail.com',
@@ -3267,12 +3267,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            232 => 
+            232 =>
             array (
                 'id' => 274,
                 'nama' => 'NUGRAHA',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'nugraha@gmail.com',
@@ -3281,12 +3281,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            233 => 
+            233 =>
             array (
                 'id' => 275,
                 'nama' => 'MASDUKI',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'masduki@gmail.com',
@@ -3295,12 +3295,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            234 => 
+            234 =>
             array (
                 'id' => 277,
                 'nama' => 'FAISAL',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'faisal@gmail.com',
@@ -3309,12 +3309,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            235 => 
+            235 =>
             array (
                 'id' => 278,
                 'nama' => 'ANGGA',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'angga@gmail.com',
@@ -3323,12 +3323,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            236 => 
+            236 =>
             array (
                 'id' => 279,
                 'nama' => 'RAJIK',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'rajik@gmail.com',
@@ -3337,12 +3337,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            237 => 
+            237 =>
             array (
                 'id' => 280,
                 'nama' => 'LINDA',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'linda@gmail.com',
@@ -3351,12 +3351,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            238 => 
+            238 =>
             array (
                 'id' => 281,
                 'nama' => 'AHMAD FATULOH',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'ahmad fatuloh@gmail.com',
@@ -3365,12 +3365,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            239 => 
+            239 =>
             array (
                 'id' => 282,
                 'nama' => 'MUHINBIN',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'muhinbin@gmail.com',
@@ -3379,12 +3379,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            240 => 
+            240 =>
             array (
                 'id' => 283,
                 'nama' => 'AJAT',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'ajat@gmail.com',
@@ -3393,12 +3393,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            241 => 
+            241 =>
             array (
                 'id' => 284,
                 'nama' => 'AKBAR',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'akbar@gmail.com',
@@ -3407,12 +3407,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            242 => 
+            242 =>
             array (
                 'id' => 285,
                 'nama' => 'KUROB',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'kurob@gmail.com',
@@ -3421,12 +3421,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            243 => 
+            243 =>
             array (
                 'id' => 287,
                 'nama' => 'OPIK',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'opik@gmail.com',
@@ -3435,12 +3435,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            244 => 
+            244 =>
             array (
                 'id' => 288,
                 'nama' => 'ANDRI',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'andri@gmail.com',
@@ -3449,12 +3449,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            245 => 
+            245 =>
             array (
                 'id' => 2,
                 'nama' => 'ASRI',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'asri@gmail.com',
@@ -3463,12 +3463,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            246 => 
+            246 =>
             array (
                 'id' => 5,
                 'nama' => 'BOY',
                 'perumahan_id' => 1,
-                'blok_id' => 17,
+                'blok_detail_id' => 17,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'boy@gmail.com',
@@ -3477,12 +3477,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            247 => 
+            247 =>
             array (
                 'id' => 11,
                 'nama' => 'HENDRIONO',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'hendriono@gmail.com',
@@ -3491,12 +3491,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            248 => 
+            248 =>
             array (
                 'id' => 20,
                 'nama' => 'INDRA',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'indra@gmail.com',
@@ -3505,12 +3505,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            249 => 
+            249 =>
             array (
                 'id' => 27,
                 'nama' => 'ASMIN',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'asmin@gmail.com',
@@ -3519,12 +3519,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            250 => 
+            250 =>
             array (
                 'id' => 34,
                 'nama' => 'ANAS',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'anas@gmail.com',
@@ -3533,12 +3533,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            251 => 
+            251 =>
             array (
                 'id' => 41,
                 'nama' => 'ADE',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'ade@gmail.com',
@@ -3547,12 +3547,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            252 => 
+            252 =>
             array (
                 'id' => 47,
                 'nama' => 'ROKY',
                 'perumahan_id' => 1,
-                'blok_id' => 16,
+                'blok_detail_id' => 16,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'roky@gmail.com',
@@ -3561,12 +3561,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            253 => 
+            253 =>
             array (
                 'id' => 53,
                 'nama' => 'ALDY',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => ' 16/17',
                 'no_telepon' => '0',
                 'email' => 'aldy@gmail.com',
@@ -3575,12 +3575,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            254 => 
+            254 =>
             array (
                 'id' => 60,
                 'nama' => 'DANIUS',
                 'perumahan_id' => 1,
-                'blok_id' => 6,
+                'blok_detail_id' => 6,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'danius@gmail.com',
@@ -3589,12 +3589,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            255 => 
+            255 =>
             array (
                 'id' => 67,
                 'nama' => 'BENI',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'beni@gmail.com',
@@ -3603,12 +3603,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            256 => 
+            256 =>
             array (
                 'id' => 72,
                 'nama' => 'AMDI/LISA',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'amdi/lisa@gmail.com',
@@ -3617,12 +3617,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            257 => 
+            257 =>
             array (
                 'id' => 74,
                 'nama' => 'RAMLAN',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'ramlan@gmail.com',
@@ -3631,12 +3631,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            258 => 
+            258 =>
             array (
                 'id' => 78,
                 'nama' => 'ALI',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'ali@gmail.com',
@@ -3645,12 +3645,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            259 => 
+            259 =>
             array (
                 'id' => 85,
                 'nama' => 'YANUAR',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'yanuar@gmail.com',
@@ -3659,12 +3659,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            260 => 
+            260 =>
             array (
                 'id' => 290,
                 'nama' => 'SARMAN',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'sarman@gmail.com',
@@ -3673,12 +3673,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            261 => 
+            261 =>
             array (
                 'id' => 291,
                 'nama' => 'YUSI',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'yusi@gmail.com',
@@ -3687,12 +3687,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            262 => 
+            262 =>
             array (
                 'id' => 292,
                 'nama' => 'TRI',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'tri@gmail.com',
@@ -3701,12 +3701,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            263 => 
+            263 =>
             array (
                 'id' => 294,
                 'nama' => 'NURI',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '27',
                 'no_telepon' => '0',
                 'email' => 'nuri@gmail.com',
@@ -3715,12 +3715,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            264 => 
+            264 =>
             array (
                 'id' => 295,
                 'nama' => 'KRINAWATI/SUKIYEM',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '28',
                 'no_telepon' => '0',
                 'email' => 'krinawati/sukiyem@gmail.com',
@@ -3729,12 +3729,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            265 => 
+            265 =>
             array (
                 'id' => 296,
                 'nama' => 'BAYU/ITA',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '29',
                 'no_telepon' => '0',
                 'email' => 'bayu/ita@gmail.com',
@@ -3743,12 +3743,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            266 => 
+            266 =>
             array (
                 'id' => 297,
                 'nama' => 'RISMA',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '31',
                 'no_telepon' => '0',
                 'email' => 'risma@gmail.com',
@@ -3757,12 +3757,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            267 => 
+            267 =>
             array (
                 'id' => 298,
                 'nama' => 'FURQON',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '30',
                 'no_telepon' => '0',
                 'email' => 'furqon@gmail.com',
@@ -3771,12 +3771,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            268 => 
+            268 =>
             array (
                 'id' => 299,
                 'nama' => 'ERSA',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '34',
                 'no_telepon' => '0',
                 'email' => 'ersa@gmail.com',
@@ -3785,12 +3785,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            269 => 
+            269 =>
             array (
                 'id' => 301,
                 'nama' => 'FELIS',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'felis@gmail.com',
@@ -3799,12 +3799,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            270 => 
+            270 =>
             array (
                 'id' => 302,
                 'nama' => 'IDRUS',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'idrus@gmail.com',
@@ -3813,12 +3813,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            271 => 
+            271 =>
             array (
                 'id' => 303,
                 'nama' => 'FAJAR',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'fajar@gmail.com',
@@ -3827,12 +3827,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            272 => 
+            272 =>
             array (
                 'id' => 304,
                 'nama' => 'JUAN',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'juan@gmail.com',
@@ -3841,12 +3841,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            273 => 
+            273 =>
             array (
                 'id' => 305,
                 'nama' => 'BUANG',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'buang@gmail.com',
@@ -3855,12 +3855,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            274 => 
+            274 =>
             array (
                 'id' => 306,
                 'nama' => 'ALFI',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'alfi@gmail.com',
@@ -3869,12 +3869,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            275 => 
+            275 =>
             array (
                 'id' => 307,
                 'nama' => 'ICHA',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'icha@gmail.com',
@@ -3883,12 +3883,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            276 => 
+            276 =>
             array (
                 'id' => 308,
                 'nama' => 'NGONTRAK',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'ngontrak@gmail.com',
@@ -3897,12 +3897,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            277 => 
+            277 =>
             array (
                 'id' => 309,
                 'nama' => 'NUNU',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'nunu@gmail.com',
@@ -3911,12 +3911,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            278 => 
+            278 =>
             array (
                 'id' => 311,
                 'nama' => 'SLAMET',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'slamet@gmail.com',
@@ -3925,12 +3925,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            279 => 
+            279 =>
             array (
                 'id' => 312,
                 'nama' => 'JAJANG',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '04',
                 'no_telepon' => '0',
                 'email' => 'jajang@gmail.com',
@@ -3939,12 +3939,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            280 => 
+            280 =>
             array (
                 'id' => 313,
                 'nama' => 'HERMAN',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '05',
                 'no_telepon' => '0',
                 'email' => 'herman@gmail.com',
@@ -3953,12 +3953,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            281 => 
+            281 =>
             array (
                 'id' => 314,
                 'nama' => 'DENI',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'deni@gmail.com',
@@ -3967,12 +3967,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            282 => 
+            282 =>
             array (
                 'id' => 315,
                 'nama' => 'IYAN',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'iyan@gmail.com',
@@ -3981,12 +3981,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            283 => 
+            283 =>
             array (
                 'id' => 316,
                 'nama' => 'FELANI',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'felani@gmail.com',
@@ -3995,12 +3995,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            284 => 
+            284 =>
             array (
                 'id' => 317,
                 'nama' => 'IKHSAN',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'ikhsan@gmail.com',
@@ -4009,12 +4009,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            285 => 
+            285 =>
             array (
                 'id' => 318,
                 'nama' => 'ALFI',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '11',
                 'no_telepon' => '0',
                 'email' => 'alfi@gmail.com',
@@ -4023,12 +4023,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            286 => 
+            286 =>
             array (
                 'id' => 320,
                 'nama' => 'DEDI SUHENDAR',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'dedi suhendar@gmail.com',
@@ -4037,12 +4037,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            287 => 
+            287 =>
             array (
                 'id' => 321,
                 'nama' => 'HABIB',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'habib@gmail.com',
@@ -4051,12 +4051,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            288 => 
+            288 =>
             array (
                 'id' => 322,
                 'nama' => 'IKBAL',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '15',
                 'no_telepon' => '0',
                 'email' => 'ikbal@gmail.com',
@@ -4065,12 +4065,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            289 => 
+            289 =>
             array (
                 'id' => 323,
                 'nama' => 'WAHYU',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '16',
                 'no_telepon' => '0',
                 'email' => 'wahyu@gmail.com',
@@ -4079,12 +4079,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            290 => 
+            290 =>
             array (
                 'id' => 324,
                 'nama' => 'SARIFUDIN',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'sarifudin@gmail.com',
@@ -4093,12 +4093,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            291 => 
+            291 =>
             array (
                 'id' => 325,
                 'nama' => 'ADE',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'ade@gmail.com',
@@ -4107,12 +4107,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            292 => 
+            292 =>
             array (
                 'id' => 326,
                 'nama' => 'ARDANA',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'ardana@gmail.com',
@@ -4121,12 +4121,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            293 => 
+            293 =>
             array (
                 'id' => 328,
                 'nama' => 'ZALDY',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'zaldy@gmail.com',
@@ -4135,12 +4135,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            294 => 
+            294 =>
             array (
                 'id' => 329,
                 'nama' => 'AFITULOH',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'afituloh@gmail.com',
@@ -4149,12 +4149,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            295 => 
+            295 =>
             array (
                 'id' => 330,
                 'nama' => 'FAIZ',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'faiz@gmail.com',
@@ -4163,12 +4163,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            296 => 
+            296 =>
             array (
                 'id' => 331,
                 'nama' => 'DANU',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'danu@gmail.com',
@@ -4177,12 +4177,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            297 => 
+            297 =>
             array (
                 'id' => 332,
                 'nama' => 'LUKMAN',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '27',
                 'no_telepon' => '0',
                 'email' => 'lukman@gmail.com',
@@ -4191,12 +4191,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            298 => 
+            298 =>
             array (
                 'id' => 333,
                 'nama' => 'HAFIF',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '28',
                 'no_telepon' => '0',
                 'email' => 'hafif@gmail.com',
@@ -4205,12 +4205,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            299 => 
+            299 =>
             array (
                 'id' => 335,
                 'nama' => 'IING. YP',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '30',
                 'no_telepon' => '0',
                 'email' => 'iing. yp@gmail.com',
@@ -4219,12 +4219,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            300 => 
+            300 =>
             array (
                 'id' => 336,
                 'nama' => 'SANDY',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '31',
                 'no_telepon' => '0',
                 'email' => 'sandy@gmail.com',
@@ -4233,12 +4233,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            301 => 
+            301 =>
             array (
                 'id' => 337,
                 'nama' => 'RAMA',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '32',
                 'no_telepon' => '0',
                 'email' => 'rama@gmail.com',
@@ -4247,12 +4247,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            302 => 
+            302 =>
             array (
                 'id' => 338,
                 'nama' => 'FEBRI',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '33',
                 'no_telepon' => '0',
                 'email' => 'febri@gmail.com',
@@ -4261,12 +4261,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            303 => 
+            303 =>
             array (
                 'id' => 339,
                 'nama' => 'AJANG',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '34',
                 'no_telepon' => '0',
                 'email' => 'ajang@gmail.com',
@@ -4275,12 +4275,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            304 => 
+            304 =>
             array (
                 'id' => 340,
                 'nama' => 'NAHROWI',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '22',
                 'no_telepon' => '0',
                 'email' => 'nahrowi@gmail.com',
@@ -4289,12 +4289,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            305 => 
+            305 =>
             array (
                 'id' => 341,
                 'nama' => 'IPUL',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'ipul@gmail.com',
@@ -4303,12 +4303,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            306 => 
+            306 =>
             array (
                 'id' => 342,
                 'nama' => 'XEKI',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '24',
                 'no_telepon' => '0',
                 'email' => 'xeki@gmail.com',
@@ -4317,12 +4317,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            307 => 
+            307 =>
             array (
                 'id' => 93,
                 'nama' => 'JAENAL',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'jaenal@gmail.com',
@@ -4331,12 +4331,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            308 => 
+            308 =>
             array (
                 'id' => 99,
                 'nama' => 'ADIT',
                 'perumahan_id' => 1,
-                'blok_id' => 1,
+                'blok_detail_id' => 1,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'adit@gmail.com',
@@ -4345,12 +4345,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            309 => 
+            309 =>
             array (
                 'id' => 106,
                 'nama' => 'FARHAN',
                 'perumahan_id' => 1,
-                'blok_id' => 7,
+                'blok_detail_id' => 7,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'farhan@gmail.com',
@@ -4359,12 +4359,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            310 => 
+            310 =>
             array (
                 'id' => 114,
                 'nama' => 'ARIF',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '07',
                 'no_telepon' => '0',
                 'email' => 'arif@gmail.com',
@@ -4373,12 +4373,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            311 => 
+            311 =>
             array (
                 'id' => 120,
                 'nama' => 'LUTFI',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'lutfi@gmail.com',
@@ -4387,12 +4387,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            312 => 
+            312 =>
             array (
                 'id' => 127,
                 'nama' => 'OKTA',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'okta@gmail.com',
@@ -4401,12 +4401,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            313 => 
+            313 =>
             array (
                 'id' => 133,
                 'nama' => 'JUNED',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '19',
                 'no_telepon' => '0',
                 'email' => 'juned@gmail.com',
@@ -4415,12 +4415,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            314 => 
+            314 =>
             array (
                 'id' => 141,
                 'nama' => 'ROSDIANSYAH',
                 'perumahan_id' => 1,
-                'blok_id' => 2,
+                'blok_detail_id' => 2,
                 'nomor_rumah' => '03',
                 'no_telepon' => '0',
                 'email' => 'rosdiansyah@gmail.com',
@@ -4429,12 +4429,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            315 => 
+            315 =>
             array (
                 'id' => 147,
                 'nama' => 'YUDHA',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'yudha@gmail.com',
@@ -4443,12 +4443,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            316 => 
+            316 =>
             array (
                 'id' => 149,
                 'nama' => 'DIDI SUJADI',
                 'perumahan_id' => 1,
-                'blok_id' => 8,
+                'blok_detail_id' => 8,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'didi sujadi@gmail.com',
@@ -4457,12 +4457,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            317 => 
+            317 =>
             array (
                 'id' => 157,
                 'nama' => 'BINTANG',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'bintang@gmail.com',
@@ -4471,12 +4471,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            318 => 
+            318 =>
             array (
                 'id' => 165,
                 'nama' => 'MUSLIM',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'muslim@gmail.com',
@@ -4485,12 +4485,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            319 => 
+            319 =>
             array (
                 'id' => 172,
                 'nama' => 'DEBY',
                 'perumahan_id' => 1,
-                'blok_id' => 3,
+                'blok_detail_id' => 3,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'deby@gmail.com',
@@ -4499,12 +4499,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            320 => 
+            320 =>
             array (
                 'id' => 180,
                 'nama' => 'RUDI',
                 'perumahan_id' => 1,
-                'blok_id' => 4,
+                'blok_detail_id' => 4,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'rudi@gmail.com',
@@ -4513,12 +4513,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            321 => 
+            321 =>
             array (
                 'id' => 186,
                 'nama' => 'MADURA',
                 'perumahan_id' => 1,
-                'blok_id' => 5,
+                'blok_detail_id' => 5,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'madura@gmail.com',
@@ -4527,12 +4527,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            322 => 
+            322 =>
             array (
                 'id' => 194,
                 'nama' => 'KIKI',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '17',
                 'no_telepon' => '0',
                 'email' => 'kiki@gmail.com',
@@ -4541,12 +4541,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            323 => 
+            323 =>
             array (
                 'id' => 201,
                 'nama' => 'KRISTIANTO',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '25',
                 'no_telepon' => '0',
                 'email' => 'kristianto@gmail.com',
@@ -4555,12 +4555,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            324 => 
+            324 =>
             array (
                 'id' => 211,
                 'nama' => 'NUR RIZA ALFIANA',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '20',
                 'no_telepon' => '0',
                 'email' => 'nur riza alfiana@gmail.com',
@@ -4569,12 +4569,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            325 => 
+            325 =>
             array (
                 'id' => 218,
                 'nama' => 'BUDI',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'budi@gmail.com',
@@ -4583,12 +4583,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            326 => 
+            326 =>
             array (
                 'id' => 219,
                 'nama' => 'YATI',
                 'perumahan_id' => 1,
-                'blok_id' => 9,
+                'blok_detail_id' => 9,
                 'nomor_rumah' => '23',
                 'no_telepon' => '0',
                 'email' => 'yati@gmail.com',
@@ -4597,12 +4597,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            327 => 
+            327 =>
             array (
                 'id' => 226,
                 'nama' => 'BAGUS',
                 'perumahan_id' => 1,
-                'blok_id' => 10,
+                'blok_detail_id' => 10,
                 'nomor_rumah' => '13',
                 'no_telepon' => '0',
                 'email' => 'bagus@gmail.com',
@@ -4611,12 +4611,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            328 => 
+            328 =>
             array (
                 'id' => 234,
                 'nama' => 'NASRUDIN',
                 'perumahan_id' => 1,
-                'blok_id' => 11,
+                'blok_detail_id' => 11,
                 'nomor_rumah' => '08',
                 'no_telepon' => '0',
                 'email' => 'nasrudin@gmail.com',
@@ -4625,12 +4625,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            329 => 
+            329 =>
             array (
                 'id' => 243,
                 'nama' => 'DANI',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '14',
                 'no_telepon' => '0',
                 'email' => 'dani@gmail.com',
@@ -4639,12 +4639,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            330 => 
+            330 =>
             array (
                 'id' => 252,
                 'nama' => 'KIBEK',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '10',
                 'no_telepon' => '0',
                 'email' => 'kibek@gmail.com',
@@ -4653,12 +4653,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            331 => 
+            331 =>
             array (
                 'id' => 260,
                 'nama' => 'BOY',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '09',
                 'no_telepon' => '0',
                 'email' => 'boy@gmail.com',
@@ -4667,12 +4667,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            332 => 
+            332 =>
             array (
                 'id' => 268,
                 'nama' => 'RIKI',
                 'perumahan_id' => 1,
-                'blok_id' => 12,
+                'blok_detail_id' => 12,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'riki@gmail.com',
@@ -4681,12 +4681,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            333 => 
+            333 =>
             array (
                 'id' => 276,
                 'nama' => 'UJANG',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '06',
                 'no_telepon' => '0',
                 'email' => 'ujang@gmail.com',
@@ -4695,12 +4695,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            334 => 
+            334 =>
             array (
                 'id' => 286,
                 'nama' => 'FIRMAN',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'firman@gmail.com',
@@ -4709,12 +4709,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            335 => 
+            335 =>
             array (
                 'id' => 289,
                 'nama' => 'NIA',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '21',
                 'no_telepon' => '0',
                 'email' => 'nia@gmail.com',
@@ -4723,12 +4723,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            336 => 
+            336 =>
             array (
                 'id' => 293,
                 'nama' => 'TB. ARIEF',
                 'perumahan_id' => 1,
-                'blok_id' => 13,
+                'blok_detail_id' => 13,
                 'nomor_rumah' => '26',
                 'no_telepon' => '0',
                 'email' => 'tb. arief@gmail.com',
@@ -4737,12 +4737,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            337 => 
+            337 =>
             array (
                 'id' => 300,
                 'nama' => 'AGUNG/ARIF',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '01',
                 'no_telepon' => '0',
                 'email' => 'agung/arif@gmail.com',
@@ -4751,12 +4751,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            338 => 
+            338 =>
             array (
                 'id' => 310,
                 'nama' => 'IPUL/ANSORI',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '02',
                 'no_telepon' => '0',
                 'email' => 'ipul/ansori@gmail.com',
@@ -4765,12 +4765,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            339 => 
+            339 =>
             array (
                 'id' => 319,
                 'nama' => 'WALDI',
                 'perumahan_id' => 1,
-                'blok_id' => 15,
+                'blok_detail_id' => 15,
                 'nomor_rumah' => '12',
                 'no_telepon' => '0',
                 'email' => 'waldi@gmail.com',
@@ -4779,12 +4779,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            340 => 
+            340 =>
             array (
                 'id' => 327,
                 'nama' => 'DEWI',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '18',
                 'no_telepon' => '0',
                 'email' => 'dewi@gmail.com',
@@ -4793,12 +4793,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            341 => 
+            341 =>
             array (
                 'id' => 334,
                 'nama' => 'DEDE RIZKY',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '29',
                 'no_telepon' => '0',
                 'email' => 'dede rizky@gmail.com',
@@ -4807,12 +4807,12 @@ class WargasTableSeeder extends Seeder
                 'gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            342 => 
+            342 =>
             array (
                 'id' => 350,
                 'nama' => 'Dira',
                 'perumahan_id' => 1,
-                'blok_id' => 14,
+                'blok_detail_id' => 14,
                 'nomor_rumah' => '17',
                 'no_telepon' => '+62 871283123',
                 'email' => 'dira201@gmail.com',
@@ -4822,7 +4822,7 @@ class WargasTableSeeder extends Seeder
                 'gang_id' => 14,
             ),
         ));
-        
-        
+
+
     }
 }

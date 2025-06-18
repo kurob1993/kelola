@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->foreignId('perumahan_id')->constrained('perumahans')->onDelete('cascade');
-            $table->foreignId('blok_id')->constrained('bloks')->onDelete('cascade');
+            $table->foreignId('blok_detail_id')->constrained('blok_details')->onDelete('cascade');
             $table->string('nomor_rumah');
             $table->string('no_telepon');
             $table->string('email')->nullable();
