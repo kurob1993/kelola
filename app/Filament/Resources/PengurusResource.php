@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\Jabatan;
 use App\Filament\Resources\PengurusResource\Pages;
 use App\Filament\Resources\PengurusResource\RelationManagers;
 use App\Models\Blok;
@@ -43,6 +44,16 @@ class PengurusResource extends Resource
                         'sm' => 1,
                         'md' => 2,
                     ])->schema([
+                        Select::make('blok_id')
+                            ->label('Blok')
+                            ->relationship(
+                                name: 'blok',
+                                titleAttribute: 'nama_blok',
+                            )
+                            ->preload()
+                            ->searchable()
+                            ->required(),
+
                         Select::make('gang_id')
                             ->label('Gang')
                             ->relationship(
@@ -62,7 +73,7 @@ class PengurusResource extends Resource
                                     $query->where('gang_id', $get('gang_id'));
                                 }
                             )
-                            ->getOptionLabelFromRecordUsing(fn(Warga $record) => "{$record->nama} - {$record->blok->nama_blok}{$record->nomor_rumah}")
+                            ->getOptionLabelFromRecordUsing(fn(Warga $record) => "{$record->nama} - {$record->blokDetail->nama_blok}{$record->nomor_rumah}")
                             ->preload()
                             ->searchable(['nama', 'nomor_rumah'])
                             ->live()
@@ -70,10 +81,11 @@ class PengurusResource extends Resource
 
                         Select::make('jabatan')
                             ->label('Jabatan')
-                            ->options([
-                                'RT' => 'Ketua RT',
-                                'Kordinator' => 'Kordinator Gang'
-                            ])
+                            ->options(
+                                collect(Jabatan::cases())->mapWithKeys(fn($case) => [
+                                    $case->name => $case->value
+                                ])->toArray()
+                            )
                             ->required(),
                     ]),
                 ]),
@@ -84,8 +96,13 @@ class PengurusResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('warga.nama')
+                TextColumn::make('nama_waraga')
+                    ->getStateUsing(fn($record) => "{$record->warga->nama} -  {$record->warga->blokDetail->nama_blok}{$record->warga->nomor_rumah}")
                     ->label('Nama Pengurus')
+                    ->searchable(),
+
+                TextColumn::make('blok.nama_blok')
+                    ->label('Blok')
                     ->searchable(),
 
                 TextColumn::make('warga.gang.nama')
@@ -94,6 +111,7 @@ class PengurusResource extends Resource
 
                 TextColumn::make('jabatan')
                     ->label('Jabatan')
+                    ->getStateUsing(fn ($record) => Jabatan::fromName($record->jabatan))
                     ->searchable(),
             ])
             ->filters([

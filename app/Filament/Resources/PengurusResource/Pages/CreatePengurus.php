@@ -14,4 +14,9 @@ class CreatePengurus extends CreateRecord
     {
         return static::getResource()::getUrl('index'); // ke table
     }
+
+    protected function afterCreate(): void
+    {
+        $record = $this->record;
+    }
 }

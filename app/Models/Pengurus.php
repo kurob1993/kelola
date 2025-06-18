@@ -19,4 +19,8 @@ class Pengurus extends Model
     {
         return $this->belongsTo(Gang::class);
     }
+
+    public function blok() {
+        return $this->belongsTo(Blok::class);
+    }
 }

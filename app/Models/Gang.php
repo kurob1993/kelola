@@ -10,4 +10,9 @@ class Gang extends Model
     {
         return $this->belongsTo(Perumahan::class);
     }
+
+    public function wargas()
+    {
+        return $this->hasMany(Warga::class);
+    }
 }
