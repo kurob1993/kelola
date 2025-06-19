@@ -20,8 +20,8 @@ namespace App\Models{
  * @property string $nama_blok
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $rt_id
- * @property int|null $kordinator_id
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\BlokDetail> $blokDetail
+ * @property-read int|null $blok_detail_count
  * @property-read \App\Models\Perumahan $perumahan
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Warga> $warga
  * @property-read int|null $warga_count
@@ -30,13 +30,32 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok query()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok whereKordinatorId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok whereNamaBlok($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok wherePerumahanId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok whereRtId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blok whereUpdatedAt($value)
  */
 	class Blok extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property int $blok_id
+ * @property string $nama_blok
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail whereBlokId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail whereNamaBlok($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail whereUpdatedAt($value)
+ */
+	class BlokDetail extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -49,6 +68,8 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Perumahan $perumahan
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Warga> $wargas
+ * @property-read int|null $wargas_count
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gang query()
@@ -97,16 +118,20 @@ namespace App\Models{
  *
  * @property int $id
  * @property int $gang_id
+ * @property int $blok_id
  * @property string $jabatan
  * @property int $warga_id
- * @property string|null $deleted_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\Gang|null $gang
+ * @property-read \App\Models\Blok $blok
+ * @property-read \App\Models\Gang $gang
  * @property-read \App\Models\Warga|null $warga
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus whereBlokId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus whereGangId($value)
@@ -114,6 +139,8 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus whereJabatan($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus whereWargaId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus withoutTrashed()
  */
 	class Pengurus extends \Eloquent {}
 }
@@ -156,6 +183,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read mixed $nama_tanggal
+ * @property-read mixed $total_iuran
  * @property-read \App\Models\Iuran|null $iuran
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TransaksiIuranDetail> $transaksiIuranDetails
  * @property-read int|null $transaksi_iuran_details_count
@@ -248,15 +276,15 @@ namespace App\Models{
  * @property int $id
  * @property string $nama
  * @property int $perumahan_id
- * @property int $blok_id
+ * @property int $blok_detail_id
  * @property string $nomor_rumah
  * @property string $no_telepon
  * @property string|null $email
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property \App\Models\Gang|null $gang
- * @property int|null $gang_id
- * @property-read \App\Models\Blok $blok
+ * @property \App\Models\Gang $gang
+ * @property int $gang_id
+ * @property-read \App\Models\BlokDetail $blokDetail
  * @property-read \App\Models\Pengurus|null $pengurus
  * @property-read \App\Models\Perumahan $perumahan
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TransaksiIuran> $transaksiIuran
@@ -265,7 +293,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga query()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereBlokId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereBlokDetailId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereGang($value)
