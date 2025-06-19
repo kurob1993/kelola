@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\BlokResource\Pages;
 
 use App\Filament\Resources\BlokResource;
+use App\Livewire\BlokDetails;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 

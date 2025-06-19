@@ -4,17 +4,20 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\BlokResource\Pages;
 use App\Filament\Resources\BlokResource\RelationManagers;
+use App\Livewire\BlokDetails;
 use App\Models\Blok;
 use App\Models\Perumahan;
+use Filament\Actions\Action;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\Layout\Component;
+use Filament\Tables\Concerns\InteractsWithTable;
+use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BlokResource extends Resource
 {
@@ -58,8 +61,11 @@ class BlokResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\ViewAction::make()
+                    ->modalSubmitAction(false)
+                    ->modalContentFooter(fn($record) => view('components.master.blok.blok-detail', ['record' => $record]))
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
