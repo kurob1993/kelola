@@ -32,6 +32,7 @@ class BlokDetailRelationManager extends RelationManager
             ->recordTitleAttribute('nama_blok')
             ->columns([
                 Tables\Columns\TextColumn::make('nama_blok'),
+                Tables\Columns\TextColumn::make('jumlah_wargas')->badge(),
             ])
             ->filters([
                 //

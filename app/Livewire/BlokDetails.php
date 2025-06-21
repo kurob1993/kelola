@@ -18,6 +18,7 @@ class BlokDetails extends BaseWidget
             ->query(BlokDetail::where("blok_id", $this->blok_id))
             ->columns([
                 Tables\Columns\TextColumn::make('nama_blok'),
+                Tables\Columns\TextColumn::make('jumlah_wargas')->badge(),
             ])->defaultPaginationPageOption(5);
     }
 }
