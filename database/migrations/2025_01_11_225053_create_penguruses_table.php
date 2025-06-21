@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('penguruses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('gang_id')->constrained('gangs')->onDelete('cascade');
+            $table->foreignId('gang_id')->nullable()->constrained('gangs')->onDelete('cascade');
             $table->foreignId('blok_id')->constrained('bloks')->onDelete('cascade');
             $table->string('jabatan');
             $table->bigInteger('warga_id');

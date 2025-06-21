@@ -14,12 +14,12 @@ class WargasTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('wargas')->delete();
-
+        
         \DB::table('wargas')->insert(array (
-            0 =>
+            0 => 
             array (
                 'id' => 1,
                 'nama' => 'BAPONG',
@@ -30,10 +30,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bapong@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => '2024-11-30 20:14:51',
-                'gang' => 'SOEKARNO 1',
+                'nama_gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            1 =>
+            1 => 
             array (
                 'id' => 3,
                 'nama' => 'NANANG',
@@ -44,10 +44,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nanang@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 1',
+                'nama_gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            2 =>
+            2 => 
             array (
                 'id' => 4,
                 'nama' => 'SAIFUL',
@@ -58,10 +58,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'saiful@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 1',
+                'nama_gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            3 =>
+            3 => 
             array (
                 'id' => 6,
                 'nama' => 'EKO',
@@ -72,10 +72,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'eko@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 1',
+                'nama_gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            4 =>
+            4 => 
             array (
                 'id' => 7,
                 'nama' => 'VIA',
@@ -86,10 +86,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'via@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 1',
+                'nama_gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            5 =>
+            5 => 
             array (
                 'id' => 8,
                 'nama' => 'MUSTAKIM',
@@ -100,10 +100,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'mustakim@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 1',
+                'nama_gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            6 =>
+            6 => 
             array (
                 'id' => 9,
                 'nama' => 'YASA ',
@@ -114,10 +114,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yasa @gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 1',
+                'nama_gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            7 =>
+            7 => 
             array (
                 'id' => 10,
                 'nama' => 'ALI',
@@ -128,10 +128,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ali@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            8 =>
+            8 => 
             array (
                 'id' => 12,
                 'nama' => 'MEDI',
@@ -142,10 +142,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'medi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            9 =>
+            9 => 
             array (
                 'id' => 13,
                 'nama' => 'RAHMAT',
@@ -156,10 +156,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rahmat@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            10 =>
+            10 => 
             array (
                 'id' => 14,
                 'nama' => 'DEDI',
@@ -170,10 +170,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dedi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            11 =>
+            11 => 
             array (
                 'id' => 15,
                 'nama' => 'NGONTRAK',
@@ -184,10 +184,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ngontrak@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            12 =>
+            12 => 
             array (
                 'id' => 16,
                 'nama' => 'BAYU',
@@ -198,10 +198,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bayu@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            13 =>
+            13 => 
             array (
                 'id' => 17,
                 'nama' => 'PONO',
@@ -212,10 +212,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'pono@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            14 =>
+            14 => 
             array (
                 'id' => 18,
                 'nama' => 'FAHRUL',
@@ -226,10 +226,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fahrul@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            15 =>
+            15 => 
             array (
                 'id' => 19,
                 'nama' => 'LANANG',
@@ -240,10 +240,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'lanang@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            16 =>
+            16 => 
             array (
                 'id' => 21,
                 'nama' => 'YAHYA',
@@ -254,10 +254,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yahya@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            17 =>
+            17 => 
             array (
                 'id' => 22,
                 'nama' => 'EKO',
@@ -268,10 +268,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'eko@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            18 =>
+            18 => 
             array (
                 'id' => 23,
                 'nama' => 'RESTU',
@@ -282,10 +282,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'restu@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            19 =>
+            19 => 
             array (
                 'id' => 24,
                 'nama' => 'YAYAT',
@@ -296,10 +296,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yayat@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            20 =>
+            20 => 
             array (
                 'id' => 25,
                 'nama' => 'ROHAEMIN',
@@ -310,10 +310,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rohaemin@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            21 =>
+            21 => 
             array (
                 'id' => 26,
                 'nama' => 'PUJI',
@@ -324,10 +324,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'puji@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            22 =>
+            22 => 
             array (
                 'id' => 28,
                 'nama' => 'RUSLAN',
@@ -338,10 +338,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ruslan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            23 =>
+            23 => 
             array (
                 'id' => 29,
                 'nama' => 'MAMAS',
@@ -352,10 +352,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'mamas@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            24 =>
+            24 => 
             array (
                 'id' => 30,
                 'nama' => 'ARIFIN',
@@ -366,10 +366,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'arifin@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            25 =>
+            25 => 
             array (
                 'id' => 31,
                 'nama' => 'MAKSUS',
@@ -380,10 +380,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'maksus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            26 =>
+            26 => 
             array (
                 'id' => 32,
                 'nama' => 'IGUN',
@@ -394,10 +394,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'igun@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            27 =>
+            27 => 
             array (
                 'id' => 33,
                 'nama' => 'ARI',
@@ -408,10 +408,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ari@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            28 =>
+            28 => 
             array (
                 'id' => 35,
                 'nama' => 'IMAM',
@@ -422,10 +422,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'imam@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            29 =>
+            29 => 
             array (
                 'id' => 36,
                 'nama' => 'TITO',
@@ -436,10 +436,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'tito@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            30 =>
+            30 => 
             array (
                 'id' => 37,
                 'nama' => 'RIYAN',
@@ -450,10 +450,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'riyan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            31 =>
+            31 => 
             array (
                 'id' => 38,
                 'nama' => 'IKSAN',
@@ -464,10 +464,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'iksan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            32 =>
+            32 => 
             array (
                 'id' => 39,
                 'nama' => 'EKA',
@@ -478,10 +478,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'eka@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            33 =>
+            33 => 
             array (
                 'id' => 40,
                 'nama' => 'YUSUF',
@@ -492,10 +492,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yusuf@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            34 =>
+            34 => 
             array (
                 'id' => 42,
                 'nama' => 'MAHER',
@@ -506,10 +506,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'maher@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            35 =>
+            35 => 
             array (
                 'id' => 43,
                 'nama' => 'AYIK',
@@ -520,10 +520,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ayik@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            36 =>
+            36 => 
             array (
                 'id' => 44,
                 'nama' => 'FAISAL',
@@ -534,10 +534,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'faisal@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            37 =>
+            37 => 
             array (
                 'id' => 45,
                 'nama' => 'RIDHO',
@@ -548,10 +548,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ridho@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            38 =>
+            38 => 
             array (
                 'id' => 46,
                 'nama' => 'HARIS',
@@ -562,10 +562,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'haris@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            39 =>
+            39 => 
             array (
                 'id' => 48,
                 'nama' => 'ADIT',
@@ -576,10 +576,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'adit@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            40 =>
+            40 => 
             array (
                 'id' => 49,
                 'nama' => 'HAYAT',
@@ -590,10 +590,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hayat@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            41 =>
+            41 => 
             array (
                 'id' => 50,
                 'nama' => 'MANTO',
@@ -604,10 +604,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'manto@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            42 =>
+            42 => 
             array (
                 'id' => 51,
                 'nama' => 'TIKO',
@@ -618,10 +618,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'tiko@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            43 =>
+            43 => 
             array (
                 'id' => 52,
                 'nama' => 'BIMBA',
@@ -632,10 +632,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bimba@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            44 =>
+            44 => 
             array (
                 'id' => 54,
                 'nama' => 'NOVA',
@@ -646,10 +646,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nova@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            45 =>
+            45 => 
             array (
                 'id' => 55,
                 'nama' => 'AKMAL',
@@ -660,10 +660,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'akmal@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            46 =>
+            46 => 
             array (
                 'id' => 56,
                 'nama' => 'PA. DE KARSI',
@@ -674,10 +674,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'pa. de karsi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            47 =>
+            47 => 
             array (
                 'id' => 57,
                 'nama' => 'EKY',
@@ -688,10 +688,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'eky@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            48 =>
+            48 => 
             array (
                 'id' => 58,
                 'nama' => 'RINO',
@@ -702,10 +702,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rino@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            49 =>
+            49 => 
             array (
                 'id' => 59,
                 'nama' => 'RUDI',
@@ -716,10 +716,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rudi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            50 =>
+            50 => 
             array (
                 'id' => 61,
                 'nama' => 'SANDI',
@@ -730,10 +730,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sandi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            51 =>
+            51 => 
             array (
                 'id' => 62,
                 'nama' => 'RIKY',
@@ -744,10 +744,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'riky@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            52 =>
+            52 => 
             array (
                 'id' => 63,
                 'nama' => 'DEDE',
@@ -758,10 +758,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dede@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            53 =>
+            53 => 
             array (
                 'id' => 64,
                 'nama' => 'HARIS',
@@ -772,10 +772,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'haris@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            54 =>
+            54 => 
             array (
                 'id' => 65,
                 'nama' => 'SANTOSO',
@@ -786,10 +786,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'santoso@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            55 =>
+            55 => 
             array (
                 'id' => 66,
                 'nama' => 'RIZAL',
@@ -800,10 +800,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rizal@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            56 =>
+            56 => 
             array (
                 'id' => 68,
                 'nama' => 'ARI',
@@ -814,10 +814,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ari@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            57 =>
+            57 => 
             array (
                 'id' => 69,
                 'nama' => 'SONAY',
@@ -828,10 +828,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sonay@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            58 =>
+            58 => 
             array (
                 'id' => 70,
                 'nama' => 'IRKA',
@@ -842,10 +842,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'irka@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            59 =>
+            59 => 
             array (
                 'id' => 71,
                 'nama' => 'SOPYAN/RARA',
@@ -856,10 +856,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sopyan/rara@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            60 =>
+            60 => 
             array (
                 'id' => 73,
                 'nama' => 'DANIUS',
@@ -870,10 +870,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'danius@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            61 =>
+            61 => 
             array (
                 'id' => 75,
                 'nama' => 'OPAN',
@@ -884,10 +884,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'opan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            62 =>
+            62 => 
             array (
                 'id' => 76,
                 'nama' => 'AGUS',
@@ -898,10 +898,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'agus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            63 =>
+            63 => 
             array (
                 'id' => 77,
                 'nama' => 'ULUM',
@@ -912,10 +912,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ulum@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            64 =>
+            64 => 
             array (
                 'id' => 79,
                 'nama' => 'ANDI',
@@ -926,10 +926,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'andi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            65 =>
+            65 => 
             array (
                 'id' => 80,
                 'nama' => 'SOFYAN',
@@ -940,10 +940,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sofyan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            66 =>
+            66 => 
             array (
                 'id' => 81,
                 'nama' => 'SUBHI',
@@ -954,10 +954,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'subhi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            67 =>
+            67 => 
             array (
                 'id' => 82,
                 'nama' => 'MAUREN',
@@ -968,10 +968,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'mauren@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            68 =>
+            68 => 
             array (
                 'id' => 83,
                 'nama' => 'FARIS',
@@ -982,10 +982,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'faris@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            69 =>
+            69 => 
             array (
                 'id' => 84,
                 'nama' => 'FAHMI',
@@ -996,10 +996,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fahmi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            70 =>
+            70 => 
             array (
                 'id' => 86,
                 'nama' => 'HAMIJI',
@@ -1010,10 +1010,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hamiji@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            71 =>
+            71 => 
             array (
                 'id' => 87,
                 'nama' => 'IRAWAN',
@@ -1024,10 +1024,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'irawan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            72 =>
+            72 => 
             array (
                 'id' => 88,
                 'nama' => 'JAJULI',
@@ -1038,10 +1038,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'jajuli@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            73 =>
+            73 => 
             array (
                 'id' => 89,
                 'nama' => 'ANGGA',
@@ -1052,10 +1052,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'angga@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            74 =>
+            74 => 
             array (
                 'id' => 90,
                 'nama' => 'ARI/KIKI',
@@ -1066,10 +1066,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ari/kiki@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            75 =>
+            75 => 
             array (
                 'id' => 91,
                 'nama' => 'EKO',
@@ -1080,10 +1080,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'eko@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            76 =>
+            76 => 
             array (
                 'id' => 92,
                 'nama' => 'INTAN',
@@ -1094,10 +1094,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'intan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            77 =>
+            77 => 
             array (
                 'id' => 94,
                 'nama' => 'ASLIN',
@@ -1108,10 +1108,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'aslin@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            78 =>
+            78 => 
             array (
                 'id' => 95,
                 'nama' => 'FITRI',
@@ -1122,10 +1122,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fitri@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            79 =>
+            79 => 
             array (
                 'id' => 96,
                 'nama' => 'RUDI',
@@ -1136,10 +1136,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rudi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            80 =>
+            80 => 
             array (
                 'id' => 97,
                 'nama' => 'ANDRY',
@@ -1150,10 +1150,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'andry@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            81 =>
+            81 => 
             array (
                 'id' => 98,
                 'nama' => 'KINAN',
@@ -1164,10 +1164,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'kinan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            82 =>
+            82 => 
             array (
                 'id' => 100,
                 'nama' => 'DANI',
@@ -1178,10 +1178,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dani@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            83 =>
+            83 => 
             array (
                 'id' => 101,
                 'nama' => 'RIZKY',
@@ -1192,10 +1192,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rizky@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            84 =>
+            84 => 
             array (
                 'id' => 102,
                 'nama' => 'IVAN',
@@ -1206,10 +1206,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ivan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            85 =>
+            85 => 
             array (
                 'id' => 103,
                 'nama' => 'BU TATIK',
@@ -1220,10 +1220,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bu tatik@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            86 =>
+            86 => 
             array (
                 'id' => 104,
                 'nama' => 'PAK DIAN',
@@ -1234,10 +1234,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'pak dian@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            87 =>
+            87 => 
             array (
                 'id' => 105,
                 'nama' => 'ASEP',
@@ -1248,10 +1248,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'asep@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            88 =>
+            88 => 
             array (
                 'id' => 107,
                 'nama' => 'BU ISTI',
@@ -1262,10 +1262,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bu isti@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            89 =>
+            89 => 
             array (
                 'id' => 108,
                 'nama' => 'ZAINUL',
@@ -1276,10 +1276,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'zainul@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            90 =>
+            90 => 
             array (
                 'id' => 109,
                 'nama' => 'EKO',
@@ -1290,10 +1290,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'eko@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            91 =>
+            91 => 
             array (
                 'id' => 110,
                 'nama' => 'JULAHAN',
@@ -1304,10 +1304,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'julahan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            92 =>
+            92 => 
             array (
                 'id' => 111,
                 'nama' => 'ROY',
@@ -1318,10 +1318,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'roy@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            93 =>
+            93 => 
             array (
                 'id' => 112,
                 'nama' => 'EZI',
@@ -1332,10 +1332,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ezi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            94 =>
+            94 => 
             array (
                 'id' => 113,
                 'nama' => 'DEDE',
@@ -1346,10 +1346,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dede@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            95 =>
+            95 => 
             array (
                 'id' => 115,
                 'nama' => 'RIFKY',
@@ -1360,10 +1360,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rifky@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            96 =>
+            96 => 
             array (
                 'id' => 116,
                 'nama' => 'JAKII',
@@ -1374,10 +1374,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'jakii@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            97 =>
+            97 => 
             array (
                 'id' => 117,
                 'nama' => 'AHMAD',
@@ -1388,10 +1388,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ahmad@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            98 =>
+            98 => 
             array (
                 'id' => 118,
                 'nama' => 'HALIM',
@@ -1402,10 +1402,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'halim@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            99 =>
+            99 => 
             array (
                 'id' => 119,
                 'nama' => 'PURBA',
@@ -1416,10 +1416,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'purba@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            100 =>
+            100 => 
             array (
                 'id' => 121,
                 'nama' => 'BOY',
@@ -1430,10 +1430,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'boy@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            101 =>
+            101 => 
             array (
                 'id' => 122,
                 'nama' => 'DEDE',
@@ -1444,10 +1444,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dede@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            102 =>
+            102 => 
             array (
                 'id' => 123,
                 'nama' => 'LEO',
@@ -1458,10 +1458,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'leo@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            103 =>
+            103 => 
             array (
                 'id' => 124,
                 'nama' => 'HAMID',
@@ -1472,10 +1472,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hamid@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            104 =>
+            104 => 
             array (
                 'id' => 125,
                 'nama' => 'MAWAN',
@@ -1486,10 +1486,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'mawan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            105 =>
+            105 => 
             array (
                 'id' => 126,
                 'nama' => 'WISNU',
@@ -1500,10 +1500,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'wisnu@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            106 =>
+            106 => 
             array (
                 'id' => 128,
                 'nama' => 'RENI',
@@ -1514,10 +1514,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'reni@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            107 =>
+            107 => 
             array (
                 'id' => 129,
                 'nama' => 'BAGUS',
@@ -1528,10 +1528,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bagus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            108 =>
+            108 => 
             array (
                 'id' => 130,
                 'nama' => 'WAHYU',
@@ -1542,10 +1542,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'wahyu@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            109 =>
+            109 => 
             array (
                 'id' => 131,
                 'nama' => 'FATULLAH',
@@ -1556,10 +1556,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fatullah@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            110 =>
+            110 => 
             array (
                 'id' => 132,
                 'nama' => 'IMAM',
@@ -1570,10 +1570,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'imam@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            111 =>
+            111 => 
             array (
                 'id' => 134,
                 'nama' => 'SAEFUL',
@@ -1584,10 +1584,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'saeful@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            112 =>
+            112 => 
             array (
                 'id' => 135,
                 'nama' => 'YOGI',
@@ -1598,10 +1598,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yogi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            113 =>
+            113 => 
             array (
                 'id' => 136,
                 'nama' => 'ANDI',
@@ -1612,10 +1612,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'andi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            114 =>
+            114 => 
             array (
                 'id' => 137,
                 'nama' => 'HUDARI',
@@ -1626,10 +1626,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hudari@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            115 =>
+            115 => 
             array (
                 'id' => 138,
                 'nama' => 'FAHMI',
@@ -1640,10 +1640,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fahmi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            116 =>
+            116 => 
             array (
                 'id' => 139,
                 'nama' => 'EKO',
@@ -1654,10 +1654,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'eko@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            117 =>
+            117 => 
             array (
                 'id' => 140,
                 'nama' => 'HENDRA',
@@ -1668,10 +1668,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hendra@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            118 =>
+            118 => 
             array (
                 'id' => 142,
                 'nama' => 'KONTRAK',
@@ -1682,10 +1682,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'kontrak@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            119 =>
+            119 => 
             array (
                 'id' => 143,
                 'nama' => 'NIKI',
@@ -1696,10 +1696,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'niki@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            120 =>
+            120 => 
             array (
                 'id' => 144,
                 'nama' => 'DADAY',
@@ -1710,10 +1710,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'daday@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            121 =>
+            121 => 
             array (
                 'id' => 145,
                 'nama' => 'BUDI',
@@ -1724,10 +1724,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'budi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            122 =>
+            122 => 
             array (
                 'id' => 146,
                 'nama' => 'ANDRI YANTO',
@@ -1738,10 +1738,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'andri yanto@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            123 =>
+            123 => 
             array (
                 'id' => 148,
                 'nama' => 'FERDI',
@@ -1752,10 +1752,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ferdi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            124 =>
+            124 => 
             array (
                 'id' => 150,
                 'nama' => 'ANGGA',
@@ -1766,10 +1766,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'angga@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            125 =>
+            125 => 
             array (
                 'id' => 151,
                 'nama' => 'DOHIKA',
@@ -1780,10 +1780,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dohika@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            126 =>
+            126 => 
             array (
                 'id' => 152,
                 'nama' => 'RIZKY FAUJI',
@@ -1794,10 +1794,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rizky fauji@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            127 =>
+            127 => 
             array (
                 'id' => 153,
                 'nama' => 'ADE',
@@ -1808,10 +1808,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ade@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            128 =>
+            128 => 
             array (
                 'id' => 154,
                 'nama' => 'IMAM',
@@ -1822,10 +1822,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'imam@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            129 =>
+            129 => 
             array (
                 'id' => 155,
                 'nama' => 'AGUS',
@@ -1836,10 +1836,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'agus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            130 =>
+            130 => 
             array (
                 'id' => 156,
                 'nama' => 'KOMAR',
@@ -1850,10 +1850,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'komar@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            131 =>
+            131 => 
             array (
                 'id' => 158,
                 'nama' => 'RULI',
@@ -1864,10 +1864,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ruli@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            132 =>
+            132 => 
             array (
                 'id' => 159,
                 'nama' => 'DANANG',
@@ -1878,10 +1878,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'danang@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            133 =>
+            133 => 
             array (
                 'id' => 160,
                 'nama' => 'AEP',
@@ -1892,10 +1892,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'aep@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            134 =>
+            134 => 
             array (
                 'id' => 161,
                 'nama' => 'ADE IKYAS',
@@ -1906,10 +1906,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ade ikyas@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            135 =>
+            135 => 
             array (
                 'id' => 162,
                 'nama' => 'NURAUFA',
@@ -1920,10 +1920,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nuraufa@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            136 =>
+            136 => 
             array (
                 'id' => 163,
                 'nama' => 'NUHMAN',
@@ -1934,10 +1934,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nuhman@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            137 =>
+            137 => 
             array (
                 'id' => 164,
                 'nama' => 'ILHAM',
@@ -1948,10 +1948,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ilham@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            138 =>
+            138 => 
             array (
                 'id' => 166,
                 'nama' => 'GINA',
@@ -1962,10 +1962,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'gina@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            139 =>
+            139 => 
             array (
                 'id' => 167,
                 'nama' => 'ABYAN',
@@ -1976,10 +1976,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'abyan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            140 =>
+            140 => 
             array (
                 'id' => 168,
                 'nama' => 'LALU',
@@ -1990,10 +1990,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'lalu@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            141 =>
+            141 => 
             array (
                 'id' => 169,
                 'nama' => 'DELA',
@@ -2004,10 +2004,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dela@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            142 =>
+            142 => 
             array (
                 'id' => 170,
                 'nama' => 'DWI',
@@ -2018,10 +2018,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dwi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            143 =>
+            143 => 
             array (
                 'id' => 171,
                 'nama' => 'MAULANA',
@@ -2032,10 +2032,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'maulana@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            144 =>
+            144 => 
             array (
                 'id' => 173,
                 'nama' => 'HENDRIK',
@@ -2046,10 +2046,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hendrik@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            145 =>
+            145 => 
             array (
                 'id' => 174,
                 'nama' => 'YUDA/UUS',
@@ -2060,10 +2060,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yuda/uus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            146 =>
+            146 => 
             array (
                 'id' => 175,
                 'nama' => 'RIKO',
@@ -2074,10 +2074,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'riko@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            147 =>
+            147 => 
             array (
                 'id' => 176,
                 'nama' => 'DENY',
@@ -2088,10 +2088,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'deny@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            148 =>
+            148 => 
             array (
                 'id' => 177,
                 'nama' => 'PANGGIH',
@@ -2102,10 +2102,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'panggih@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            149 =>
+            149 => 
             array (
                 'id' => 178,
                 'nama' => 'APRI',
@@ -2116,10 +2116,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'apri@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            150 =>
+            150 => 
             array (
                 'id' => 179,
                 'nama' => 'CECEP',
@@ -2130,10 +2130,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'cecep@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            151 =>
+            151 => 
             array (
                 'id' => 181,
                 'nama' => 'ROHIM',
@@ -2144,10 +2144,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rohim@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            152 =>
+            152 => 
             array (
                 'id' => 182,
                 'nama' => 'ADAM',
@@ -2158,10 +2158,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'adam@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            153 =>
+            153 => 
             array (
                 'id' => 183,
                 'nama' => 'FAUJI',
@@ -2172,10 +2172,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fauji@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            154 =>
+            154 => 
             array (
                 'id' => 184,
                 'nama' => 'WAHYU-2',
@@ -2186,10 +2186,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'wahyu-2@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            155 =>
+            155 => 
             array (
                 'id' => 185,
                 'nama' => 'PVC',
@@ -2200,10 +2200,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'pvc@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            156 =>
+            156 => 
             array (
                 'id' => 187,
                 'nama' => 'AGUS',
@@ -2214,10 +2214,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'agus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            157 =>
+            157 => 
             array (
                 'id' => 188,
                 'nama' => 'RIYAN',
@@ -2228,10 +2228,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'riyan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            158 =>
+            158 => 
             array (
                 'id' => 189,
                 'nama' => 'ISTI',
@@ -2242,10 +2242,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'isti@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            159 =>
+            159 => 
             array (
                 'id' => 190,
                 'nama' => 'DIDI',
@@ -2256,10 +2256,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'didi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            160 =>
+            160 => 
             array (
                 'id' => 191,
                 'nama' => 'SUNARDI',
@@ -2270,10 +2270,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sunardi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            161 =>
+            161 => 
             array (
                 'id' => 192,
                 'nama' => 'YUGATA',
@@ -2284,10 +2284,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yugata@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            162 =>
+            162 => 
             array (
                 'id' => 193,
                 'nama' => 'YUGATA',
@@ -2298,10 +2298,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yugata@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            163 =>
+            163 => 
             array (
                 'id' => 195,
                 'nama' => 'PANGKI',
@@ -2312,10 +2312,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'pangki@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            164 =>
+            164 => 
             array (
                 'id' => 196,
                 'nama' => 'FAHRUL ROJI',
@@ -2326,10 +2326,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fahrul roji@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            165 =>
+            165 => 
             array (
                 'id' => 197,
                 'nama' => 'SINGGIH',
@@ -2340,10 +2340,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'singgih@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            166 =>
+            166 => 
             array (
                 'id' => 198,
                 'nama' => 'ISMET ',
@@ -2354,10 +2354,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ismet @gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            167 =>
+            167 => 
             array (
                 'id' => 199,
                 'nama' => 'JAKI',
@@ -2368,10 +2368,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'jaki@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            168 =>
+            168 => 
             array (
                 'id' => 200,
                 'nama' => 'SUMEDI',
@@ -2382,10 +2382,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sumedi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            169 =>
+            169 => 
             array (
                 'id' => 202,
                 'nama' => 'GUNADI',
@@ -2396,10 +2396,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'gunadi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            170 =>
+            170 => 
             array (
                 'id' => 203,
                 'nama' => 'HERU SINAGA',
@@ -2410,10 +2410,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'heru sinaga@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            171 =>
+            171 => 
             array (
                 'id' => 204,
                 'nama' => 'JOKO',
@@ -2424,10 +2424,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'joko@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            172 =>
+            172 => 
             array (
                 'id' => 205,
                 'nama' => 'JUFRONI',
@@ -2438,10 +2438,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'jufroni@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            173 =>
+            173 => 
             array (
                 'id' => 206,
                 'nama' => 'SADIMIN',
@@ -2452,10 +2452,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sadimin@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            174 =>
+            174 => 
             array (
                 'id' => 207,
                 'nama' => 'DIMAS',
@@ -2466,10 +2466,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dimas@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            175 =>
+            175 => 
             array (
                 'id' => 208,
                 'nama' => 'GALIH',
@@ -2480,10 +2480,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'galih@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            176 =>
+            176 => 
             array (
                 'id' => 209,
                 'nama' => 'KHOIRUL',
@@ -2494,10 +2494,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'khoirul@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            177 =>
+            177 => 
             array (
                 'id' => 210,
                 'nama' => 'SAEFUROHMAN',
@@ -2508,10 +2508,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'saefurohman@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            178 =>
+            178 => 
             array (
                 'id' => 212,
                 'nama' => 'YONI WINARTO',
@@ -2522,10 +2522,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yoni winarto@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            179 =>
+            179 => 
             array (
                 'id' => 213,
                 'nama' => 'HERMAWAN',
@@ -2536,10 +2536,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hermawan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            180 =>
+            180 => 
             array (
                 'id' => 214,
                 'nama' => 'NURI ISKANDAR',
@@ -2550,10 +2550,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nuri iskandar@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            181 =>
+            181 => 
             array (
                 'id' => 215,
                 'nama' => 'FERI FADLI',
@@ -2564,10 +2564,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'feri fadli@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            182 =>
+            182 => 
             array (
                 'id' => 216,
                 'nama' => 'SABRAMALISI',
@@ -2578,10 +2578,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sabramalisi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            183 =>
+            183 => 
             array (
                 'id' => 217,
                 'nama' => 'DONNY ',
@@ -2592,10 +2592,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'donny @gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            184 =>
+            184 => 
             array (
                 'id' => 220,
                 'nama' => 'RONI',
@@ -2606,10 +2606,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'roni@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            185 =>
+            185 => 
             array (
                 'id' => 221,
                 'nama' => 'REZA',
@@ -2620,10 +2620,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'reza@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            186 =>
+            186 => 
             array (
                 'id' => 222,
                 'nama' => 'PIJAR',
@@ -2634,10 +2634,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'pijar@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            187 =>
+            187 => 
             array (
                 'id' => 223,
                 'nama' => 'SUPRIYADI',
@@ -2648,10 +2648,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'supriyadi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            188 =>
+            188 => 
             array (
                 'id' => 224,
                 'nama' => 'ROBERTO',
@@ -2662,10 +2662,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'roberto@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            189 =>
+            189 => 
             array (
                 'id' => 225,
                 'nama' => 'HADIRI',
@@ -2676,10 +2676,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hadiri@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            190 =>
+            190 => 
             array (
                 'id' => 227,
                 'nama' => 'AGUS MULYADI ',
@@ -2690,10 +2690,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'agus mulyadi @gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            191 =>
+            191 => 
             array (
                 'id' => 228,
                 'nama' => 'IPUL',
@@ -2704,10 +2704,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ipul@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            192 =>
+            192 => 
             array (
                 'id' => 229,
                 'nama' => 'ROSIAH',
@@ -2718,10 +2718,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rosiah@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            193 =>
+            193 => 
             array (
                 'id' => 230,
                 'nama' => 'INEKE',
@@ -2732,10 +2732,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ineke@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            194 =>
+            194 => 
             array (
                 'id' => 231,
                 'nama' => 'HARIYANTO',
@@ -2746,10 +2746,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hariyanto@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            195 =>
+            195 => 
             array (
                 'id' => 232,
                 'nama' => 'YOSEP',
@@ -2760,10 +2760,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yosep@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            196 =>
+            196 => 
             array (
                 'id' => 233,
                 'nama' => 'NGONTRAK',
@@ -2774,10 +2774,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ngontrak@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            197 =>
+            197 => 
             array (
                 'id' => 235,
                 'nama' => 'HERI',
@@ -2788,10 +2788,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'heri@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            198 =>
+            198 => 
             array (
                 'id' => 236,
                 'nama' => 'ADE',
@@ -2802,10 +2802,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ade@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            199 =>
+            199 => 
             array (
                 'id' => 237,
                 'nama' => 'AJI',
@@ -2816,10 +2816,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'aji@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            200 =>
+            200 => 
             array (
                 'id' => 238,
                 'nama' => 'NAFIUDIN',
@@ -2830,10 +2830,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nafiudin@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            201 =>
+            201 => 
             array (
                 'id' => 239,
                 'nama' => 'WAHYU',
@@ -2844,10 +2844,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'wahyu@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            202 =>
+            202 => 
             array (
                 'id' => 240,
                 'nama' => 'EGA',
@@ -2858,10 +2858,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ega@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            203 =>
+            203 => 
             array (
                 'id' => 241,
                 'nama' => 'PIPIT',
@@ -2872,10 +2872,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'pipit@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            204 =>
+            204 => 
             array (
                 'id' => 242,
                 'nama' => 'INDRA',
@@ -2886,10 +2886,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'indra@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            205 =>
+            205 => 
             array (
                 'id' => 244,
                 'nama' => 'JAMAL',
@@ -2900,10 +2900,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'jamal@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            206 =>
+            206 => 
             array (
                 'id' => 245,
                 'nama' => 'DIMAS',
@@ -2914,10 +2914,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dimas@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            207 =>
+            207 => 
             array (
                 'id' => 246,
                 'nama' => 'SYAHRIL',
@@ -2928,10 +2928,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'syahril@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            208 =>
+            208 => 
             array (
                 'id' => 247,
                 'nama' => 'RUDI',
@@ -2942,10 +2942,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rudi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            209 =>
+            209 => 
             array (
                 'id' => 248,
                 'nama' => 'FABIO',
@@ -2956,10 +2956,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fabio@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            210 =>
+            210 => 
             array (
                 'id' => 249,
                 'nama' => 'RIZAL',
@@ -2970,10 +2970,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rizal@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            211 =>
+            211 => 
             array (
                 'id' => 250,
                 'nama' => 'REZA',
@@ -2984,10 +2984,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'reza@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            212 =>
+            212 => 
             array (
                 'id' => 251,
                 'nama' => 'SYARIF',
@@ -2998,10 +2998,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'syarif@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            213 =>
+            213 => 
             array (
                 'id' => 253,
                 'nama' => 'KUKU/KOKO',
@@ -3012,10 +3012,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'kuku/koko@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            214 =>
+            214 => 
             array (
                 'id' => 254,
                 'nama' => 'BAMBANG',
@@ -3026,10 +3026,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bambang@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            215 =>
+            215 => 
             array (
                 'id' => 255,
                 'nama' => 'RIJAL',
@@ -3040,10 +3040,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rijal@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            216 =>
+            216 => 
             array (
                 'id' => 256,
                 'nama' => 'RAHMAT',
@@ -3054,10 +3054,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rahmat@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            217 =>
+            217 => 
             array (
                 'id' => 257,
                 'nama' => 'FAHRUL',
@@ -3068,10 +3068,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fahrul@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            218 =>
+            218 => 
             array (
                 'id' => 258,
                 'nama' => 'IYAN',
@@ -3082,10 +3082,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'iyan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            219 =>
+            219 => 
             array (
                 'id' => 259,
                 'nama' => 'IYUS',
@@ -3096,10 +3096,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'iyus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            220 =>
+            220 => 
             array (
                 'id' => 261,
                 'nama' => 'ARI',
@@ -3110,10 +3110,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ari@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            221 =>
+            221 => 
             array (
                 'id' => 262,
                 'nama' => 'ALFA',
@@ -3124,10 +3124,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'alfa@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            222 =>
+            222 => 
             array (
                 'id' => 263,
                 'nama' => 'SUHARTONO',
@@ -3138,10 +3138,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'suhartono@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            223 =>
+            223 => 
             array (
                 'id' => 264,
                 'nama' => 'HERYANTO',
@@ -3152,10 +3152,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'heryanto@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            224 =>
+            224 => 
             array (
                 'id' => 265,
                 'nama' => 'GUNAWAN',
@@ -3166,10 +3166,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'gunawan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            225 =>
+            225 => 
             array (
                 'id' => 266,
                 'nama' => 'SAM\'UN',
@@ -3180,10 +3180,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sam\'un@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            226 =>
+            226 => 
             array (
                 'id' => 267,
                 'nama' => 'MASKAN',
@@ -3194,10 +3194,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'maskan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            227 =>
+            227 => 
             array (
                 'id' => 269,
                 'nama' => 'MARDI',
@@ -3208,10 +3208,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'mardi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            228 =>
+            228 => 
             array (
                 'id' => 270,
                 'nama' => 'VANI',
@@ -3222,10 +3222,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'vani@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            229 =>
+            229 => 
             array (
                 'id' => 271,
                 'nama' => 'MUKSI',
@@ -3236,10 +3236,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'muksi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            230 =>
+            230 => 
             array (
                 'id' => 272,
                 'nama' => 'ULES',
@@ -3250,10 +3250,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ules@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            231 =>
+            231 => 
             array (
                 'id' => 273,
                 'nama' => 'TITUS',
@@ -3264,10 +3264,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'titus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            232 =>
+            232 => 
             array (
                 'id' => 274,
                 'nama' => 'NUGRAHA',
@@ -3278,10 +3278,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nugraha@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            233 =>
+            233 => 
             array (
                 'id' => 275,
                 'nama' => 'MASDUKI',
@@ -3292,10 +3292,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'masduki@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            234 =>
+            234 => 
             array (
                 'id' => 277,
                 'nama' => 'FAISAL',
@@ -3306,10 +3306,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'faisal@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            235 =>
+            235 => 
             array (
                 'id' => 278,
                 'nama' => 'ANGGA',
@@ -3320,10 +3320,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'angga@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            236 =>
+            236 => 
             array (
                 'id' => 279,
                 'nama' => 'RAJIK',
@@ -3334,10 +3334,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rajik@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            237 =>
+            237 => 
             array (
                 'id' => 280,
                 'nama' => 'LINDA',
@@ -3348,10 +3348,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'linda@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            238 =>
+            238 => 
             array (
                 'id' => 281,
                 'nama' => 'AHMAD FATULOH',
@@ -3362,10 +3362,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ahmad fatuloh@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            239 =>
+            239 => 
             array (
                 'id' => 282,
                 'nama' => 'MUHINBIN',
@@ -3376,10 +3376,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'muhinbin@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            240 =>
+            240 => 
             array (
                 'id' => 283,
                 'nama' => 'AJAT',
@@ -3390,10 +3390,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ajat@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            241 =>
+            241 => 
             array (
                 'id' => 284,
                 'nama' => 'AKBAR',
@@ -3404,10 +3404,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'akbar@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            242 =>
+            242 => 
             array (
                 'id' => 285,
                 'nama' => 'KUROB',
@@ -3418,10 +3418,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'kurob@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            243 =>
+            243 => 
             array (
                 'id' => 287,
                 'nama' => 'OPIK',
@@ -3432,10 +3432,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'opik@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            244 =>
+            244 => 
             array (
                 'id' => 288,
                 'nama' => 'ANDRI',
@@ -3446,10 +3446,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'andri@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            245 =>
+            245 => 
             array (
                 'id' => 2,
                 'nama' => 'ASRI',
@@ -3460,10 +3460,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'asri@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 1',
+                'nama_gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            246 =>
+            246 => 
             array (
                 'id' => 5,
                 'nama' => 'BOY',
@@ -3474,10 +3474,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'boy@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 1',
+                'nama_gang' => 'SOEKARNO 1',
                 'gang_id' => 1,
             ),
-            247 =>
+            247 => 
             array (
                 'id' => 11,
                 'nama' => 'HENDRIONO',
@@ -3488,10 +3488,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hendriono@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            248 =>
+            248 => 
             array (
                 'id' => 20,
                 'nama' => 'INDRA',
@@ -3502,10 +3502,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'indra@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            249 =>
+            249 => 
             array (
                 'id' => 27,
                 'nama' => 'ASMIN',
@@ -3516,10 +3516,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'asmin@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            250 =>
+            250 => 
             array (
                 'id' => 34,
                 'nama' => 'ANAS',
@@ -3530,10 +3530,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'anas@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 2',
+                'nama_gang' => 'SOEKARNO 2',
                 'gang_id' => 2,
             ),
-            251 =>
+            251 => 
             array (
                 'id' => 41,
                 'nama' => 'ADE',
@@ -3544,10 +3544,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ade@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            252 =>
+            252 => 
             array (
                 'id' => 47,
                 'nama' => 'ROKY',
@@ -3558,10 +3558,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'roky@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 3',
+                'nama_gang' => 'SOEKARNO 3',
                 'gang_id' => 3,
             ),
-            253 =>
+            253 => 
             array (
                 'id' => 53,
                 'nama' => 'ALDY',
@@ -3572,10 +3572,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'aldy@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            254 =>
+            254 => 
             array (
                 'id' => 60,
                 'nama' => 'DANIUS',
@@ -3586,10 +3586,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'danius@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            255 =>
+            255 => 
             array (
                 'id' => 67,
                 'nama' => 'BENI',
@@ -3600,10 +3600,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'beni@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            256 =>
+            256 => 
             array (
                 'id' => 72,
                 'nama' => 'AMDI/LISA',
@@ -3614,10 +3614,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'amdi/lisa@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 4',
+                'nama_gang' => 'SOEKARNO 4',
                 'gang_id' => 4,
             ),
-            257 =>
+            257 => 
             array (
                 'id' => 74,
                 'nama' => 'RAMLAN',
@@ -3628,10 +3628,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ramlan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            258 =>
+            258 => 
             array (
                 'id' => 78,
                 'nama' => 'ALI',
@@ -3642,10 +3642,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ali@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            259 =>
+            259 => 
             array (
                 'id' => 85,
                 'nama' => 'YANUAR',
@@ -3656,10 +3656,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yanuar@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            260 =>
+            260 => 
             array (
                 'id' => 290,
                 'nama' => 'SARMAN',
@@ -3670,10 +3670,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sarman@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            261 =>
+            261 => 
             array (
                 'id' => 291,
                 'nama' => 'YUSI',
@@ -3684,10 +3684,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yusi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            262 =>
+            262 => 
             array (
                 'id' => 292,
                 'nama' => 'TRI',
@@ -3698,10 +3698,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'tri@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            263 =>
+            263 => 
             array (
                 'id' => 294,
                 'nama' => 'NURI',
@@ -3712,10 +3712,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nuri@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            264 =>
+            264 => 
             array (
                 'id' => 295,
                 'nama' => 'KRINAWATI/SUKIYEM',
@@ -3726,10 +3726,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'krinawati/sukiyem@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            265 =>
+            265 => 
             array (
                 'id' => 296,
                 'nama' => 'BAYU/ITA',
@@ -3740,10 +3740,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bayu/ita@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            266 =>
+            266 => 
             array (
                 'id' => 297,
                 'nama' => 'RISMA',
@@ -3754,10 +3754,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'risma@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            267 =>
+            267 => 
             array (
                 'id' => 298,
                 'nama' => 'FURQON',
@@ -3768,10 +3768,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'furqon@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            268 =>
+            268 => 
             array (
                 'id' => 299,
                 'nama' => 'ERSA',
@@ -3782,10 +3782,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ersa@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            269 =>
+            269 => 
             array (
                 'id' => 301,
                 'nama' => 'FELIS',
@@ -3796,10 +3796,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'felis@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            270 =>
+            270 => 
             array (
                 'id' => 302,
                 'nama' => 'IDRUS',
@@ -3810,10 +3810,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'idrus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            271 =>
+            271 => 
             array (
                 'id' => 303,
                 'nama' => 'FAJAR',
@@ -3824,10 +3824,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'fajar@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            272 =>
+            272 => 
             array (
                 'id' => 304,
                 'nama' => 'JUAN',
@@ -3838,10 +3838,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'juan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            273 =>
+            273 => 
             array (
                 'id' => 305,
                 'nama' => 'BUANG',
@@ -3852,10 +3852,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'buang@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            274 =>
+            274 => 
             array (
                 'id' => 306,
                 'nama' => 'ALFI',
@@ -3866,10 +3866,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'alfi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            275 =>
+            275 => 
             array (
                 'id' => 307,
                 'nama' => 'ICHA',
@@ -3880,10 +3880,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'icha@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            276 =>
+            276 => 
             array (
                 'id' => 308,
                 'nama' => 'NGONTRAK',
@@ -3894,10 +3894,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ngontrak@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            277 =>
+            277 => 
             array (
                 'id' => 309,
                 'nama' => 'NUNU',
@@ -3908,10 +3908,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nunu@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            278 =>
+            278 => 
             array (
                 'id' => 311,
                 'nama' => 'SLAMET',
@@ -3922,10 +3922,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'slamet@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            279 =>
+            279 => 
             array (
                 'id' => 312,
                 'nama' => 'JAJANG',
@@ -3936,10 +3936,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'jajang@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            280 =>
+            280 => 
             array (
                 'id' => 313,
                 'nama' => 'HERMAN',
@@ -3950,10 +3950,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'herman@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            281 =>
+            281 => 
             array (
                 'id' => 314,
                 'nama' => 'DENI',
@@ -3964,10 +3964,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'deni@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            282 =>
+            282 => 
             array (
                 'id' => 315,
                 'nama' => 'IYAN',
@@ -3978,10 +3978,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'iyan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            283 =>
+            283 => 
             array (
                 'id' => 316,
                 'nama' => 'FELANI',
@@ -3992,10 +3992,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'felani@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            284 =>
+            284 => 
             array (
                 'id' => 317,
                 'nama' => 'IKHSAN',
@@ -4006,10 +4006,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ikhsan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            285 =>
+            285 => 
             array (
                 'id' => 318,
                 'nama' => 'ALFI',
@@ -4020,10 +4020,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'alfi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            286 =>
+            286 => 
             array (
                 'id' => 320,
                 'nama' => 'DEDI SUHENDAR',
@@ -4034,10 +4034,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dedi suhendar@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            287 =>
+            287 => 
             array (
                 'id' => 321,
                 'nama' => 'HABIB',
@@ -4048,10 +4048,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'habib@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            288 =>
+            288 => 
             array (
                 'id' => 322,
                 'nama' => 'IKBAL',
@@ -4062,10 +4062,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ikbal@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            289 =>
+            289 => 
             array (
                 'id' => 323,
                 'nama' => 'WAHYU',
@@ -4076,10 +4076,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'wahyu@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            290 =>
+            290 => 
             array (
                 'id' => 324,
                 'nama' => 'SARIFUDIN',
@@ -4090,10 +4090,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sarifudin@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            291 =>
+            291 => 
             array (
                 'id' => 325,
                 'nama' => 'ADE',
@@ -4104,10 +4104,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ade@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            292 =>
+            292 => 
             array (
                 'id' => 326,
                 'nama' => 'ARDANA',
@@ -4118,10 +4118,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ardana@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            293 =>
+            293 => 
             array (
                 'id' => 328,
                 'nama' => 'ZALDY',
@@ -4132,10 +4132,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'zaldy@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            294 =>
+            294 => 
             array (
                 'id' => 329,
                 'nama' => 'AFITULOH',
@@ -4146,10 +4146,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'afituloh@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            295 =>
+            295 => 
             array (
                 'id' => 330,
                 'nama' => 'FAIZ',
@@ -4160,10 +4160,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'faiz@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            296 =>
+            296 => 
             array (
                 'id' => 331,
                 'nama' => 'DANU',
@@ -4174,10 +4174,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'danu@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            297 =>
+            297 => 
             array (
                 'id' => 332,
                 'nama' => 'LUKMAN',
@@ -4188,10 +4188,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'lukman@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            298 =>
+            298 => 
             array (
                 'id' => 333,
                 'nama' => 'HAFIF',
@@ -4202,10 +4202,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'hafif@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            299 =>
+            299 => 
             array (
                 'id' => 335,
                 'nama' => 'IING. YP',
@@ -4216,10 +4216,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'iing. yp@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            300 =>
+            300 => 
             array (
                 'id' => 336,
                 'nama' => 'SANDY',
@@ -4230,10 +4230,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'sandy@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            301 =>
+            301 => 
             array (
                 'id' => 337,
                 'nama' => 'RAMA',
@@ -4244,10 +4244,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rama@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            302 =>
+            302 => 
             array (
                 'id' => 338,
                 'nama' => 'FEBRI',
@@ -4258,10 +4258,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'febri@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            303 =>
+            303 => 
             array (
                 'id' => 339,
                 'nama' => 'AJANG',
@@ -4272,10 +4272,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ajang@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            304 =>
+            304 => 
             array (
                 'id' => 340,
                 'nama' => 'NAHROWI',
@@ -4286,10 +4286,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nahrowi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            305 =>
+            305 => 
             array (
                 'id' => 341,
                 'nama' => 'IPUL',
@@ -4300,10 +4300,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ipul@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            306 =>
+            306 => 
             array (
                 'id' => 342,
                 'nama' => 'XEKI',
@@ -4314,10 +4314,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'xeki@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            307 =>
+            307 => 
             array (
                 'id' => 93,
                 'nama' => 'JAENAL',
@@ -4328,10 +4328,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'jaenal@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            308 =>
+            308 => 
             array (
                 'id' => 99,
                 'nama' => 'ADIT',
@@ -4342,10 +4342,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'adit@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 5',
+                'nama_gang' => 'SOEKARNO 5',
                 'gang_id' => 5,
             ),
-            309 =>
+            309 => 
             array (
                 'id' => 106,
                 'nama' => 'FARHAN',
@@ -4356,10 +4356,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'farhan@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            310 =>
+            310 => 
             array (
                 'id' => 114,
                 'nama' => 'ARIF',
@@ -4370,10 +4370,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'arif@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            311 =>
+            311 => 
             array (
                 'id' => 120,
                 'nama' => 'LUTFI',
@@ -4384,10 +4384,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'lutfi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 6',
+                'nama_gang' => 'SOEKARNO 6',
                 'gang_id' => 6,
             ),
-            312 =>
+            312 => 
             array (
                 'id' => 127,
                 'nama' => 'OKTA',
@@ -4398,10 +4398,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'okta@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            313 =>
+            313 => 
             array (
                 'id' => 133,
                 'nama' => 'JUNED',
@@ -4412,10 +4412,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'juned@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            314 =>
+            314 => 
             array (
                 'id' => 141,
                 'nama' => 'ROSDIANSYAH',
@@ -4426,10 +4426,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rosdiansyah@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 7',
+                'nama_gang' => 'SOEKARNO 7',
                 'gang_id' => 7,
             ),
-            315 =>
+            315 => 
             array (
                 'id' => 147,
                 'nama' => 'YUDHA',
@@ -4440,10 +4440,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yudha@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            316 =>
+            316 => 
             array (
                 'id' => 149,
                 'nama' => 'DIDI SUJADI',
@@ -4454,10 +4454,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'didi sujadi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            317 =>
+            317 => 
             array (
                 'id' => 157,
                 'nama' => 'BINTANG',
@@ -4468,10 +4468,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bintang@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            318 =>
+            318 => 
             array (
                 'id' => 165,
                 'nama' => 'MUSLIM',
@@ -4482,10 +4482,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'muslim@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 8',
+                'nama_gang' => 'SOEKARNO 8',
                 'gang_id' => 8,
             ),
-            319 =>
+            319 => 
             array (
                 'id' => 172,
                 'nama' => 'DEBY',
@@ -4496,10 +4496,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'deby@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            320 =>
+            320 => 
             array (
                 'id' => 180,
                 'nama' => 'RUDI',
@@ -4510,10 +4510,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'rudi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            321 =>
+            321 => 
             array (
                 'id' => 186,
                 'nama' => 'MADURA',
@@ -4524,10 +4524,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'madura@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 9',
+                'nama_gang' => 'SOEKARNO 9',
                 'gang_id' => 9,
             ),
-            322 =>
+            322 => 
             array (
                 'id' => 194,
                 'nama' => 'KIKI',
@@ -4538,10 +4538,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'kiki@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            323 =>
+            323 => 
             array (
                 'id' => 201,
                 'nama' => 'KRISTIANTO',
@@ -4552,10 +4552,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'kristianto@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 10',
+                'nama_gang' => 'SOEKARNO 10',
                 'gang_id' => 10,
             ),
-            324 =>
+            324 => 
             array (
                 'id' => 211,
                 'nama' => 'NUR RIZA ALFIANA',
@@ -4566,10 +4566,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nur riza alfiana@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            325 =>
+            325 => 
             array (
                 'id' => 218,
                 'nama' => 'BUDI',
@@ -4580,10 +4580,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'budi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            326 =>
+            326 => 
             array (
                 'id' => 219,
                 'nama' => 'YATI',
@@ -4594,10 +4594,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'yati@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 11',
+                'nama_gang' => 'SOEKARNO 11',
                 'gang_id' => 11,
             ),
-            327 =>
+            327 => 
             array (
                 'id' => 226,
                 'nama' => 'BAGUS',
@@ -4608,10 +4608,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'bagus@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            328 =>
+            328 => 
             array (
                 'id' => 234,
                 'nama' => 'NASRUDIN',
@@ -4622,10 +4622,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nasrudin@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 12',
+                'nama_gang' => 'SOEKARNO 12',
                 'gang_id' => 12,
             ),
-            329 =>
+            329 => 
             array (
                 'id' => 243,
                 'nama' => 'DANI',
@@ -4636,10 +4636,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dani@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            330 =>
+            330 => 
             array (
                 'id' => 252,
                 'nama' => 'KIBEK',
@@ -4650,10 +4650,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'kibek@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            331 =>
+            331 => 
             array (
                 'id' => 260,
                 'nama' => 'BOY',
@@ -4664,10 +4664,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'boy@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            332 =>
+            332 => 
             array (
                 'id' => 268,
                 'nama' => 'RIKI',
@@ -4678,10 +4678,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'riki@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            333 =>
+            333 => 
             array (
                 'id' => 276,
                 'nama' => 'UJANG',
@@ -4692,10 +4692,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ujang@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 13',
+                'nama_gang' => 'SOEKARNO 13',
                 'gang_id' => 13,
             ),
-            334 =>
+            334 => 
             array (
                 'id' => 286,
                 'nama' => 'FIRMAN',
@@ -4706,10 +4706,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'firman@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            335 =>
+            335 => 
             array (
                 'id' => 289,
                 'nama' => 'NIA',
@@ -4720,10 +4720,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'nia@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            336 =>
+            336 => 
             array (
                 'id' => 293,
                 'nama' => 'TB. ARIEF',
@@ -4734,10 +4734,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'tb. arief@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            337 =>
+            337 => 
             array (
                 'id' => 300,
                 'nama' => 'AGUNG/ARIF',
@@ -4748,10 +4748,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'agung/arif@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 14',
+                'nama_gang' => 'SOEKARNO 14',
                 'gang_id' => 14,
             ),
-            338 =>
+            338 => 
             array (
                 'id' => 310,
                 'nama' => 'IPUL/ANSORI',
@@ -4762,10 +4762,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'ipul/ansori@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            339 =>
+            339 => 
             array (
                 'id' => 319,
                 'nama' => 'WALDI',
@@ -4776,10 +4776,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'waldi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            340 =>
+            340 => 
             array (
                 'id' => 327,
                 'nama' => 'DEWI',
@@ -4790,10 +4790,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dewi@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            341 =>
+            341 => 
             array (
                 'id' => 334,
                 'nama' => 'DEDE RIZKY',
@@ -4804,10 +4804,10 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dede rizky@gmail.com',
                 'created_at' => '2024-11-30 20:14:51',
                 'updated_at' => NULL,
-                'gang' => 'SOEKARNO 15',
+                'nama_gang' => 'SOEKARNO 15',
                 'gang_id' => 15,
             ),
-            342 =>
+            342 => 
             array (
                 'id' => 350,
                 'nama' => 'Dira',
@@ -4818,11 +4818,11 @@ class WargasTableSeeder extends Seeder
                 'email' => 'dira201@gmail.com',
                 'created_at' => '2025-06-09 16:32:39',
                 'updated_at' => '2025-06-09 16:51:14',
-                'gang' => NULL,
+                'nama_gang' => NULL,
                 'gang_id' => 14,
             ),
         ));
-
-
+        
+        
     }
 }

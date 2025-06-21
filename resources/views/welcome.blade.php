@@ -27,16 +27,16 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-800">
 <!-- Navigation -->
-<nav class="bg-gray-800 shadow-md sticky top-0 z-50">
+<nav class="bg-gray-80 bg-opacity-40 shadow-md sticky top-0 z-50 backdrop-blur-md" style="backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
             <div class="flex items-center">
-                <span class="text-2xl font-bold text-white">Okuru.id</span>
+                <span class="text-2xl font-bold text-blue-600">Okuru.id</span>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="#features" class="text-white hover:text-gray-200">Fitur</a>
+                <a href="#features" class="text-blue-500 hover:text-blue-600">Fitur</a>
                 <a href="/admin/login" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                     Masuk
                 </a>

@@ -61,7 +61,7 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                         ->label('Status Bayar'),
                     Forms\Components\Select::make('metode_bayar')
                         ->options(['cash', 'transfer', 'online'])
-                        ->label('Status Bayar'),
+                        ->label('Metode Bayar'),
                     Forms\Components\FileUpload::make('bukti_bayar')
                         ->columnSpan(['md' => 2])
                         ->label('Bukti Bayar')

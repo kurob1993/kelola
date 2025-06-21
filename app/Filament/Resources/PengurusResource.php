@@ -61,8 +61,7 @@ class PengurusResource extends Resource
                                 titleAttribute: 'nama',
                             )
                             ->preload()
-                            ->searchable()
-                            ->required(),
+                            ->searchable(),
 
                         Select::make('warga_id')
                             ->label('Warga')
@@ -70,7 +69,9 @@ class PengurusResource extends Resource
                                 name: 'warga',
                                 titleAttribute: 'nama',
                                 modifyQueryUsing: function (Builder $query, Forms\Get $get) {
-                                    $query->where('gang_id', $get('gang_id'));
+                                    $query->whereHas('blokDetail', function (Builder $query) use ($get) {
+                                        $query->where('blok_id', $get('blok_id'));
+                                    });
                                 }
                             )
                             ->getOptionLabelFromRecordUsing(fn(Warga $record) => "{$record->nama} - {$record->blokDetail->nama_blok}{$record->nomor_rumah}")
@@ -97,7 +98,12 @@ class PengurusResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('nama_waraga')
-                    ->getStateUsing(fn($record) => "{$record->warga->nama} -  {$record->warga->blokDetail->nama_blok}{$record->warga->nomor_rumah}")
+                    ->getStateUsing(function ($record) {
+                        return "{$record->warga->nama} -
+                            {$record->warga->blokDetail->nama_blok}{$record->warga->nomor_rumah}
+                            ({$record->warga->gang->nama})
+                        ";
+                    })
                     ->label('Nama Pengurus')
                     ->searchable(),
 
@@ -105,13 +111,13 @@ class PengurusResource extends Resource
                     ->label('Blok')
                     ->searchable(),
 
-                TextColumn::make('warga.gang.nama')
+                TextColumn::make('gang.nama')
                     ->label('Gang')
                     ->searchable(),
 
                 TextColumn::make('jabatan')
                     ->label('Jabatan')
-                    ->getStateUsing(fn ($record) => Jabatan::fromName($record->jabatan))
+                    ->getStateUsing(fn($record) => Jabatan::fromName($record->jabatan))
                     ->searchable(),
             ])
             ->filters([

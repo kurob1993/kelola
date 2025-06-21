@@ -14,12 +14,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('users')->delete();
-
+        
         \DB::table('users')->insert(array (
-            0 =>
+            0 => 
             array (
                 'id' => 2,
                 'name' => 'kordinator 14',
@@ -31,7 +31,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2025-03-12 04:19:03',
                 'warga_id' => 283,
             ),
-            1 =>
+            1 => 
             array (
                 'id' => 4,
                 'name' => 'kurob1993',
@@ -43,7 +43,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2025-05-17 11:31:41',
                 'warga_id' => NULL,
             ),
-            2 =>
+            2 => 
             array (
                 'id' => 1,
                 'name' => 'kurob',
@@ -55,7 +55,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2025-06-09 15:31:51',
                 'warga_id' => 285,
             ),
-            3 =>
+            3 => 
             array (
                 'id' => 8,
                 'name' => 'Dira',
@@ -68,7 +68,7 @@ class UsersTableSeeder extends Seeder
                 'warga_id' => 350,
             ),
         ));
-
-
+        
+        
     }
 }

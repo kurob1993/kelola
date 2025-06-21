@@ -2,6 +2,9 @@
 
 namespace App\Providers\Filament;
 
+use App\Livewire\StatsOverview;
+use App\Livewire\TransaksiIuranChart;
+use App\Livewire\TransaksiIuranTable;
 use Filament\FontProviders\GoogleFontProvider;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\Authenticate;
@@ -46,8 +49,9 @@ class AdminPanelProvider extends PanelProvider
             ->pages([])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                StatsOverview::class,
+                TransaksiIuranChart::class,
+                TransaksiIuranTable::class,
             ])
             ->middleware([
                 EncryptCookies::class,

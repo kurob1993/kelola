@@ -24,7 +24,6 @@ class TransaksiIuranDetailsRelationManager extends RelationManager
                     ->label('Iuran')
                     ->options(function () {
                         $transaksiIuran = $this->ownerRecord;
-                        \Log::debug($transaksiIuran->warga?->gang_id);
 
                         $gangId = $transaksiIuran->warga?->gang_id;
 

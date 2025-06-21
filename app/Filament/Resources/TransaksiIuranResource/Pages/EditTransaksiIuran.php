@@ -25,4 +25,9 @@ class EditTransaksiIuran extends EditRecord
             ->url(route('filament.admin.resources.transaksi-iurans.index'))
             ->color('gray');
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('index'); // ke table
+    }
 }
