@@ -62,10 +62,11 @@ class BlokResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\ViewAction::make()
                     ->modalSubmitAction(false)
-                    ->modalContentFooter(fn($record) => view('components.master.blok.blok-detail', ['record' => $record]))
+                    ->modalContentFooter(fn($record) => view('components.master.blok.blok-detail', ['record' => $record])),
+                Tables\Actions\DeleteAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

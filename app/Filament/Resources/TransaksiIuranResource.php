@@ -84,7 +84,7 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                 Tables\Columns\TextColumn::make('tanggal_bayar')->label('Jatuh Tempo')->date('d F Y'),
                 Tables\Columns\TextColumn::make('metode_bayar')->label('Metode Bayar'),
                 Tables\Columns\TextColumn::make('total_iuran')
-                    ->money('Rp.')
+                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 2))
                     ->label('Nominal'),
                 Tables\Columns\TextColumn::make('status_bayar')
                     ->formatStateUsing(fn(string $state): string => strtoupper($state))
@@ -134,7 +134,6 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\Action::make('bukti_bayar')
                     ->icon('heroicon-o-eye')
                     ->modalContent(fn($record) => view('components.transaksi.iuran.modal-bukti-bayar', [
@@ -143,6 +142,7 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                     ->modalWidth('max-w-2xl')
                     ->modalSubmitAction(false)
                     ->modalCancelActionLabel('Close'),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

@@ -32,5 +32,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ModelHasRolesTableSeeder::class);
         $this->call(TransaksiIuransTableSeeder::class);
         $this->call(TransaksiIuranDetailsTableSeeder::class);
+        $this->call(KategoriTransaksiSeeder::class);
     }
 }

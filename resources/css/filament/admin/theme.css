@@ -2,6 +2,13 @@
 
 @config 'tailwind.config.js';
 
+.fi-simple-main {
+    @apply my-0 min-h-screen py-36;
+    @apply sm:my-auto sm:min-h-[auto] sm:py-11;
+}
+
+
+/*main page*/
 .fi-breadcrumbs {
     @apply hidden;
 }

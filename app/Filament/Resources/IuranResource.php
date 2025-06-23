@@ -78,6 +78,7 @@ class IuranResource extends Resource
                 Tables\Columns\TextColumn::make('nama_iuran')->label('Nama Iuran')->searchable(),
                 Tables\Columns\TextColumn::make('nominal')
                     ->numeric()
+                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 2))
                     ->label('Nominal'),
                 Tables\Columns\TextColumn::make('periode')
                     ->label('Periode')
@@ -91,8 +92,8 @@ class IuranResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

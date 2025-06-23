@@ -58,7 +58,7 @@ class TransaksiIuranDetailsRelationManager extends RelationManager
             ->columns([
                 Tables\Columns\TextColumn::make('iuran.nama_iuran')->label('Iuran'),
                 Tables\Columns\TextColumn::make('jumlah')
-                    ->formatStateUsing(fn(string $state): string => 'Rp. ' . number_format($state))
+                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 2))
                     ->label('Jumlah Bayar'),
             ])
             ->filters([

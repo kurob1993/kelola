@@ -58,6 +58,7 @@ class GangResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make()
                     ->action(function ($record) {
                         if ($record->wargas()->exists()) {
@@ -77,7 +78,6 @@ class GangResource extends Resource
                             ->success()
                             ->send();
                     }),
-                Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
