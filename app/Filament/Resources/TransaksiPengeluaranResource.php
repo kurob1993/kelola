@@ -63,10 +63,10 @@ class TransaksiPengeluaranResource extends Resource
                     ->sortable()
                     ->searchable(),
 
-                TextColumn::make('dibuat_oleh')
-                    ->label('Dibuat Oleh')
-                    ->sortable()
-                    ->searchable(),
+//                TextColumn::make('dibuat_oleh')
+//                    ->label('Dibuat Oleh')
+//                    ->sortable()
+//                    ->searchable(),
 
                 TextColumn::make('keterangan')
                     ->label('Keterangan')
