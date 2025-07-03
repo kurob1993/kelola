@@ -90,9 +90,8 @@ RUN curl -L -o /usr/local/bin/frankenphp https://github.com/dunglas/frankenphp/r
     && chmod +x /usr/local/bin/frankenphp
 
 # Salin script dan konfigurasi supervisor
-COPY ./docker/start-container /usr/local/bin/start-container
-COPY ./docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY ./docker/.env.template /tmp/.env.template
+COPY ./docker/8.3/start-container /usr/local/bin/start-container
+COPY ./docker/8.3/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN chmod +x /usr/local/bin/start-container
 
 # Salin aplikasi
