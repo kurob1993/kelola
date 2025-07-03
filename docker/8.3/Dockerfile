@@ -37,7 +37,7 @@ RUN npm install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 COPY . /var/www/html
 
 # Jalankan build frontend (misal untuk Laravel Mix, Vite, dll)
-RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+RUN composer update --no-dev --optimize-autoloader --no-interaction --prefer-dist
 RUN npm run build
 
 # Aplikasi yang sebenarnya
