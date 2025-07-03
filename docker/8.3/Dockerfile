@@ -42,7 +42,7 @@ WORKDIR /var/www/html
 ENV TZ=Asia/Jakarta
 ENV DEBIAN_FRONTEND=noninteractive
 ENV SUPERVISOR_PHP_COMMAND="/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan octane:frankenphp --host=0.0.0.0 --port=80"
-ENV SUPERVISOR_PHP_USER='iash'
+ENV SUPERVISOR_PHP_USER='okuru'
 
 # Konfigurasi timezone
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -65,7 +65,7 @@ RUN apt-get update && apt-get upgrade -y \
 
 # Konfigurasi PHP untuk production
 RUN mkdir -p /etc/php/8.3/cli/conf.d/
-COPY ./docker/8.3/php.ini /etc/php/8.3/cli/conf.d/99-iuran.ini
+COPY ./docker/8.3/php.ini /etc/php/8.3/cli/conf.d/99-okuru.ini
 
 # Tambahkan konfigurasi OPcache untuk produksi
 RUN echo "opcache.enable=1" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
@@ -81,8 +81,8 @@ RUN echo "opcache.enable=1" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.3
 
 # Buat user non-root untuk menjalankan aplikasi
-RUN groupadd --force -g ${WWWGROUP} iash
-RUN useradd -ms /bin/bash --no-user-group -g ${WWWGROUP} -u ${WWWUSER} iash
+RUN groupadd --force -g ${WWWGROUP} okuru
+RUN useradd -ms /bin/bash --no-user-group -g ${WWWGROUP} -u ${WWWUSER} okuru
 
 
 # Unduh binary FrankenPHP
