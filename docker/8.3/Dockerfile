@@ -25,8 +25,19 @@ RUN apt-get update && apt-get upgrade -y gnupg curl ca-certificates \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Install Node.js 18 (LTS saat ini)
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs
+
+# Install dependencies & build frontend
+COPY package*.json ./
+RUN npm install -g --production
+
 # Salin aplikasi
 COPY . /var/www/html
+
+# Jalankan build frontend (misal untuk Laravel Mix, Vite, dll)
+RUN npm run build
 RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 
 # Aplikasi yang sebenarnya
