@@ -1,8 +1,4 @@
-FROM ubuntu:24.04 as builder
-
-ARG NODE_VERSION=20
-ARG MYSQL_CLIENT="mysql-client"
-ARG POSTGRES_VERSION=17
+FROM ubuntu:24.04 AS builder
 
 WORKDIR /var/www/html
 
@@ -22,28 +18,17 @@ RUN apt-get update && apt-get upgrade -y gnupg curl ca-certificates \
     && echo "deb [signed-by=/etc/apt/keyrings/ppa_ondrej_php.gpg] https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
     && apt-get update \
     && apt-get install -y php8.3-cli php8.3-dev \
-       php8.3-pgsql php8.3-gd php8.3-curl php8.3-imap php8.3-mysql php8.3-mbstring \
-       php8.3-xml php8.3-zip php8.3-bcmath php8.3-intl php8.3-readline php8.3-ldap \
-       php8.3-msgpack php8.3-igbinary php8.3-redis php8.3-memcached php8.3-pcov php8.3-imagick \
+       php8.3-gd php8.3-curl php8.3-imap php8.3-mbstring \
+       php8.3-xml php8.3-zip php8.3-bcmath php8.3-intl php8.3-readline \
+       php8.3-msgpack php8.3-igbinary php8.3-pcov php8.3-imagick \
     && curl -sLS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-    # Install Node.js dan npm dari NodeSource
-RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
-    && apt-get install -y nodejs \
-    && npm install -g npm@latest
-
 # Salin aplikasi
 COPY . /var/www/html
 RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
-RUN php artisan key:generate \
-    && php artisan config:cache \
-    && php artisan route:cache \
-    && php artisan view:cache
 
-RUN npm install && npm run build
-    
 # Aplikasi yang sebenarnya
 FROM ubuntu:24.04
 
@@ -56,8 +41,8 @@ WORKDIR /var/www/html
 
 ENV TZ=Asia/Jakarta
 ENV DEBIAN_FRONTEND=noninteractive
-ENV SUPERVISOR_PHP_COMMAND="/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan serve --host=0.0.0.0 --port=80"
-ENV SUPERVISOR_PHP_USER='sail'
+ENV SUPERVISOR_PHP_COMMAND="/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan octane:frankenphp --host=0.0.0.0 --port=80"
+ENV SUPERVISOR_PHP_USER='iash'
 
 # Konfigurasi timezone
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -73,14 +58,14 @@ RUN apt-get update && apt-get upgrade -y \
        php8.3-pgsql php8.3-mysql php8.3-gd php8.3-curl php8.3-mbstring \
        php8.3-xml php8.3-zip php8.3-bcmath php8.3-intl \
        php8.3-redis php8.3-msgpack php8.3-igbinary \
-       ncdu vim \
+       ncdu vim gettext \
     && curl -sLS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Konfigurasi PHP untuk production
 RUN mkdir -p /etc/php/8.3/cli/conf.d/
-COPY ./docker/8.3/php.ini /etc/php/8.3/cli/conf.d/99-sail.ini
+COPY ./docker/php.ini /etc/php/8.3/cli/conf.d/99-iash.ini
 
 # Tambahkan konfigurasi OPcache untuk produksi
 RUN echo "opcache.enable=1" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
@@ -96,19 +81,28 @@ RUN echo "opcache.enable=1" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.3
 
 # Buat user non-root untuk menjalankan aplikasi
-RUN groupadd --force -g ${WWWGROUP} sail
-RUN useradd -ms /bin/bash --no-user-group -g ${WWWGROUP} -u ${WWWUSER} sail
+RUN groupadd --force -g ${WWWGROUP} iash
+RUN useradd -ms /bin/bash --no-user-group -g ${WWWGROUP} -u ${WWWUSER} iash
+
+
+# Unduh binary FrankenPHP
+RUN curl -L -o /usr/local/bin/frankenphp https://github.com/dunglas/frankenphp/releases/download/v1.7.0/frankenphp-linux-$(uname -m) \
+    && chmod +x /usr/local/bin/frankenphp
 
 # Salin script dan konfigurasi supervisor
-COPY ./docker/8.3/start-container /usr/local/bin/start-container
-COPY ./docker/8.3/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY ./docker/start-container /usr/local/bin/start-container
+COPY ./docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY ./docker/.env.template /tmp/.env.template
 RUN chmod +x /usr/local/bin/start-container
 
 # Salin aplikasi
 COPY --from=builder /var/www/html /var/www/html
 
-RUN chown -R sail:sail /var/www/html/storage /var/www/html/bootstrap/cache \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chown -R ${WWWUSER}:${WWWUSER} /var/www/html && chmod -R 755 /var/www/html
+RUN php artisan config:clear \
+    && php artisan route:cache \
+    && php artisan view:cache \
+    && php artisan storage:link
 
 # Ports
 EXPOSE 80/tcp
