@@ -65,7 +65,7 @@ RUN apt-get update && apt-get upgrade -y \
 
 # Konfigurasi PHP untuk production
 RUN mkdir -p /etc/php/8.3/cli/conf.d/
-COPY ./docker/php.ini /etc/php/8.3/cli/conf.d/99-iash.ini
+COPY ./docker/8.3/php.ini /etc/php/8.3/cli/conf.d/99-iuran.ini
 
 # Tambahkan konfigurasi OPcache untuk produksi
 RUN echo "opcache.enable=1" >> /etc/php/8.3/cli/conf.d/10-opcache.ini \
