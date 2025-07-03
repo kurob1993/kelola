@@ -31,7 +31,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
 
 # Install dependencies & build frontend
 COPY package*.json ./
-RUN npm install -g --production
+RUN npm update
 
 # Salin aplikasi
 COPY . /var/www/html
