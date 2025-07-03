@@ -12,12 +12,12 @@
         "hydrat/filament-table-layout-toggle": "^2.0",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "laravel/octane": "^2.10",
         "rawilk/filament-password-input": "^2.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
         "barryvdh/laravel-ide-helper": "^3.2",
-        "laravel/octane": "^2.10",
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.1",
         "laravel/pint": "^1.13",
