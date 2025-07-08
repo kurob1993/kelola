@@ -112,7 +112,8 @@ RUN chown -R ${WWWUSER}:${WWWUSER} /var/www/html && chmod -R 755 /var/www/html
 RUN php artisan config:clear \
     && php artisan route:cache \
     && php artisan view:cache \
-    && php artisan storage:link
+    && php artisan storage:link \
+    && php artisan icon:cache
 
 # Ports
 EXPOSE 80/tcp
