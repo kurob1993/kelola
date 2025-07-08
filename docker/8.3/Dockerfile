@@ -97,7 +97,7 @@ RUN useradd -ms /bin/bash --no-user-group -g ${WWWGROUP} -u ${WWWUSER} okuru
 
 
 # Unduh binary FrankenPHP
-RUN curl -L -o /usr/local/bin/frankenphp https://github.com/dunglas/frankenphp/releases/download/v1.7.0/frankenphp-linux-$(uname -m) \
+RUN curl -L -o /usr/local/bin/frankenphp https://github.com/dunglas/frankenphp/releases/download/v1.8.0/frankenphp-linux-$(uname -m) \
     && chmod +x /usr/local/bin/frankenphp
 
 # Salin script dan konfigurasi supervisor
