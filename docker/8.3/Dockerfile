@@ -109,9 +109,11 @@ RUN chmod +x /usr/local/bin/start-container
 COPY --from=builder /var/www/html /var/www/html
 
 RUN chown -R ${WWWUSER}:${WWWUSER} /var/www/html && chmod -R 755 /var/www/html
-RUN php artisan config:clear \
-    && php artisan route:cache \
+RUN php artisan livewire:publish --assets \
+    && php artisan filament:assets \
+    && php artisan config:clear \
     && php artisan view:cache \
+    && php artisan route:cache \
     && php artisan storage:link \
     && php artisan icon:cache
 
