@@ -4,6 +4,7 @@ namespace App\Filament\Resources\TransaksiPengeluaranResource\RelationManagers;
 
 use App\Models\KategoriTransaksi;
 use App\Models\TransaksiPengeluaranDetail;
+use Closure;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
@@ -17,6 +18,7 @@ use Filament\Tables\Table;
 use Illuminate\Console\Events\ScheduledTaskFailed;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\DB;
 
 class TransaksiPengeluaranDetailRelationManager extends RelationManager
 {
@@ -35,7 +37,18 @@ class TransaksiPengeluaranDetailRelationManager extends RelationManager
                 ->createOptionForm([
                     TextInput::make('nama')
                         ->required()
-                        ->maxLength(100),
+                        ->maxLength(100)
+                        ->rules([
+                            fn (): Closure => function ($attribute, $value, $fail) {
+                                $exists = DB::table('kategori_transaksis')
+                                    ->whereRaw('LOWER(nama) = ?', [strtolower($value)])
+                                    ->exists();
+
+                                if ($exists) {
+                                    $fail('Kategori dengan nama serupa sudah ada (tidak boleh duplikat meskipun beda huruf besar/kecil).');
+                                }
+                            }
+                        ])
                 ])->createOptionModalHeading('Tambah Kategori Transaksi'),
             TextInput::make('qty')
                 ->numeric()
@@ -66,7 +79,7 @@ class TransaksiPengeluaranDetailRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('deskripsi')->limit(40),
                 Tables\Columns\TextColumn::make('qty')->numeric(),
                 Tables\Columns\TextColumn::make('jumlah')
-                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 2)),
+                    ->formatStateUsing(fn($state) => 'Rp ' . number_format($state, 2)),
             ])
             ->filters([
                 //

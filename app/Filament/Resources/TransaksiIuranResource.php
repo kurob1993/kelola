@@ -20,6 +20,7 @@ use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 
 class TransaksiIuranResource extends Resource implements HasShieldPermissions
 {
@@ -60,7 +61,7 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                         ->required()
                         ->label('Status Bayar'),
                     Forms\Components\Select::make('metode_bayar')
-                        ->options(['cash', 'transfer', 'online'])
+                        ->options(['cash' => 'Cash', 'transfer' => 'Transfer', 'online' => 'Online'])
                         ->label('Metode Bayar'),
                     Forms\Components\FileUpload::make('bukti_bayar')
                         ->columnSpan(['md' => 2])
@@ -81,8 +82,11 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('warga.nama')->label('Warga')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('warga.gang.nama')->label('Gang')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('tanggal_bayar')->label('Jatuh Tempo')->date('d F Y'),
-                Tables\Columns\TextColumn::make('metode_bayar')->label('Metode Bayar'),
+                Tables\Columns\TextColumn::make('metode_bayar')
+                    ->formatStateUsing(fn (string $state): string => Str::ucwords($state))
+                    ->label('Metode Bayar'),
                 Tables\Columns\TextColumn::make('total_iuran')
                     ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 2))
                     ->label('Nominal'),
@@ -137,6 +141,7 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                 Tables\Actions\Action::make('bukti_bayar')
                     ->icon('heroicon-o-eye')
                     ->modalContent(fn($record) => view('components.transaksi.iuran.modal-bukti-bayar', [
+                        'data' => $record->bukti_bayar,
                         'imageUrl' => asset('storage/' . $record->bukti_bayar),
                     ]))
                     ->modalWidth('max-w-2xl')

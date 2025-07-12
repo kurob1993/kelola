@@ -46,6 +46,9 @@ namespace App\Models{
  * @property string $nama_blok
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read mixed $jumlah_wargas
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Warga> $wargas
+ * @property-read int|null $wargas_count
  * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|BlokDetail query()
@@ -117,7 +120,28 @@ namespace App\Models{
  * 
  *
  * @property int $id
- * @property int $gang_id
+ * @property string $nama
+ * @property string|null $deskripsi
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KategoriTransaksi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KategoriTransaksi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KategoriTransaksi query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KategoriTransaksi whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KategoriTransaksi whereDeskripsi($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KategoriTransaksi whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KategoriTransaksi whereNama($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KategoriTransaksi whereUpdatedAt($value)
+ */
+	class KategoriTransaksi extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property int|null $gang_id
  * @property int $blok_id
  * @property string $jabatan
  * @property int $warga_id
@@ -125,7 +149,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Blok $blok
- * @property-read \App\Models\Gang $gang
+ * @property-read \App\Models\Gang|null $gang
  * @property-read \App\Models\Warga|null $warga
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Pengurus newQuery()
@@ -214,6 +238,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Iuran $iuran
+ * @property-read \App\Models\TransaksiIuran $transaksiIuran
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail query()
@@ -225,6 +250,63 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuranDetail whereUpdatedAt($value)
  */
 	class TransaksiIuranDetail extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property string $tanggal
+ * @property string|null $keterangan
+ * @property string $dibuat_oleh
+ * @property string|null $bukti_url
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read mixed $total_pengeluaran
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TransaksiPengeluaranDetail> $transaksiPengeluaranDetails
+ * @property-read int|null $transaksi_pengeluaran_details_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran whereBuktiUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran whereDibuatOleh($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran whereKeterangan($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran whereTanggal($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaran whereUpdatedAt($value)
+ */
+	class TransaksiPengeluaran extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property int $transaksi_pengeluaran_id
+ * @property int $kategori_transaksi_id
+ * @property string|null $deskripsi
+ * @property int $qty
+ * @property string $jumlah
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\KategoriTransaksi $kategoriTransaksi
+ * @property-read \App\Models\TransaksiPengeluaran $transaksi
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail whereDeskripsi($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail whereJumlah($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail whereKategoriTransaksiId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail whereQty($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail whereTransaksiPengeluaranId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiPengeluaranDetail whereUpdatedAt($value)
+ */
+	class TransaksiPengeluaranDetail extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -282,9 +364,10 @@ namespace App\Models{
  * @property string|null $email
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property \App\Models\Gang $gang
+ * @property string|null $nama_gang
  * @property int $gang_id
  * @property-read \App\Models\BlokDetail $blokDetail
+ * @property-read \App\Models\Gang $gang
  * @property-read \App\Models\Pengurus|null $pengurus
  * @property-read \App\Models\Perumahan $perumahan
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TransaksiIuran> $transaksiIuran
@@ -296,10 +379,10 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereBlokDetailId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereGang($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereGangId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNama($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNamaGang($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNoTelepon($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga whereNomorRumah($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Warga wherePerumahanId($value)

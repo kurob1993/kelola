@@ -12,6 +12,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Support\Colors\Color;
 use Filament\Tables;
 use Filament\Tables\Columns\Summarizers\Sum;
 use Filament\Tables\Columns\TextColumn;
@@ -44,7 +45,7 @@ class TransaksiPengeluaranResource extends Resource
                         ->required(),
                     Textarea::make('keterangan')->rows(10),
                     FileUpload::make('bukti_url')
-                         ->imagePreviewHeight('250')
+                        ->imagePreviewHeight('250')
                         ->directory('bukti-pengeluaran')
                         ->nullable(),
                 ])->columns([
@@ -57,16 +58,16 @@ class TransaksiPengeluaranResource extends Resource
     {
         return $table
             ->columns([
+                TextColumn::make('dibuat_oleh')
+                    ->label('Dibuat Oleh')
+                    ->sortable()
+                    ->searchable(),
+
                 TextColumn::make('tanggal')
                     ->label('Tanggal')
                     ->date('d M Y')
                     ->sortable()
                     ->searchable(),
-
-//                TextColumn::make('dibuat_oleh')
-//                    ->label('Dibuat Oleh')
-//                    ->sortable()
-//                    ->searchable(),
 
                 TextColumn::make('keterangan')
                     ->label('Keterangan')
@@ -74,19 +75,45 @@ class TransaksiPengeluaranResource extends Resource
 
                 TextColumn::make('total_pengeluaran')
                     ->label('Total')
-                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 2))
+                    ->formatStateUsing(fn($state) => 'Rp ' . number_format($state, 2))
                     ->sortable(),
-                TextColumn::make('bukti_url')
-                    ->label('Bukti')
-                    ->url(fn($record) => $record ? asset('storage/' . $record->bukti_url) : 'javascript:void(0)')
-                    ->openUrlInNewTab()
-                    ->wrap(),
+
+                TextColumn::make('transaksiPengeluaranDetails.kategoriTransaksi.nama')
+                    ->label('Kategori')
+                    ->badge()
+                    ->color(function ($state) {
+                        $colors = [
+                            Color::rgb('rgb(244, 67, 54)'),   // Merah (Red)
+                            Color::rgb('rgb(33, 150, 243)'),  // Biru (Blue)
+                            Color::rgb('rgb(76, 175, 80)'),   // Hijau (Green)
+                            Color::rgb('rgb(255, 193, 7)'),   // Kuning (Amber)
+                            Color::rgb('rgb(156, 39, 176)'),  // Ungu (Purple)
+                            Color::rgb('rgb(255, 87, 34)'),   // Oranye (Deep Orange)
+                            Color::rgb('rgb(0, 188, 212)'),   // Cyan
+                            Color::rgb('rgb(121, 85, 72)'),   // Coklat (Brown)
+                            Color::rgb('rgb(96, 125, 139)'),  // Biru Abu (Blue Grey)
+                            Color::rgb('rgb(63, 81, 181)'),   // Indigo
+                        ];
+
+                        // Generate index based on hash of value
+                        $index = crc32(strtolower($state)) % count($colors);
+                        return $colors[$index] ?? 'gray';
+                    }),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\Action::make('Bukti Pengeluaran')
+                    ->icon('heroicon-o-eye')
+                    ->modalContent(fn($record) => view('components.transaksi.iuran.modal-bukti-bayar', [
+                        'data' => $record->bukti_url,
+                        'imageUrl' => asset('storage/' . $record->bukti_url),
+                    ]))
+                    ->modalWidth('max-w-2xl')
+                    ->modalSubmitAction(false)
+                    ->modalCancelActionLabel('Close'),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
