@@ -2,21 +2,32 @@
 
 namespace App\Filament\Pages;
 
+use App\Livewire\PengeluaranStats;
+use App\Livewire\PengeluaranTotalStats;
+use App\Livewire\StatsOverview;
+use Filament\Pages\Dashboard\Concerns\HasFiltersForm;
+use Filament\Forms\Form;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Form;
-use Filament\Pages\Dashboard\Concerns\HasFiltersForm;
+use Filament\Pages\Dashboard as BaseDashboard;
 
-class Dashboard extends \Filament\Pages\Dashboard
+class DashboardPengeluaran extends BaseDashboard
 {
     use HasFiltersForm;
 
-    protected static ?string $title = 'Iuran Warga';
+    protected static ?string $title = 'Pengeluaran';
     protected static ?string $navigationIcon = 'heroicon-o-chart-pie';
+
+//    protected static string $view = 'filament.pages.dashboard-pengeluaran';
 
     public static function getNavigationGroup(): ?string
     {
         return 'Dashboard'; // Ambil dari file lang
+    }
+
+    public static function getRoutePath(): string
+    {
+        return 'dashboard-pengeluaran';
     }
 
     public function filtersForm(Form $form): Form
@@ -43,5 +54,19 @@ class Dashboard extends \Filament\Pages\Dashboard
                 Select::make('tahun')->options($years),
             ])
         ]);
+    }
+
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            PengeluaranTotalStats::class,
+        ];
+    }
+
+    public function getWidgets(): array
+    {
+        return [
+            PengeluaranStats::class,
+        ];
     }
 }

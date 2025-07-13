@@ -14,7 +14,7 @@ class TransaksiIuranTable extends BaseWidget
 
     public function table(Table $table): Table
     {
-        $bulan = $this->filters['bulan'] ?? now()->format('m');
+        $bulan = $this->filters['bulan'] ?: now()->format('m');
         $tahun = $this->filters['tahun'] ?: now()->format('Y');
 
         return $table

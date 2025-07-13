@@ -15,7 +15,7 @@ class StatsOverview extends BaseWidget
 
     protected function getStats(): array
     {
-        $bulan = $this->filters['bulan'] ?? now()->format('m');
+        $bulan = $this->filters['bulan'] ?: now()->format('m');
         $tahun = $this->filters['tahun'] ?: now()->format('Y');
 
         // 1. Total warga yang memiliki iuran (baik sudah atau belum bayar)
@@ -59,12 +59,12 @@ class StatsOverview extends BaseWidget
             ->toArray();
 
         return [
-            Stat::make('Sudah Bayar', $wargaSudahBayar)
-                ->color('success')
-                ->chart($chartLunas),
             Stat::make('Belum Bayar', $wargaBelumBayar)
                 ->color('danger')
                 ->chart($wargaBelumBayar > 0 ? [0, $wargaBelumBayar] : []),
+            Stat::make('Sudah Bayar', $wargaSudahBayar)
+                ->color('success')
+                ->chart($chartLunas),
             Stat::make('Total Masuk', Number::currency(
                 number: $totalMasuk,
                 in: 'Rp.',

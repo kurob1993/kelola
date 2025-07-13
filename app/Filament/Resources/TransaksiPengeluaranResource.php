@@ -11,12 +11,19 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Pages\Dashboard\Actions\FilterAction;
 use Filament\Resources\Resource;
 use Filament\Support\Colors\Color;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\Summarizers\Sum;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\Indicator;
+use Filament\Tables\Filters\QueryBuilder;
 use Filament\Tables\Table;
+use Filament\Tables\Filters\QueryBuilder\Constraints\DateConstraint;
+use Illuminate\Support\Carbon;
 
 class TransaksiPengeluaranResource extends Resource
 {
@@ -101,8 +108,37 @@ class TransaksiPengeluaranResource extends Resource
                     }),
             ])
             ->filters([
-                //
+                Filter::make('tanggal')
+                    ->form([
+                        DatePicker::make('start_date')->label('Mulai'),
+                        DatePicker::make('end_date')->label('Sampai'),
+                    ])
+                    ->query(function ($query, array $data) {
+                        return $query
+                            ->when($data['start_date'], fn($q) => $q->whereDate('tanggal', '>=', $data['start_date']))
+                            ->when($data['end_date'], fn($q) => $q->whereDate('tanggal', '<=', $data['end_date']));
+                    })
+                    ->indicateUsing(function (array $data): array {
+                        $indicators = [];
+
+                        if ($data['start_date'] ?? null) {
+                            $indicators[] = Indicator::make('Mulai ' . Carbon::parse($data['start_date'])->toFormattedDateString())
+                                ->removeField('tanggal');
+                        }
+
+                        if ($data['end_date'] ?? null) {
+                            $indicators[] = Indicator::make('Sampai ' . Carbon::parse($data['end_date'])->toFormattedDateString())
+                                ->removeField('tanggal');
+                        }
+
+                        return $indicators;
+                    })
             ])
+            ->filtersTriggerAction(
+                fn(Action $action) => $action
+                    ->button()
+                    ->label('Filter'),
+            )
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\Action::make('Bukti Pengeluaran')

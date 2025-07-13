@@ -16,6 +16,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -136,6 +137,11 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                         return $query->whereHas('warga', fn($q) => $state['value'] ? $q->where('gang_id', $state['value']) : null);
                     }),
             ])
+            ->filtersTriggerAction(
+                fn(Action $action) => $action
+                    ->button()
+                    ->label('Filter'),
+            )
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\Action::make('bukti_bayar')

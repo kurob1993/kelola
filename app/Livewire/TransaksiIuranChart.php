@@ -14,7 +14,7 @@ class TransaksiIuranChart extends ChartWidget
 
     protected function getData(): array
     {
-        $bulan = $this->filters['bulan'] ?? now()->format('m');
+        $bulan = $this->filters['bulan'] ?: now()->format('m');
         $tahun = $this->filters['tahun'] ?: now()->format('Y');
 
         // 4. Total uang masuk (hanya dari transaksi lunas)
