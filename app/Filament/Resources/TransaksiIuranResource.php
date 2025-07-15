@@ -10,12 +10,15 @@ use App\Models\TransaksiIuran;
 use App\Models\Warga;
 use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\Action;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\Indicator;
 use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -85,10 +88,10 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                 Tables\Columns\TextColumn::make('warga.gang.nama')->label('Gang')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('tanggal_bayar')->label('Jatuh Tempo')->date('d F Y'),
                 Tables\Columns\TextColumn::make('metode_bayar')
-                    ->formatStateUsing(fn (string $state): string => Str::ucwords($state))
+                    ->formatStateUsing(fn(string $state): string => Str::ucwords($state))
                     ->label('Metode Bayar'),
                 Tables\Columns\TextColumn::make('total_iuran')
-                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 2))
+                    ->formatStateUsing(fn($state) => 'Rp ' . number_format($state, 2))
                     ->label('Nominal'),
                 Tables\Columns\TextColumn::make('status_bayar')
                     ->formatStateUsing(fn(string $state): string => strtoupper($state))
@@ -134,6 +137,33 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                     ->searchable()
                     ->modifyQueryUsing(function (Builder $query, $state) {
                         return $query->whereHas('warga', fn($q) => $state['value'] ? $q->where('gang_id', $state['value']) : null);
+                    }),
+                Filter::make('tanggal_bayar')
+                    ->form([
+                        Section::make('Jatuh Tempo')->schema([
+                            DatePicker::make('start_date')->label('Mulai'),
+                            DatePicker::make('end_date')->label('Sampai'),
+                        ]),
+                    ])
+                    ->query(function ($query, array $data) {
+                        return $query
+                            ->when($data['start_date'], fn($q) => $q->whereDate('tanggal_bayar', '>=', $data['start_date']))
+                            ->when($data['end_date'], fn($q) => $q->whereDate('tanggal_bayar', '<=', $data['end_date']));
+                    })
+                    ->indicateUsing(function (array $data): array {
+                        $indicators = [];
+
+                        if ($data['start_date'] ?? null) {
+                            $indicators[] = Indicator::make('Mulai ' . Carbon::parse($data['start_date'])->toFormattedDateString())
+                                ->removeField('tanggal_bayar');
+                        }
+
+                        if ($data['end_date'] ?? null) {
+                            $indicators[] = Indicator::make('Sampai ' . Carbon::parse($data['end_date'])->toFormattedDateString())
+                                ->removeField('tanggal_bayar');
+                        }
+
+                        return $indicators;
                     }),
             ])
             ->filtersTriggerAction(
