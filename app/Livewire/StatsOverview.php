@@ -61,15 +61,18 @@ class StatsOverview extends BaseWidget
         return [
             Stat::make('Belum Bayar', $wargaBelumBayar)
                 ->color('danger')
+                ->icon('heroicon-o-exclamation-circle')
                 ->chart($wargaBelumBayar > 0 ? [0, $wargaBelumBayar] : []),
             Stat::make('Sudah Bayar', $wargaSudahBayar)
                 ->color('success')
+                ->icon('heroicon-o-check-circle')
                 ->chart($chartLunas),
             Stat::make('Total Masuk', Number::currency(
                 number: $totalMasuk,
                 in: 'Rp.',
                 precision: 0,
             ))
+                ->icon('heroicon-o-banknotes')
                 ->color('success')
                 ->chart($chartLunas),
             Stat::make('Tunggakan', Number::currency(
@@ -77,6 +80,7 @@ class StatsOverview extends BaseWidget
                 in: 'Rp.',
                 precision: 0,
             ))
+                ->icon('heroicon-o-exclamation-triangle')
                 ->color('warning')
                 ->chart($wargaBelumBayar > 0 ? [0, $wargaBelumBayar] : []),
         ];

@@ -3,6 +3,7 @@
 namespace App\Filament\Pages;
 
 use App\Livewire\PengeluaranStats;
+use App\Livewire\PengeluaranTable;
 use App\Livewire\PengeluaranTotalStats;
 use App\Livewire\StatsOverview;
 use Filament\Pages\Dashboard\Concerns\HasFiltersForm;
@@ -67,6 +68,7 @@ class DashboardPengeluaran extends BaseDashboard
     {
         return [
             PengeluaranStats::class,
+            PengeluaranTable::class,
         ];
     }
 }
