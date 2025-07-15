@@ -25,17 +25,16 @@ class PengeluaranStats extends BaseWidget
         })->get();
 
         $total = $pengeluaran->sum(fn($item) => $item->jumlah * $item->qty);
-        $rataRata = $total/$pengeluaran->count();
+        $rataRata = $total/($pengeluaran->count() < 1 ?: 1);
 
         // Mencari transaksi dengan nilai terbesar
         $terbanyak = $pengeluaran->sortByDesc(fn($item) => $item->jumlah * $item->qty)->first();
         // Atau jika hanya ingin nominalnya saja
-        $nominalTerbanyak = $pengeluaran->max(fn($item) => $item->jumlah * $item->qty);
-        $tanggalTerbanyak = $terbanyak?->transaksi ? Carbon::make($terbanyak?->transaksi->tanggal)->format('d F Y') : null;
+        $nominalTerbanyak = $pengeluaran->max(fn($item) => $item->jumlah * $item->qty) ?? 0;
+        $tanggalTerbanyak = $terbanyak?->transaksi ? Carbon::make($terbanyak?->transaksi->tanggal)
+            ->translatedFormat('d F Y') : null;
 
         $jumlah = $pengeluaran->count();
-
-
 
         return [
             Stat::make('Total Pengeluaran', Number::currency(
