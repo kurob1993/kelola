@@ -5,7 +5,6 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\TransaksiIuranResource\Pages;
 use App\Filament\Resources\TransaksiIuranResource\RelationManagers;
 use App\Models\Gang;
-use App\Models\Iuran;
 use App\Models\Perumahan;
 use App\Models\TransaksiIuran;
 use App\Models\Warga;

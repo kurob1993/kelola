@@ -5,24 +5,21 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\TransaksiPengeluaranResource\Pages;
 use App\Filament\Resources\TransaksiPengeluaranResource\RelationManagers\TransaksiPengeluaranDetailRelationManager;
 use App\Models\TransaksiPengeluaran;
+use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
-use Filament\Pages\Dashboard\Actions\FilterAction;
 use Filament\Resources\Resource;
 use Filament\Support\Colors\Color;
 use Filament\Tables;
 use Filament\Tables\Actions\Action;
-use Filament\Tables\Columns\Summarizers\Sum;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\Indicator;
-use Filament\Tables\Filters\QueryBuilder;
 use Filament\Tables\Table;
-use Filament\Tables\Filters\QueryBuilder\Constraints\DateConstraint;
 use Illuminate\Support\Carbon;
 
 class TransaksiPengeluaranResource extends Resource
