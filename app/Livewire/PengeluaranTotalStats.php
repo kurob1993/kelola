@@ -60,7 +60,7 @@ class PengeluaranTotalStats extends BaseWidget
         }
 
         return [
-            Stat::make('Total Pengeluaran (Diperbarui '.$pengeluaranUpdateDate->created_at->format('d M Y').')', Number::currency(
+            Stat::make('Total Pengeluaran (Diperbarui '.$pengeluaranUpdateDate?->created_at->format('d M Y').')', Number::currency(
                 number: $pengeluaran,
                 in: 'Rp.',
                 precision: 0,
@@ -70,7 +70,7 @@ class PengeluaranTotalStats extends BaseWidget
                 ->color($pengeluarnColor)
                 ->icon('heroicon-o-banknotes'),
 
-            Stat::make('Saldo Saat Ini (Diperbarui '.$iuranUpdateDate->created_at->format('d M Y').')', Number::currency(
+            Stat::make('Saldo Saat Ini (Diperbarui '.$iuranUpdateDate?->created_at->format('d M Y').')', Number::currency(
                 number: $saldo,
                 in: 'Rp.',
                 precision: 0,
