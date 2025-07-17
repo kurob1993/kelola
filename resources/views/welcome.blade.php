@@ -33,7 +33,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
             <div class="flex items-center">
-                <span class="text-2xl font-bold text-blue-600">Okuru.id</span>
+                <span class="text-2xl font-bold text-blue-600">Iuran Warga</span>
             </div>
             <div class="flex items-center space-x-4">
                 <a href="#features" class="text-blue-500 hover:text-blue-600">Fitur</a>
