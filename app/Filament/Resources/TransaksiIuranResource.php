@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\TransaksiIuranResource\Pages;
 use App\Filament\Resources\TransaksiIuranResource\RelationManagers;
 use App\Models\Gang;
+use App\Models\Pengurus;
 use App\Models\Perumahan;
 use App\Models\TransaksiIuran;
 use App\Models\Warga;
@@ -23,6 +24,7 @@ use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 class TransaksiIuranResource extends Resource implements HasShieldPermissions
@@ -51,7 +53,7 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                 ])->schema([
                     Forms\Components\Select::make('warga_id')
                         ->label('Warga')
-                        ->options(Warga::all()->pluck('nama', 'id'))
+                        ->options(self::getWarga())
                         ->searchable()
                         ->required(),
                     Forms\Components\DatePicker::make('tanggal_bayar')
@@ -75,8 +77,6 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                         ->helperText('Unggah bukti pembayaran dalam format gambar (max 2 MB).'),
                 ])
             ]),
-
-
         ]);
     }
 
@@ -224,5 +224,53 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
             'force_delete_any',
             'generate',
         ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+
+        if ($user->hasRole('super_admin')) {
+            return parent::getEloquentQuery();
+        }
+
+        if ($user->hasRole('warga')) {
+            return parent::getEloquentQuery()->where('warga_id', $user->warga_id);
+        }
+
+        if ($user->hasRole('kordinator')) {
+            $gang_id = $user->warga->gang_id;
+            return parent::getEloquentQuery()->whereHas('warga', function ($q) use ($gang_id) {
+                $q->where('gang_id', $gang_id);
+            });
+        }
+
+        if ($user->hasRole('admin')) {
+            $pengurus = Pengurus::where('warga_id', $user->warga_id)->first();
+            return parent::getEloquentQuery()->whereHas('warga', function ($q) use ($pengurus) {
+                $q->whereHas('blokDetail', fn($q) => $q->where('blok_id', $pengurus->blok_id));
+            });
+        }
+
+        // Default fallback: no data
+        return parent::getEloquentQuery()->whereRaw('1 = 0');
+    }
+
+    private static function getWarga(): array|Collection
+    {
+        $user = auth()->user();
+
+        if ($user->hasRole('super_admin')) {
+            return Warga::all()->pluck('nama', 'id');
+        }
+
+        if ($user->hasRole('admin')) {
+            $pengurus = Pengurus::where('warga_id', $user->warga_id)->first();
+            return Warga::whereHas('blokDetail', fn($q) => $q->where('blok_id', $pengurus->blok_id) )
+                ->pluck('nama', 'id');
+        }
+
+        // Default fallback: no data
+        return [];
     }
 }

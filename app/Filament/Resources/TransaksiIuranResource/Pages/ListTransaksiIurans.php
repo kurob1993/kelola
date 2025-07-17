@@ -4,6 +4,7 @@ namespace App\Filament\Resources\TransaksiIuranResource\Pages;
 
 use App\Filament\Resources\TransaksiIuranResource;
 use App\Models\Iuran;
+use App\Models\Pengurus;
 use App\Models\Perumahan;
 use App\Models\TransaksiIuran;
 use App\Models\TransaksiIuranDetail;
@@ -30,7 +31,7 @@ class ListTransaksiIurans extends ListRecords
                 ->form([
                     Select::make('perumahan')
                         ->label('Pilih Perumahan')
-                        ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
+                        ->options(self::getPerumahan())
                         ->required(),
                     DatePicker::make('date')
                         ->label('Pilih Tanggal')
@@ -100,5 +101,21 @@ class ListTransaksiIurans extends ListRecords
                 ->send();
         }
 
+    }
+
+    private function getPerumahan()
+    {
+        $user = auth()->user();
+
+        if ($user->hasRole('super_admin')) {
+            return Perumahan::all()->pluck('nama_perumahan', 'id');
+        }
+
+        if ($user->hasRole('admin')) {
+            return Perumahan::where('id', $user->warga->perumahan_id)->get()->pluck('nama_perumahan', 'id');
+        }
+
+        // Default fallback: no data
+        return [];
     }
 }

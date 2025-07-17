@@ -29,7 +29,7 @@ class UserResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
-    protected static ?int $navigationSort = 100;
+    protected static ?int $navigationSort = 0;
 
     public static function getNavigationGroup(): ?string
     {

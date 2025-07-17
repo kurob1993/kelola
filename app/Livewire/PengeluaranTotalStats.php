@@ -65,7 +65,7 @@ class PengeluaranTotalStats extends BaseWidget
                 in: 'Rp.',
                 precision: 0,
             ))
-                ->description(number_abbr_id($pengeluaran).' '.$pengeluarnStatus)
+                ->description(number_abbr_id($pengeluaran).' pengeluaran '.$pengeluarnStatus)
                 ->descriptionIcon($pengeluarnIcon)
                 ->color($pengeluarnColor)
                 ->icon('heroicon-o-banknotes'),

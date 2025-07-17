@@ -37,32 +37,25 @@ class PengeluaranStats extends BaseWidget
         $jumlah = $pengeluaran->count();
 
         return [
-            Stat::make('Total Pengeluaran', Number::currency(
+            Stat::make('Total Pengeluaran (Rp)', Number::format(
                 number: $total,
-                in: 'Rp.',
                 precision: 0,
             ))
-                ->color('danger')
                 ->icon('heroicon-o-banknotes'),
 
-            Stat::make('Rata-rata Harian', Number::currency(
+            Stat::make('Rata-rata Harian (Rp)', Number::format(
                 number: $rataRata,
-                in: 'Rp.',
                 precision: 0,
             ))
-                ->color('danger')
                 ->icon('heroicon-o-chart-bar'),
 
-            Stat::make('Terbanyak ('.$tanggalTerbanyak.')', Number::currency(
+            Stat::make('Terbanyak (Rp) - '. $tanggalTerbanyak, Number::format(
                 number: $nominalTerbanyak,
-                in: 'Rp.',
                 precision: 0,
             ))
-                ->color('danger')
                 ->icon('heroicon-o-fire'),
 
             Stat::make('Jumlah Transaksi', $jumlah . ' transaksi')
-                ->color('danger')
                 ->icon('heroicon-o-clipboard-document-list'),
         ];
     }
