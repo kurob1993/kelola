@@ -37,7 +37,6 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
 
     protected static ?int $navigationSort = 6;
 
-//    protected static ?string $navigationGroup = 'Transaksi';
     public static function getNavigationGroup(): ?string
     {
         return __('kelola.nav.transaction'); // Ambil dari file lang
@@ -56,24 +55,43 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                         ->options(self::getWarga())
                         ->searchable()
                         ->required(),
+
                     Forms\Components\DatePicker::make('tanggal_bayar')
                         ->default(Carbon::now()->endOfMonth()->toDateString())
                         ->label('Jatuh Tempo')
                         ->required(),
+
+                    // Tambahan tanggal_pelunasan
+                    Forms\Components\DatePicker::make('tanggal_pelunasan')
+                        ->label('Tanggal Pelunasan')
+                        ->nullable()
+                        ->helperText('Tanggal aktual pembayaran iuran')
+                        ->columnSpan(['md' => 2]),
+
                     Forms\Components\Select::make('status_bayar')
                         ->default('belum lunas')
-                        ->options(['lunas' => 'Lunas', 'belum lunas' => 'Belum Lunas', 'tertunda' => 'Tertunda'])
+                        ->options([
+                            'lunas' => 'Lunas',
+                            'belum lunas' => 'Belum Lunas',
+                            'tertunda' => 'Tertunda'
+                        ])
                         ->required()
                         ->label('Status Bayar'),
+
                     Forms\Components\Select::make('metode_bayar')
-                        ->options(['cash' => 'Cash', 'transfer' => 'Transfer', 'online' => 'Online'])
+                        ->options([
+                            'cash' => 'Cash',
+                            'transfer' => 'Transfer',
+                            'online' => 'Online'
+                        ])
                         ->label('Metode Bayar'),
+
                     Forms\Components\FileUpload::make('bukti_bayar')
                         ->columnSpan(['md' => 2])
                         ->label('Bukti Bayar')
-                        ->image() // Membatasi hanya untuk gambar
-                        ->directory('bukti_bayar') // Folder tempat file akan disimpan
-                        ->maxSize(2048) // Ukuran maksimum file (dalam KB)
+                        ->image()
+                        ->directory('bukti_bayar')
+                        ->maxSize(2048)
                         ->helperText('Unggah bukti pembayaran dalam format gambar (max 2 MB).'),
                 ])
             ]),
@@ -84,15 +102,35 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('warga.nama')->label('Warga')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('warga.gang.nama')->label('Gang')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('tanggal_bayar')->label('Jatuh Tempo')->date('d F Y'),
+                Tables\Columns\TextColumn::make('warga.nama')
+                    ->label('Warga')
+                    ->sortable()
+                    ->searchable(),
+
+                Tables\Columns\TextColumn::make('warga.gang.nama')
+                    ->label('Gang')
+                    ->sortable()
+                    ->searchable(),
+
+                Tables\Columns\TextColumn::make('tanggal_bayar')
+                    ->label('Jatuh Tempo')
+                    ->date('d F Y'),
+
+                // Tambahan kolom tanggal_pelunasan
+                Tables\Columns\TextColumn::make('tanggal_pelunasan')
+                    ->label('Tanggal Pelunasan')
+                    ->date('d F Y')
+                    ->sortable()
+                    ->toggleable(),
+
                 Tables\Columns\TextColumn::make('metode_bayar')
                     ->formatStateUsing(fn(string $state): string => Str::ucwords($state))
                     ->label('Metode Bayar'),
+
                 Tables\Columns\TextColumn::make('total_iuran')
                     ->formatStateUsing(fn($state) => 'Rp ' . number_format($state, 2))
                     ->label('Nominal'),
+
                 Tables\Columns\TextColumn::make('status_bayar')
                     ->formatStateUsing(fn(string $state): string => strtoupper($state))
                     ->badge()
@@ -109,7 +147,6 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                     ->collapsible(),
             ])
             ->filters([
-                // filter by status bayar
                 Tables\Filters\SelectFilter::make('status_bayar')
                     ->options([
                         'lunas' => 'Lunas',
@@ -130,7 +167,6 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                         }
                     }),
 
-                // filter by gang
                 Tables\Filters\SelectFilter::make('gang_id')
                     ->label('Gang')
                     ->options(Gang::all()->pluck('nama', 'id'))
@@ -138,6 +174,7 @@ class TransaksiIuranResource extends Resource implements HasShieldPermissions
                     ->modifyQueryUsing(function (Builder $query, $state) {
                         return $query->whereHas('warga', fn($q) => $state['value'] ? $q->where('gang_id', $state['value']) : null);
                     }),
+
                 Filter::make('tanggal_bayar')
                     ->form([
                         Section::make('Jatuh Tempo')->schema([

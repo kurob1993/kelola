@@ -2,25 +2,26 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TransaksiPengeluaranResource\Pages;
-use App\Filament\Resources\TransaksiPengeluaranResource\RelationManagers\TransaksiPengeluaranDetailRelationManager;
-use App\Models\TransaksiPengeluaran;
-use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
+use Auth;
 use Filament\Forms;
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
-use Filament\Support\Colors\Color;
 use Filament\Tables;
-use Filament\Tables\Actions\Action;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\Filter;
-use Filament\Tables\Filters\Indicator;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Illuminate\Support\Carbon;
+use Filament\Resources\Resource;
+use Filament\Support\Colors\Color;
+use Filament\Tables\Actions\Action;
+use Filament\Tables\Filters\Filter;
+use App\Models\TransaksiPengeluaran;
+use Filament\Tables\Filters\Indicator;
+use Filament\Forms\Components\Textarea;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
+use App\Filament\Resources\TransaksiPengeluaranResource\Pages;
+use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
+use App\Filament\Resources\TransaksiPengeluaranResource\RelationManagers\TransaksiPengeluaranDetailRelationManager;
 
 class TransaksiPengeluaranResource extends Resource
 {
@@ -44,7 +45,7 @@ class TransaksiPengeluaranResource extends Resource
                 Forms\Components\Section::make()->schema([
                     DatePicker::make('tanggal')->required(),
                     TextInput::make('dibuat_oleh')
-                        ->default(\Auth::user()->name)
+                        ->default(Auth::user()->name)
                         ->readOnly()
                         ->required(),
                     Textarea::make('keterangan')->rows(10),
