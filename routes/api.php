@@ -17,7 +17,6 @@ Route::post('/callback', function (Request $request) {
     Log::debug("Body callback");
     Log::debug(json_encode($request->all()));
 
-
     $payload = $request->getContent();
     $signatureHeader = $request->header('x-hub-signature-256');
 
@@ -30,9 +29,10 @@ Route::post('/callback', function (Request $request) {
     }
 
     Log::debug("Signature valid");
+    $data = json_decode($payload, true);
 
     $wa = new WhatsappService();
-    $wa->sendMessage($payload->chat_id, 'siap komanadan');
+    $wa->sendMessage($data['chat_id'], 'siap komanadan');
     return response()->json(['message' => 'Webhook verified']);
 
 });
