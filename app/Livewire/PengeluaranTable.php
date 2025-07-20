@@ -28,6 +28,9 @@ class PengeluaranTable extends BaseWidget
             Tables\Columns\TextColumn::make('deskripsi')->limit(40),
             Tables\Columns\TextColumn::make('jumlah')
                 ->formatStateUsing(fn($state) => 'Rp ' . number_format($state, 2)),
+            
+            
         ]);
+        
     }
 }
