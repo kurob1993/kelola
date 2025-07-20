@@ -1,5 +1,6 @@
 <?php
 
+use App\Services\WebhookSignatureService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,20 @@ Route::post('/callback', function (Request $request) {
 
     Log::debug("Body callback");
     Log::debug(json_encode($request->all()));
+
+
+    $payload = $request->getContent();
+    $signatureHeader = $request->header('x-hub-signature-256');
+
+    $secretKey = config('services.whatsapp.api_secret'); // atau langsung 'your_webhook_secret'
+    $signatureService = new WebhookSignatureService($secretKey);
+
+    if (!$signatureService->isValid($payload, $signatureHeader)) {
+        Log::debug("Invalid signature");
+        return response()->json(['message' => 'Invalid signature'], 401);
+    }
+
+    Log::debug("Signature valid");
+    return response()->json(['message' => 'Webhook verified']);
+
 });
