@@ -14,8 +14,9 @@
         "filament/filament": "^3.2",
         "hydrat/filament-table-layout-toggle": "^2.0",
         "laravel/framework": "^11.9",
-        "laravel/tinker": "^2.9",
         "laravel/octane": "^2.10",
+        "laravel/sanctum": "^4.0",
+        "laravel/tinker": "^2.9",
         "rawilk/filament-password-input": "^2.0"
     },
     "require-dev": {
