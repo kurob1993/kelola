@@ -1,6 +1,7 @@
 <?php
 
 use App\Services\WebhookSignatureService;
+use App\Services\WhatsappService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,9 @@ Route::post('/callback', function (Request $request) {
     }
 
     Log::debug("Signature valid");
+
+    $wa = new WhatsappService();
+    $wa->sendMessage($payload->chat_id, 'siap komanadan');
     return response()->json(['message' => 'Webhook verified']);
 
 });
