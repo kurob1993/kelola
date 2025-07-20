@@ -32,7 +32,12 @@ Route::post('/callback', function (Request $request) {
     $data = json_decode($payload, true);
 
     $wa = new WhatsappService();
-    $wa->sendMessage($data['chat_id'], 'siap komanadan');
+    $wa->sendMessage($data['from'], 'siap komanadan');
     return response()->json(['message' => 'Webhook verified']);
 
+});
+
+route::post('/send-message', function (Request $request) {
+    $wa = new WhatsappService();
+    return $wa->sendMessage('6287855561244@s.whatsapp.net', 'siap komanadan');
 });

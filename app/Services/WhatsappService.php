@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class WhatsappService
 {
@@ -20,8 +21,10 @@ class WhatsappService
         $url = $this->baseUrl . $endpoint;
 
         $response = Http::withHeaders([
-            'Authorization' => 'Basic ' . base64_encode('user:' . $this->apiKey),
+            'Authorization' => 'Basic ' . $this->apiKey,
         ])->$method($url, $data);
+
+        Log::debug($url);
 
         return $response->json();
     }
@@ -116,6 +119,8 @@ class WhatsappService
     public function sendMessage(string $phone, string $message, array $options = [])
     {
         $data = array_merge(['phone' => $phone, 'message' => $message], $options);
+
+        Log::debug(json_encode($data));
         return $this->sendRequest('post', '/send/message', $data);
     }
 
