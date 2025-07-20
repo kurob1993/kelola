@@ -9,5 +9,9 @@ Route::get('/user', function (Request $request) {
 
 
 Route::post('/callback', function (Request $request) {
-   \Illuminate\Support\Facades\Log::debug(json_encode($request->all()));
+    Log::debug("Header callback");
+    Log::debug(json_encode($request->header()));
+
+    Log::debug("Body callback");
+    Log::debug(json_encode($request->all()));
 });
