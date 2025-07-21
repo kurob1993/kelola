@@ -5,9 +5,9 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Telescope\IncomingEntry;
 use Laravel\Telescope\Telescope;
-use Laravel\Telescope\TelescopeApplicationServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
+class TelescopeServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
@@ -17,6 +17,8 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
         if (!class_exists(\Laravel\Telescope\Telescope::class) || $this->app->isProduction()) {
             return;
         }
+
+        $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
 
         // Telescope::night();
 
