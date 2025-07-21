@@ -31,10 +31,9 @@ Route::post('/callback', function (Request $request) {
     Log::debug("Signature valid");
     $data = json_decode($payload, true);
 
-    $wa = new WhatsappService();
-    $wa->sendMessage($data['chat_id'] . '@s.whatsapp.net', 'siap komanadan');
+//    $wa = new WhatsappService();
+//    $wa->sendMessage($data['chat_id'] . '@s.whatsapp.net', 'siap komanadan');
     return response()->json(['message' => 'Webhook verified']);
-
 });
 
 route::post('/send-message', function (Request $request) {
