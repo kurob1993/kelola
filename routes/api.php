@@ -41,3 +41,11 @@ route::post('/send-message', function (Request $request) {
     $wa = new WhatsappService();
     return $wa->sendMessage('6287855561244@s.whatsapp.net', 'siap komanadan');
 });
+
+route::post('/get-signature', function (Request $request) {
+    $secretKey = config('services.whatsapp.api_secret'); // atau langsung 'your_webhook_secret'
+    $signatureService = new WebhookSignatureService($secretKey);
+
+    $payload = $request->getContent();
+    return $signatureService->generate($payload);
+});

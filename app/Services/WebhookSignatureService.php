@@ -22,4 +22,9 @@ class WebhookSignatureService
 
         return hash_equals($computedSignature, $theirSignature);
     }
+
+    public function generate(string $payload): string
+    {
+        return 'sha256=' . hash_hmac('sha256', $payload, $this->secret);
+    }
 }
