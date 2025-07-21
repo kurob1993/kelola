@@ -39,7 +39,10 @@ class PengeluaranTotalStats extends BaseWidget
             $pengeluarnIcon = 'heroicon-m-arrow-trending-down';
         }
 
-        $iuran = TransaksiIuranDetail::all()->sum('jumlah');
+        $iuran = TransaksiIuranDetail::whereHas(
+            'transaksiIuran',
+            fn($query) => $query->where('status_bayar','lunas')
+        )->sum('jumlah');
         $iuranUpdateDate = TransaksiIuranDetail::orderBy('created_at', 'desc')->first();
 
         $saldo = $iuran-$pengeluaran;
