@@ -11,6 +11,7 @@ use App\Models\Perumahan;
 use App\Models\TransaksiIuran;
 use App\Models\TransaksiIuranDetail;
 use App\Models\Warga;
+use App\Services\SendNotifWhatsapp;
 use App\Services\WhatsappService;
 use Filament\Actions;
 use Filament\Actions\Action;
@@ -92,26 +93,13 @@ class ListTransaksiIurans extends ListRecords
                     }
                 }
 
-                if (strlen($warga->no_telepon) >= 10) {
-                    $totalIuran = $transaskiIuran->total_iuran;
-                    $totalIuran = Number::format($totalIuran, 2);
-                    $jatuhTempo = Carbon::parse($data['date'])->translatedFormat('F Y');
-
-                    $text = "Halo Bapak/Ibu 👋, \n\nPengingat iuran warga bulan ".$jatuhTempo." sebesar Rp ".$totalIuran.",- 🙏";
-                    $text .= "\nMohon dibayarkan ke koordinator masing-masing paling lambat:";
-                    $text .= "\n\n📆 07 ".$jatuhTempo;
-                    $text .= "\n📌 Mohon konfirmasi setelah pembayaran ya.";
-                    $text .= "\n\nTerima kasih atas perhatian & kerjasamanya! 🤝";
-                    $text .= "\nPengurus RT";
-
-                    $apiWa = new WhatsappService();
-                    $noWa = $apiWa->formatToWhatsapp($warga->no_telepon);
-
-                    Bus::chain([
-                        new WaTyping($noWa),
-                        new WaSendMessage($noWa, $text)
-                    ])->dispatch();
-                }
+                $notif =  new SendNotifWhatsapp();
+                $notif->sendNotifIuranBaru(
+                    phone: $warga->no_telepon,
+                    name: $warga->nama,
+                    jatuhTempoDate: $data['date'],
+                    totalIuran: $transaskiIuran->total_iuran
+                );
             }
 
             // Contoh notifikasi sukses
