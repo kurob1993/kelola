@@ -396,4 +396,26 @@ class WhatsappService
     {
         return $this->sendRequest('post', '/group/leave', ['group_id' => $groupId]);
     }
+
+
+    public function formatToWhatsapp(string $phone): string
+    {
+        // Hapus semua spasi
+        $phone = str_replace(' ', '', $phone);
+
+        // Hilangkan semua karakter non-digit
+        $phone = preg_replace('/\D/', '', $phone);
+
+        // Kalau diawali dengan 0, ganti dengan 62
+        if (substr($phone, 0, 1) === '0') {
+            $phone = '62' . substr($phone, 1);
+        }
+
+        // Kalau tidak diawali dengan 62, tambahkan 62
+        if (substr($phone, 0, 2) !== '62') {
+            $phone = '62' . ltrim($phone, '0');
+        }
+
+        return $phone;
+    }
 }
