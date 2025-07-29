@@ -11,7 +11,7 @@ class Dashboard extends \Filament\Pages\Dashboard
 {
     use HasFiltersForm;
 
-    protected static ?string $title = 'Iuran Warga';
+    protected static ?string $title = 'Dashhboard';
     protected static ?string $navigationIcon = 'heroicon-o-chart-pie';
 
     public static function getNavigationGroup(): ?string

@@ -29,29 +29,7 @@ class EditUser extends EditRecord
 
     protected function afterSave(): void
     {
-        $roleId = Arr::wrap($this->form->getState()['role'])[0] ?? null;
 
-        // if $roleId is array get index 0
-
-        $roleName = Role::findById($roleId)->name;
-
-        $this->record->syncRoles([$roleName]);
-
-        if($roleName === 'warga') {
-            $warga = Warga::find($this->record->warga_id);
-            $warga->nama = $this->record->name;
-            $warga->email = $this->record->email;
-            $warga->save();
-        }
-
-        if($roleName === 'admin' || $roleName === 'kordinator') {
-            $pengurus = Pengurus::where('warga_id', $this->record->warga_id)->firstOrNew();
-            $pengurus->warga_id = $this->record->warga->id;
-            $pengurus->gang_id = $this->record->warga->gang_id;
-            $pengurus->blok_id = $this->record->warga->blokDetail->blok_id;
-            $pengurus->jabatan = $roleName === 'admin' ? 'RT': 'KORDINATOR';
-            $pengurus->save();
-        }
     }
 
 }

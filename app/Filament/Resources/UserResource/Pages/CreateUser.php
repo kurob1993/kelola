@@ -26,19 +26,6 @@ class CreateUser extends CreateRecord
 
     protected function afterCreate(): void
     {
-        $record = $this->record;
-        $roleId = $record->role;
-        $roleName = Role::findById($roleId)->name;
 
-        $this->record->syncRoles([$roleName]);
-
-        if($roleName === 'admin' || $roleName === 'kordinator') {
-            $pengurus = Pengurus::where('warga_id', $record->warga_id)->firstOrNew();
-            $pengurus->warga_id = $record->warga->id;
-            $pengurus->gang_id = $record->warga->gang_id;
-            $pengurus->blok_id = $record->warga->blokDetail->blok_id;
-            $pengurus->jabatan = $roleName === 'admin' ? 'RT': 'KORDINATOR';
-            $pengurus->save();
-        }
     }
 }
