@@ -200,13 +200,15 @@ namespace App\Models{
  *
  * @property int $id
  * @property int $warga_id
- * @property string $tanggal_bayar
+ * @property \Illuminate\Support\Carbon $tanggal_bayar
  * @property string $status_bayar
  * @property string|null $metode_bayar
  * @property string|null $bukti_bayar
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $tanggal_pelunasan
  * @property-read mixed $nama_tanggal
+ * @property-read mixed $tanggal_pelunasan_formatted
  * @property-read mixed $total_iuran
  * @property-read \App\Models\Iuran|null $iuran
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TransaksiIuranDetail> $transaksiIuranDetails
@@ -221,6 +223,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereMetodeBayar($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereStatusBayar($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereTanggalBayar($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereTanggalPelunasan($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TransaksiIuran whereWargaId($value)
  */
