@@ -3,11 +3,7 @@
 namespace App\Filament\Resources\UserResource\Pages;
 
 use App\Filament\Resources\UserResource;
-use App\Models\Pengurus;
-use App\Models\Perumahan;
-use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
-use Spatie\Permission\Models\Role;
 
 class CreateUser extends CreateRecord
 {

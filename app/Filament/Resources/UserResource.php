@@ -117,11 +117,6 @@ class UserResource extends Resource
             ->recordUrl(null);
     }
 
-    public static function getRelations(): array
-    {
-        return [];
-    }
-
     public static function getPages(): array
     {
         return [
@@ -161,25 +156,6 @@ class UserResource extends Resource
             TextInput::make('name')
                 ->required()
                 ->maxLength(255),
-
-            Select::make('warga_id')
-                ->label('Warga')
-                ->relationship(
-                    name: 'warga',
-                    titleAttribute: 'nama',
-                    modifyQueryUsing: function (Builder $query, $state) {
-                        $query->orWhere('nama', 'like', "%{$state}%")
-                            ->orWhere('nomor_rumah', 'like', "%{$state}%")
-                            ->orWhereHas('blokDetail', function ($query) use ($state) {
-                                $query->where('nama_blok', 'like', "%{$state}%");
-                            });
-                    }
-                )
-                ->getOptionLabelFromRecordUsing(fn(Warga $record) => "{$record->nama} - {$record->blokDetail->nama_blok}{$record->nomor_rumah}")
-                ->preload()
-                ->searchable()
-                ->live()
-                ->required(),
 
             TextInput::make('email')
                 ->email()
