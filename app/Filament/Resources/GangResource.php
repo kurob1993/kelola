@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\GangResource\Pages;
 use App\Filament\Resources\GangResource\RelationManagers;
 use App\Models\Gang;
+use App\Models\Pengurus;
 use App\Models\Perumahan;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
@@ -13,6 +14,7 @@ use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -27,7 +29,7 @@ class GangResource extends Resource
 
     protected static ?string $navigationGroup = 'Data Master';
 
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
     {
@@ -55,8 +57,23 @@ class GangResource extends Resource
                 Tables\Columns\TextColumn::make('nama')->label('Nama Gang')->searchable(),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('perumahan_id')
+                    ->label('Perumahan')
+                    ->options(function () {
+                        $user = auth()->user();
+                        if (!$user->hasRole('super_admin')) {
+                            return Perumahan::where('id', $user->warga->perumahan_id)->get()->pluck('nama_perumahan', 'id');
+                        }
+
+                        return Perumahan::pluck('nama_perumahan', 'id');
+                    })
+                    ->searchable(),
             ])
+            ->filtersTriggerAction(
+                fn(Action $action) => $action
+                    ->button()
+                    ->label('Filter'),
+            )
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make()
@@ -126,5 +143,22 @@ class GangResource extends Resource
             'create' => Pages\CreateGang::route('/create'),
             'edit' => Pages\EditGang::route('/{record}/edit'),
         ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+
+        if ($user->hasRole('super_admin')) {
+            return parent::getEloquentQuery();
+        }
+
+        if ($user->hasRole('admin')) {
+            $pengurus = Pengurus::where('warga_id', $user->warga_id)->first();
+            return parent::getEloquentQuery()->where('perumahan_id', $pengurus->blok->perumahan_id);
+        }
+
+        // Default fallback: no data
+        return parent::getEloquentQuery()->whereRaw('1 = 0');
     }
 }

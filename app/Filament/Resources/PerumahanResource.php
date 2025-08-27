@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PerumahanResource\Pages;
 use App\Filament\Resources\PerumahanResource\RelationManagers;
+use App\Models\Pengurus;
 use App\Models\Perumahan;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
@@ -90,5 +91,22 @@ class PerumahanResource extends Resource
             'create' => Pages\CreatePerumahan::route('/create'),
             'edit' => Pages\EditPerumahan::route('/{record}/edit'),
         ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+
+        if ($user->hasRole('super_admin')) {
+            return parent::getEloquentQuery();
+        }
+
+        if ($user->hasRole('admin')) {
+            $pengurus = Pengurus::where('warga_id', $user->warga_id)->first();
+            return parent::getEloquentQuery()->where('id', $pengurus->blok->perumahan_id);
+        }
+
+        // Default fallback: no data
+        return parent::getEloquentQuery()->whereRaw('1 = 0');
     }
 }

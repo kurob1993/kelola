@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
+use App\Models\Pengurus;
 use App\Models\User;
 use App\Models\Warga;
 use Filament\Forms\Components\Grid;
@@ -205,5 +206,24 @@ class UserResource extends Resource
                 ->visible(fn(string $context): bool => $context === 'create')
                 ->dehydrated(false),
         ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+
+        if ($user->hasRole('super_admin')) {
+            return parent::getEloquentQuery();
+        }
+
+        if ($user->hasRole('admin')) {
+            $pengurus = Pengurus::where('warga_id', $user->warga_id)->first();
+            return parent::getEloquentQuery()->whereHas('warga', function ($q) use ($pengurus) {
+                $q->whereHas('blokDetail', fn($q) => $q->where('blok_id', $pengurus->blok_id));
+            });
+        }
+
+        // Default fallback: no data
+        return parent::getEloquentQuery()->whereRaw('1 = 0');
     }
 }

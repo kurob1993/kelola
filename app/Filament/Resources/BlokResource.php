@@ -4,20 +4,18 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\BlokResource\Pages;
 use App\Filament\Resources\BlokResource\RelationManagers;
-use App\Livewire\BlokDetails;
 use App\Models\Blok;
+use App\Models\Pengurus;
 use App\Models\Perumahan;
-use Filament\Actions\Action;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\Layout\Component;
-use Filament\Tables\Concerns\InteractsWithTable;
-use Filament\Tables\Contracts\HasTable;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 class BlokResource extends Resource
 {
@@ -27,7 +25,7 @@ class BlokResource extends Resource
 
     protected static ?string $pluralLabel = 'Blok';
 
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 2;
 
     protected static ?string $navigationGroup = 'Data Master';
 
@@ -58,8 +56,23 @@ class BlokResource extends Resource
                 Tables\Columns\TextColumn::make('nama_blok')->label('Nama Blok')->searchable(),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('perumahan_id')
+                    ->label('Perumahan')
+                    ->options(function () {
+                        $user = auth()->user();
+                        if (!$user->hasRole('super_admin')) {
+                            return Perumahan::where('id', $user->warga->perumahan_id)->get()->pluck('nama_perumahan', 'id');
+                        }
+
+                        return Perumahan::pluck('nama_perumahan', 'id');
+                    })
+                    ->searchable(),
             ])
+            ->filtersTriggerAction(
+                fn(Action $action) => $action
+                    ->button()
+                    ->label('Filter'),
+            )
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\ViewAction::make()
@@ -89,5 +102,22 @@ class BlokResource extends Resource
             'create' => Pages\CreateBlok::route('/create'),
             'edit' => Pages\EditBlok::route('/{record}/edit'),
         ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+
+        if ($user->hasRole('super_admin')) {
+            return parent::getEloquentQuery();
+        }
+
+        if ($user->hasRole('admin')) {
+            $pengurus = Pengurus::where('warga_id', $user->warga_id)->first();
+            return parent::getEloquentQuery()->where('perumahan_id', $pengurus->blok->perumahan_id);
+        }
+
+        // Default fallback: no data
+        return parent::getEloquentQuery()->whereRaw('1 = 0');
     }
 }

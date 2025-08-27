@@ -5,7 +5,9 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\WargaResource\Pages;
 use App\Filament\Resources\WargaResource\RelationManagers;
 use App\Models\Blok;
+use App\Models\BlokDetail;
 use App\Models\Gang;
+use App\Models\Pengurus;
 use App\Models\Perumahan;
 use App\Models\Warga;
 use Filament\Forms;
@@ -14,6 +16,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -41,18 +44,38 @@ class WargaResource extends Resource
                     Forms\Components\Select::make('perumahan_id')
                         ->columnSpan(2)
                         ->label('Perumahan')
-                        ->options(Perumahan::all()->pluck('nama_perumahan', 'id'))
+                        ->options(function () {
+                            $user = auth()->user();
+                            if (!$user->hasRole('super_admin')) {
+                                return Perumahan::where('id', $user->warga->perumahan_id)->get()->pluck('nama_perumahan', 'id');
+                            }
+
+                            return Perumahan::pluck('nama_perumahan', 'id');
+                        })
+                        ->native(false)
                         ->required(),
                     Forms\Components\TextInput::make('nama')->required()->label('Nama'),
                     Forms\Components\Select::make('blok_detail_id')
                         ->label('Blok')
-                        ->relationship('blokDetail', 'nama_blok')
-                        ->preload()
+                        ->options(function ($get) {
+                            $perumahanId = $get('perumahan_id');
+                            return $perumahanId
+                                ? BlokDetail::whereHas('blok', function ($query) use ($perumahanId) {
+                                    $query->where('perumahan_id', $perumahanId);
+                                })->pluck('nama_blok', 'id')
+                                : [];
+                        })
                         ->searchable()
-                        ->required(),
+                        ->required()
+                        ->reactive(),
                     Forms\Components\Select::make('gang_id')
                         ->label('Gang')
-                        ->relationship('gang', 'nama')
+                        ->options(function ($get) {
+                            $perumahanId = $get('perumahan_id');
+                            return $perumahanId
+                                ? Gang::where('perumahan_id', $perumahanId)->pluck('nama', 'id')
+                                : [];
+                        })
                         ->searchable()
                         ->preload()
                         ->required(),
@@ -64,7 +87,6 @@ class WargaResource extends Resource
                     Forms\Components\TextInput::make('email')->email()->required()->label('Email'),
                 ])
             ]),
-
         ]);
     }
 
@@ -82,8 +104,23 @@ class WargaResource extends Resource
                     ->date('d F Y'),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('perumahan_id')
+                    ->label('Perumahan')
+                    ->options(function () {
+                        $user = auth()->user();
+                        if (!$user->hasRole('super_admin')) {
+                            return Perumahan::where('id', $user->warga->perumahan_id)->get()->pluck('nama_perumahan', 'id');
+                        }
+
+                        return Perumahan::pluck('nama_perumahan', 'id');
+                    })
+                    ->searchable(),
             ])
+            ->filtersTriggerAction(
+                fn(Action $action) => $action
+                    ->button()
+                    ->label('Filter'),
+            )
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
@@ -109,5 +146,22 @@ class WargaResource extends Resource
             'create' => Pages\CreateWarga::route('/create'),
             'edit' => Pages\EditWarga::route('/{record}/edit'),
         ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+
+        if ($user->hasRole('super_admin')) {
+            return parent::getEloquentQuery();
+        }
+
+        if ($user->hasRole('admin')) {
+            $pengurus = Pengurus::where('warga_id', $user->warga_id)->first();
+            return parent::getEloquentQuery()->where('perumahan_id', $pengurus->blok->perumahan_id);
+        }
+
+        // Default fallback: no data
+        return parent::getEloquentQuery()->whereRaw('1 = 0');
     }
 }
